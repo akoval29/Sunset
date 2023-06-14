@@ -13,14 +13,13 @@ $fz: 26px;
   font-family: "Poppins", sans-serif;
 
   &__header {
-    font-size: $fz;
-    flex-basis: 100%;
-    max-height: 10%;
-    top: 0;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    font-size: $fz;
     color: #fff;
     background-color: #1a16f5;
   }
@@ -55,9 +54,11 @@ $fz: 26px;
   }
 
   &__nav-li {
+    list-style: none;
     margin: 10px 10px;
-    justify-content: center;
-    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
     @media (max-width: 730px) {
       margin: 0;
     }
@@ -81,7 +82,8 @@ $fz: 26px;
     }
   }
 
-  &__main {
+  &__main,
+  &__posts {
     flex-basis: 100%;
     max-width: 60%;
     background-color: #fff;
@@ -93,14 +95,13 @@ $fz: 26px;
   }
 
   &__footer {
-    font-size: $fz;
-    flex-basis: 100%;
-    max-height: 10%;
-    width: 100%;
-    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+    font-size: $fz;
     background-color: #2bac0b;
     color: #fff;
   }
