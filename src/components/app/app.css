@@ -1,30 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("./normalize.css");
 .app {
   display: flex;
+  position: relative;
   flex-direction: column;
+  width: 100%;
   height: 100vh;
-  background-color: #fff;
   font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
 }
-.app__header {
+.app__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+.app__footer, .app__header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 50px;
   width: 100%;
-  top: 0;
   font-size: 26px;
-  color: #fff;
-  background-color: #1a16f5;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  opacity: 0.3;
 }
-.app__main-title, .app__links-title {
-  margin-bottom: 20px;
+.app__footer {
+  bottom: 0;
 }
-@media (max-width: 730px) {
-  .app__main-title, .app__links-title {
-    margin-bottom: 0px;
-  }
+.app__header {
+  top: 0;
 }
 .app__container {
   display: flex;
@@ -35,7 +51,7 @@
   display: flex;
   flex-basis: 100%;
   max-width: 20%;
-  background-color: red;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   padding: 15px;
   flex-direction: column;
 }
@@ -44,61 +60,121 @@
     height: 50px;
     max-width: 100%;
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
+    padding: 0;
   }
 }
 .app__nav-li {
+  position: relative;
+  text-decoration: none;
+  padding: 6px 20px;
   list-style: none;
-  margin: 10px 10px;
+  text-decoration: none;
 }
-.app__nav-li:hover {
-  cursor: pointer;
+.app__nav-li:hover .app__span {
+  opacity: 1;
+  transform: scale(1);
 }
 @media (max-width: 730px) {
   .app__nav-li {
+    font-size: 0.75em;
+    padding: 6px 10px;
     margin: 0;
   }
 }
-.app__nav-title {
+.app__nav-link {
+  font-size: 1.5em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  list-style: none;
+  text-decoration: none;
+  vertical-align: middle;
+  color: white;
+}
+.app__nav-link:hover {
+  cursor: pointer;
+}
+.app__nav-link.active {
+  color: brown;
+}
+.app__span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 2px solid brown;
+  border-radius: 7px;
+  transform: scale(0);
+  transition: 0.5s;
+  opacity: 0;
+}
+.app__main-title, .app__nav-title, .app__links-title {
+  font-family: "Poppins", sans-serif;
+  color: black;
   margin-bottom: 20px;
+  text-align: center;
+  vertical-align: middle;
 }
 @media (max-width: 730px) {
   .app__nav-title {
     display: none;
   }
 }
+@media (max-width: 730px) {
+  .app__links-title {
+    text-align: unset;
+    margin-bottom: 0px;
+  }
+}
+.app__main {
+  flex-basis: 100%;
+  max-width: 60%;
+  line-height: 25px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.5));
+  padding: 15px 35px;
+}
+@media (max-width: 730px) {
+  .app__main {
+    padding: 15px;
+    height: calc(100% - (100px));
+    max-width: 100%;
+  }
+}
+.app__paragraph {
+  color: black;
+  margin-bottom: 5px;
+}
 .app__links {
+  display: flex;
+  flex-direction: column;
   flex-basis: 100%;
   max-width: 20%;
-  background-color: purple;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   padding: 15px;
 }
 @media (max-width: 730px) {
   .app__links {
     height: 50px;
     max-width: 100%;
+    flex-direction: row;
   }
 }
-.app__main, .app__posts {
-  flex-basis: 100%;
-  max-width: 60%;
-  background-color: #fff;
-  padding: 15px;
+.app__link {
+  vertical-align: middle;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.app__link:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 @media (max-width: 730px) {
-  .app__main, .app__posts {
-    height: calc(100% - (100px));
-    max-width: 100%;
+  .app__link {
+    padding: 0px 10px;
   }
-}
-.app__footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  width: 100%;
-  bottom: 0;
-  font-size: 26px;
-  background-color: #2bac0b;
-  color: #fff;
 }/*# sourceMappingURL=app.css.map */
