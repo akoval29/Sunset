@@ -9,7 +9,7 @@
   width: 100%;
   height: 100vh;
   font-family: "Poppins", sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .app__bg {
   position: absolute;
@@ -49,6 +49,7 @@
 }
 .app__nav {
   display: flex;
+  align-items: center;
   flex-basis: 100%;
   max-width: 20%;
   background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
@@ -67,10 +68,9 @@
 }
 .app__nav-li {
   position: relative;
-  text-decoration: none;
-  padding: 6px 20px;
+  padding: 6px 30px;
   list-style: none;
-  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .app__nav-li:hover .app__span {
   opacity: 1;
@@ -79,7 +79,7 @@
 @media (max-width: 730px) {
   .app__nav-li {
     font-size: 0.75em;
-    padding: 6px 10px;
+    padding: 6px;
     margin: 0;
   }
 }
@@ -116,6 +116,7 @@
   margin-bottom: 20px;
   text-align: center;
   vertical-align: middle;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 730px) {
   .app__nav-title {
@@ -128,11 +129,16 @@
     margin-bottom: 0px;
   }
 }
+@media (max-width: 400px) {
+  .app__links-title {
+    display: none;
+  }
+}
 .app__main {
   flex-basis: 100%;
   max-width: 60%;
   line-height: 25px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.5));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.5));
   padding: 15px 35px;
 }
 @media (max-width: 730px) {
@@ -145,9 +151,11 @@
 .app__paragraph {
   color: black;
   margin-bottom: 5px;
+  letter-spacing: 1px;
 }
 .app__links {
   display: flex;
+  align-items: center;
   flex-direction: column;
   flex-basis: 100%;
   max-width: 20%;
@@ -158,23 +166,38 @@
   .app__links {
     height: 50px;
     max-width: 100%;
+    justify-content: center;
     flex-direction: row;
+    padding: 0 15px;
   }
 }
-.app__link {
+.app__text-link {
   vertical-align: middle;
   color: white;
   list-style: none;
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-.app__link:hover {
+.app__text-link:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 @media (max-width: 730px) {
-  .app__link {
-    padding: 0px 10px;
+  .app__text-link {
+    display: none;
+  }
+}
+.app__link-icon {
+  display: none;
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+  filter: invert(1);
+}
+@media (max-width: 730px) {
+  .app__link-icon {
+    display: block;
   }
 }/*# sourceMappingURL=app.css.map */

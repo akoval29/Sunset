@@ -1,7 +1,7 @@
 export const Users = () => {
   return (
     <article className="app__main">
-      <h3 className="app__main-title">Users</h3>
+      <h3 className="app__main-title">Users list</h3>
       <p className="app__paragraph">Joey Jordison</p>
       <p className="app__paragraph">Malcolm Corley</p>
       <p className="app__paragraph">Bruce Lee</p>

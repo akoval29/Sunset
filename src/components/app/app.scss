@@ -17,7 +17,7 @@ $theme-color: brown;
   width: 100%;
   height: 100vh;
   font-family: "Poppins", sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 
   &__bg {
     position: absolute;
@@ -60,6 +60,7 @@ $theme-color: brown;
 
   &__nav {
     display: flex;
+    align-items: center;
     flex-basis: 100%;
     max-width: 20%;
     background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
@@ -77,10 +78,9 @@ $theme-color: brown;
 
   &__nav-li {
     position: relative;
-    text-decoration: none;
-    padding: 6px 20px;
+    padding: 6px 30px;
     list-style: none;
-    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     &:hover {
       .app__span {
         opacity: 1;
@@ -89,7 +89,7 @@ $theme-color: brown;
     }
     @media (max-width: 730px) {
       font-size: 0.75em;
-      padding: 6px 10px;
+      padding: 6px;
       margin: 0;
     }
   }
@@ -131,6 +131,7 @@ $theme-color: brown;
     margin-bottom: 20px;
     text-align: center;
     vertical-align: middle;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   &__nav-title {
@@ -144,6 +145,9 @@ $theme-color: brown;
       text-align: unset;
       margin-bottom: 0px;
     }
+    @media (max-width: 400px) {
+      display: none;
+    }
   }
 
   &__main {
@@ -153,9 +157,9 @@ $theme-color: brown;
     background: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0) 10%,
-      rgba(0, 0, 0, 0) 10%,
-      rgba(0, 0, 0, 0) 90%,
+      rgba(0, 0, 0, 0) 5%,
+      rgba(0, 0, 0, 0) 5%,
+      rgba(0, 0, 0, 0) 95%,
       rgba(0, 0, 0, 0.5)
     );
     padding: 15px 35px;
@@ -169,10 +173,12 @@ $theme-color: brown;
   &__paragraph {
     color: $theme-font-color2;
     margin-bottom: 5px;
+    letter-spacing: 1px;
   }
 
   &__links {
     display: flex;
+    align-items: center;
     flex-direction: column;
     flex-basis: 100%;
     max-width: 20%;
@@ -181,23 +187,36 @@ $theme-color: brown;
     @media (max-width: 730px) {
       height: $h;
       max-width: 100%;
+      justify-content: center;
       flex-direction: row;
+      padding: 0 15px;
     }
   }
 
-  &__link {
+  &__text-link {
     vertical-align: middle;
     color: $theme-font-color;
     list-style: none;
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     &:hover {
       cursor: pointer;
       text-decoration: underline;
     }
     @media (max-width: 730px) {
-      padding: 0px 10px;
+      display: none;
+    }
+  }
+  &__link-icon {
+    display: none;
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    filter: invert(1);
+    @media (max-width: 730px) {
+      display: block;
     }
   }
 }
