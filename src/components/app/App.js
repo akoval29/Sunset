@@ -21,7 +21,7 @@ export const App = () => {
         <img src={cityImage} className="app__bg" alt="bg" />
         <header className="app__header">Header</header>
         <section className="app__container">
-          <nav className="app__nav">
+          <ul className="app__nav">
             <h3 className="app__nav-title">Navigation</h3>
 
             <li className="app__nav-li">
@@ -47,7 +47,7 @@ export const App = () => {
                 Todos<span className="app__span"></span>
               </NavLink>
             </li>
-          </nav>
+          </ul>
 
           <Routes>
             <Route path="/" element={<Main />} />
