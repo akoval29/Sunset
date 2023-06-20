@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("./normalize.css");
+
+$h: 50px;
+$section-h: calc(100% - (#{$h * 2}));
+$fz: 26px;
+$theme-font-color: white;
+$theme-font-color2: black;
+$theme-color: brown;
+
+.app {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 2px;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__footer,
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    font-size: $fz;
+    color: $theme-font-color;
+    font-weight: bold;
+    background-color: black;
+    opacity: 0.3;
+  }
+  &__footer {
+    bottom: 0;
+  }
+  &__header {
+    top: 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+    max-width: 20%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    padding: 15px;
+    flex-direction: column;
+    @media (max-width: 730px) {
+      height: $h;
+      max-width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0;
+    }
+  }
+
+  &__nav-li {
+    position: relative;
+    padding: 6px 30px;
+    list-style: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    &:hover {
+      .app__span {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    @media (max-width: 730px) {
+      font-size: 0.75em;
+      padding: 6px;
+      margin: 0;
+    }
+  }
+
+  &__nav-link {
+    font-size: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    vertical-align: middle;
+    color: $theme-font-color;
+    &:hover {
+      cursor: pointer;
+    }
+    &.active {
+      color: $theme-color;
+    }
+  }
+
+  &__span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid $theme-color;
+    border-radius: 7px;
+    transform: scale(0);
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  &__main-title,
+  &__nav-title,
+  &__links-title {
+    font-family: "Poppins", sans-serif;
+    color: $theme-font-color2;
+    margin-bottom: 20px;
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  &__nav-title {
+    @media (max-width: 730px) {
+      display: none;
+    }
+  }
+
+  &__links-title {
+    @media (max-width: 730px) {
+      text-align: unset;
+      margin-bottom: 0px;
+    }
+    @media (max-width: 400px) {
+      display: none;
+    }
+  }
+
+  &__main {
+    flex-basis: 100%;
+    max-width: 60%;
+    line-height: 25px;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0) 5%,
+      rgba(0, 0, 0, 0) 5%,
+      rgba(0, 0, 0, 0) 95%,
+      rgba(0, 0, 0, 0.5)
+    );
+    padding: 15px 35px;
+    @media (max-width: 730px) {
+      padding: 15px;
+      height: $section-h;
+      max-width: 100%;
+    }
+  }
+
+  &__paragraph {
+    color: $theme-font-color2;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 100%;
+    max-width: 20%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    padding: 15px;
+    @media (max-width: 730px) {
+      height: $h;
+      max-width: 100%;
+      justify-content: center;
+      flex-direction: row;
+      padding: 0 15px;
+    }
+  }
+
+  &__text-link {
+    vertical-align: middle;
+    color: $theme-font-color;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    @media (max-width: 730px) {
+      display: none;
+    }
+  }
+  &__link-icon {
+    display: none;
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    filter: invert(1);
+    @media (max-width: 730px) {
+      display: block;
+    }
+  }
+}
