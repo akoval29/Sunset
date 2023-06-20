@@ -5,12 +5,12 @@ import {
   NavLink,
 } from "react-router-dom";
 
-import cityImage from "../../img/city.png";
+import cityImage from "../../assets/city.png";
 
-import { Main } from "../app-main/MainList";
-import { Posts } from "../app-posts/PostList";
-import { Todos } from "../app-todos/TodoList";
-import { Users } from "../app-users/UserList";
+import { Main } from "../main-page/mainPage";
+import { Posts } from "../posts-page/postPage";
+import { Todos } from "../todos-page/todoPage";
+import { Users } from "../users-page/userPage";
 
 import "./app.css";
 
