@@ -138,14 +138,16 @@
   flex-basis: 100%;
   max-width: 60%;
   line-height: 25px;
+  overflow-y: auto;
+  height: calc(100vh - 2 * 50px);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.5));
   padding: 15px 35px;
 }
 @media (max-width: 730px) {
   .app__main {
     padding: 15px;
-    height: calc(100% - (100px));
     max-width: 100%;
+    height: calc((100vh - 2 * 50px) - 100px);
   }
 }
 .app__paragraph {

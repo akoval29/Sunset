@@ -4,7 +4,7 @@
 @import url("./normalize.css");
 
 $h: 50px;
-$section-h: calc(100% - (#{$h * 2}));
+$section-h: calc(100vh - 2 * #{$h});
 $fz: 26px;
 $theme-font-color: white;
 $theme-font-color2: black;
@@ -154,6 +154,8 @@ $theme-color: brown;
     flex-basis: 100%;
     max-width: 60%;
     line-height: 25px;
+    overflow-y: auto;
+    height: $section-h;
     background: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.5),
@@ -165,8 +167,8 @@ $theme-color: brown;
     padding: 15px 35px;
     @media (max-width: 730px) {
       padding: 15px;
-      height: $section-h;
       max-width: 100%;
+      height: calc($section-h - 100px);
     }
   }
 

@@ -1,33 +1,39 @@
-let lastCity1 = null; // уникнути повторних запитів на сервер 1/3
+import React, { useEffect, useState } from "react";
+import { getInfo } from "../../shared/useAPI";
+
+import "./postStyle.css";
+
 export const Posts = () => {
+  const [postItems, setPostItems] = useState([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await getInfo("posts");
+        if (response && response.data) {
+          setPostItems(response.data);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
   return (
     <article className="app__main">
       <h3 className="app__main-title">Posts</h3>
-      <p className="app__paragraph">Lorem ipsum dolor,</p>
-      <p className="app__paragraph">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-      </p>
-      <p className="app__paragraph">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, numquam
-        temporibus!
-      </p>
+      {postItems.map((item) => (
+        <div className="post" key={item.id}>
+          <div className="post__wrap">
+            <p className="post__userId">User № {item.userId}</p>
+            <p className="post__postId">Post № {item.id}</p>
+          </div>
+          <h4 className="post__title">{item.title}</h4>
+          <p className="post__body">{item.body}</p>
+        </div>
+      ))}
     </article>
   );
 };
-
-// export async function getWeatherTop(city) {
-//   if (!city || (lastCity1 && lastCity1 === city)) {
-//     return;
-//   } // уникнути пустих і повторних запитів на сервер 2/3
-//   try {
-//     const response = await axios.get(
-//       `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
-//     );
-//     lastCity1 = city; // уникнути повторних запитів на сервер 3/3
-//     return response;
-//   } catch (error) {
-//     onError();
-//     console.error(error);
-//     throw error;
-//   }
-// }
