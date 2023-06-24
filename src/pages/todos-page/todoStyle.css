@@ -1,18 +1,18 @@
-.post {
+.todo {
   border: 2px solid black;
   border-radius: 15px;
   padding: 10px;
   margin: 15px 10px;
   background-color: rgba(255, 255, 255, 0.1);
 }
-.post__wrap {
+.todo__wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   flex: 1 1 45%;
 }
-.post__wrap::after {
+.todo__wrap::after {
   content: "";
   display: block;
   width: 100%;
@@ -20,7 +20,13 @@
   padding-top: 10px;
   border-bottom: 1px solid black;
 }
-.post__title {
+.todo__container {
+  display: flex;
+  justify-content: space-between;
+}
+.todo__title {
   margin-bottom: 5px;
-  text-align: center;
-}/*# sourceMappingURL=postStyle.css.map */
+}
+.todo__completed {
+  font-weight: bold;
+}/*# sourceMappingURL=todoStyle.css.map */

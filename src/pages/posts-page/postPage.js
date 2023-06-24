@@ -10,7 +10,7 @@ export const Posts = () => {
     const fetchPosts = async () => {
       try {
         const response = await getInfo("posts");
-        if (response && response.data) {
+        if (response) {
           setPostItems(response.data);
         }
       } catch (error) {
