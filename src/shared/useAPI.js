@@ -5,6 +5,7 @@ export async function getInfo(info) {
     const response = await axios.get(
       `https://jsonplaceholder.typicode.com/${info}`
     );
+    console.log(`new request: ${info}`);
     console.log(response.data);
     return response;
   } catch (error) {

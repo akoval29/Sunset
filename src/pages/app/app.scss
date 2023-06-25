@@ -168,7 +168,7 @@ $theme-color: brown;
     @media (max-width: 730px) {
       padding: 15px;
       max-width: 100%;
-      height: calc($section-h - 100px);
+      height: calc($section-h - 2 * #{$h});
     }
   }
 

@@ -37,14 +37,14 @@ export const App = () => {
             </li>
 
             <li className="app__nav-li">
-              <NavLink className="app__nav-link" to="/users">
-                Users<span className="app__span"></span>
+              <NavLink className="app__nav-link" to="/todos">
+                Todos<span className="app__span"></span>
               </NavLink>
             </li>
 
             <li className="app__nav-li">
-              <NavLink className="app__nav-link" to="/todos">
-                Todos<span className="app__span"></span>
+              <NavLink className="app__nav-link" to="/users">
+                Users<span className="app__span"></span>
               </NavLink>
             </li>
           </ul>
