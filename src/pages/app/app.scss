@@ -151,6 +151,7 @@ $theme-color: brown;
   }
 
   &__main {
+    position: relative;
     flex-basis: 100%;
     max-width: 60%;
     line-height: 25px;

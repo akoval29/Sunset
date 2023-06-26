@@ -135,6 +135,7 @@
   }
 }
 .app__main {
+  position: relative;
   flex-basis: 100%;
   max-width: 60%;
   line-height: 25px;
@@ -147,7 +148,7 @@
   .app__main {
     padding: 15px;
     max-width: 100%;
-    height: calc((100vh - 2 * 50px) - 100px);
+    height: calc($section-h - 2 * 50px);
   }
 }
 .app__paragraph {

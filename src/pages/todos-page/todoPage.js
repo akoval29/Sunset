@@ -1,25 +1,10 @@
-import React, { useEffect, useState } from "react";
-
-import { getInfo } from "../../shared/useAPI";
+import React from "react";
+import { useFetchPosts } from "../../shared/hooks";
 
 import "./todoStyle.css";
 
 export const Todos = () => {
-  const [todoItems, setTodoItems] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await getInfo("todos");
-        if (response) {
-          setTodoItems(response.data);
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchData();
-  }, []);
+  const todoItems = useFetchPosts("todos");
 
   const getCompletedColor = (completed) => {
     return completed ? "greenyellow" : "red";

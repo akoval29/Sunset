@@ -10,7 +10,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  flex: 1 1 45%;
 }
 .post__wrap::after {
   content: "";

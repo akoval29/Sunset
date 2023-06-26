@@ -1,25 +1,10 @@
-import React, { useEffect, useState } from "react";
-
-import { getInfo } from "../../shared/useAPI";
+import React from "react";
+import { useFetchPosts } from "../../shared/hooks";
 
 import "./userStyle.css";
 
 export const Users = () => {
-  const [userItems, setuserItems] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await getInfo("users");
-        if (response) {
-          setuserItems(response.data);
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchData();
-  }, []);
+  const userItems = useFetchPosts("users");
 
   return (
     <article className="app__main">

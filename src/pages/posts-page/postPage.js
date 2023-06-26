@@ -1,25 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { getInfo } from "../../shared/useAPI";
-
+import React from "react";
+import { useFetchPosts } from "../../shared/hooks";
 import "./postStyle.css";
 
 export const Posts = () => {
-  const [postItems, setPostItems] = useState([]);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await getInfo("posts");
-        if (response) {
-          setPostItems(response.data);
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchPosts();
-  }, []);
+  const postItems = useFetchPosts("posts");
 
   return (
     <article className="app__main">
