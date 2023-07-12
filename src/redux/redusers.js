@@ -1,9 +1,13 @@
-const PostsinitialState = {
+const initialState = {
   posts: [],
   postsLoadingStatus: "idle",
+  users: [],
+  usersLoadingStatus: "idle",
+  todos: [],
+  todosLoadingStatus: "idle",
 };
 
-export const postReducer = (state = PostsinitialState, action) => {
+export const postReducer = (state = initialState, action) => {
   switch (action.type) {
     case "POSTS_FETCHING":
       return {
@@ -30,6 +34,72 @@ export const postReducer = (state = PostsinitialState, action) => {
       return {
         ...state,
         // posts: state.posts.filter((item) => item.id !== action.payload),
+      };
+    default:
+      return state;
+  }
+};
+
+export const userReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "USERS_FETCHING":
+      return {
+        ...state,
+        usersLoadingStatus: "loading",
+      };
+    case "USERS_FETCHED":
+      return {
+        ...state,
+        users: action.payload,
+        usersLoadingStatus: "idle",
+      };
+    case "USERS_FETCHING_ERROR":
+      return {
+        ...state,
+        usersLoadingStatus: "error",
+      };
+    case "USERS_CREATED":
+      return {
+        ...state,
+        // user: [...state.user, action.payload],
+      };
+    case "USERS_DELETED":
+      return {
+        ...state,
+        // user: state.user.filter((item) => item.id !== action.payload),
+      };
+    default:
+      return state;
+  }
+};
+
+export const todoReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "TODOS_FETCHING":
+      return {
+        ...state,
+        todosLoadingStatus: "loading",
+      };
+    case "TODOS_FETCHED":
+      return {
+        ...state,
+        todos: action.payload,
+        todosLoadingStatus: "idle",
+      };
+    case "TODOS_FETCHING_ERROR":
+      return {
+        ...state,
+        todosLoadingStatus: "error",
+      };
+    case "TODOS_CREATED":
+      return {
+        ...state,
+        // todos: [...state.todos, action.payload],
+      };
+    case "TODOS_DELETED":
+      return {
+        ...state,
+        // todos: state.todos.filter((item) => item.id !== action.payload),
       };
     default:
       return state;

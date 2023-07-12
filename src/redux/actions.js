@@ -17,40 +17,40 @@ export const postsFetchingError = () => {
   };
 };
 
-// export const todosFetching = () => {
-//   return {
-//     type: "TODOS_FETCHING",
-//   };
-// };
+export const todosFetching = () => {
+  return {
+    type: "TODOS_FETCHING",
+  };
+};
 
-// export const todosFetched = () => {
-//   return {
-//     type: "TODOS_FETCHED",
-//     payload: todos,
-//   };
-// };
+export const todosFetched = (todos) => {
+  return {
+    type: "TODOS_FETCHED",
+    payload: todos,
+  };
+};
 
-// export const todosFetchingError = () => {
-//   return {
-//     type: "TODOS_FETCHING_ERROR",
-//   };
-// };
+export const todosFetchingError = () => {
+  return {
+    type: "TODOS_FETCHING_ERROR",
+  };
+};
 
-// export const usersFetching = () => {
-//   return {
-//     type: "USERS_FETCHING",
-//   };
-// };
+export const usersFetching = () => {
+  return {
+    type: "USERS_FETCHING",
+  };
+};
 
-// export const usersFetched = () => {
-//   return {
-//     type: "USERS_FETCHED",
-//     payload: users,
-//   };
-// };
+export const usersFetched = (users) => {
+  return {
+    type: "USERS_FETCHED",
+    payload: users,
+  };
+};
 
-// export const usersFetchingError = () => {
-//   return {
-//     type: "USERS_FETCHING_ERROR",
-//   };
-// };
+export const usersFetchingError = () => {
+  return {
+    type: "USERS_FETCHING_ERROR",
+  };
+};

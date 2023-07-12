@@ -1,10 +1,34 @@
-import React from "react";
-import { useFetchPosts } from "../../shared/hooks";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useHttp } from "../../shared/useAPI";
+
+import {
+  todosFetching,
+  todosFetched,
+  todosFetchingError,
+} from "../../redux/actions";
 
 import "./todoStyle.css";
 
 export const Todos = () => {
-  const todoItems = useFetchPosts("todos");
+  const { todos, todosLoadingStatus } = useSelector((state) => state.todos);
+  const dispatch = useDispatch();
+  const { request } = useHttp();
+
+  useEffect(() => {
+    dispatch(todosFetching());
+    request("https://jsonplaceholder.typicode.com/todos")
+      .then((data) => dispatch(todosFetched(data)))
+      .catch(() => dispatch(todosFetchingError()));
+
+    // eslint-disable-next-line
+  }, []);
+
+  if (todosLoadingStatus === "loading") {
+    return <h5 className="">Loading ...</h5>;
+  } else if (todosFetchingError === "error") {
+    return <h5 className="">Помилка завантаження</h5>;
+  }
 
   const getCompletedColor = (completed) => {
     return completed ? "greenyellow" : "red";
@@ -13,7 +37,7 @@ export const Todos = () => {
   return (
     <article className="app__main">
       <h3 className="app__main-title">Todos</h3>
-      {todoItems.map((item) => (
+      {todos.map((item) => (
         <div className="todo" key={item.id}>
           <div className="todo__wrap">
             <p className="todo__userId">User № {item.userId}</p>
