@@ -9,8 +9,8 @@ import cityImage from "../../assets/city.png";
 
 import { Main } from "../main-page/mainPage";
 import { Posts } from "../posts-page/postPage";
-import { Todos } from "../todos-page/todoPage";
-import { Users } from "../users-page/userPage";
+// import { Todos } from "../todos-page/todoPage";
+// import { Users } from "../users-page/userPage";
 
 import "./app.css";
 
@@ -36,7 +36,7 @@ export const App = () => {
               </NavLink>
             </li>
 
-            <li className="app__nav-li">
+            {/* <li className="app__nav-li">
               <NavLink className="app__nav-link" to="/todos">
                 Todos<span className="app__span"></span>
               </NavLink>
@@ -46,14 +46,14 @@ export const App = () => {
               <NavLink className="app__nav-link" to="/users">
                 Users<span className="app__span"></span>
               </NavLink>
-            </li>
+            </li> */}
           </ul>
 
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/posts" element={<Posts />} />
-            <Route path="/todos" element={<Todos />} />
-            <Route path="/users" element={<Users />} />
+            {/* <Route path="/todos" element={<Todos />} />
+            <Route path="/users" element={<Users />} /> */}
           </Routes>
 
           <aside className="app__links">
