@@ -3,7 +3,6 @@ import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 
 import { App } from "./pages/app/App";
-
 import store from "../src/redux/store";
 
 const root = document.getElementById("app");

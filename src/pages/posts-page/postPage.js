@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHttp } from "../../shared/useAPI";
 
 import { Add } from "../../features/add/add";
-// import { ScrollTo } from "../../features/scroll/pageScroll";
+import { ScrollTo } from "../../features/scroll/pageScroll";
 import { Spinner } from "../../features/loading/spinner";
 
 import {
@@ -34,16 +34,6 @@ export const Posts = () => {
     return <h5 className="">Помилка завантаження</h5>;
   }
 
-  // scrolling
-  // const handleScrollTo = () => {
-  //   scrollTo();
-  // };
-
-  //newPost
-  // const newPost = () => {
-  //   console.log(`newPost btn +`);
-  // };
-
   return (
     <article className="app__main">
       <h3 className="app__main-title">Posts</h3>
@@ -59,7 +49,10 @@ export const Posts = () => {
       ))}
 
       <Add />
-      {/* <ScrollTo /> */}
+      <ScrollTo />
+      {/* <div className="scroll" onClick={ScrollTo}>
+        <span className="scroll__arrow scroll__arrowDown"></span>
+      </div> */}
     </article>
   );
 };
