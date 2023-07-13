@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHttp } from "../../shared/useAPI";
 
-import { scrollTo } from "../../features/scroll/pageScroll";
-import "../../features/scroll/scrollStyle.css";
+import { Add } from "../../features/add/add";
+// import { ScrollTo } from "../../features/scroll/pageScroll";
+import { Spinner } from "../../features/loading/spinner";
 
 import {
   postsFetching,
@@ -28,20 +29,20 @@ export const Posts = () => {
   }, []);
 
   if (postsLoadingStatus === "loading") {
-    return <h5 className="">Loading ...</h5>;
+    return <Spinner />;
   } else if (postsFetchingError === "error") {
     return <h5 className="">Помилка завантаження</h5>;
   }
 
   // scrolling
-  const handleScrollTo = () => {
-    scrollTo();
-  };
+  // const handleScrollTo = () => {
+  //   scrollTo();
+  // };
 
   //newPost
-  const newPost = () => {
-    console.log(`newPost btn +`);
-  };
+  // const newPost = () => {
+  //   console.log(`newPost btn +`);
+  // };
 
   return (
     <article className="app__main">
@@ -57,18 +58,8 @@ export const Posts = () => {
         </div>
       ))}
 
-      <div className="add" onClick={newPost}>
-        <div className="add__cross-wrap">
-          <span className="add__cross">✕</span>
-        </div>
-        <div className="add__message-wrap">
-          <div className="add__message">Add new post</div>
-        </div>
-      </div>
-
-      <div className="scroll" onClick={handleScrollTo}>
-        <span className="scroll__arrow scroll__arrowDown"></span>
-      </div>
+      <Add />
+      {/* <ScrollTo /> */}
     </article>
   );
 };

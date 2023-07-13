@@ -1,4 +1,6 @@
-export function scrollTo() {
+import "./scrollStyle.css";
+
+export const ScrollTo = () => {
   // Навігація по скролу
   const container = document.querySelector(".app__main");
   const arrow = document.querySelector(".scroll__arrow");
@@ -35,4 +37,12 @@ export function scrollTo() {
   };
 
   animateScroll();
-}
+
+  // render
+
+  return (
+    <div className="scroll" onClick={ScrollTo}>
+      <span className="scroll__arrow scroll__arrowDown"></span>
+    </div>
+  );
+};

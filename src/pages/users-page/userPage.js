@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHttp } from "../../shared/useAPI";
 
+import { Spinner } from "../../features/loading/spinner";
+
 import {
   usersFetching,
   usersFetched,
@@ -25,7 +27,7 @@ export const Users = () => {
   }, []);
 
   if (usersLoadingStatus === "loading") {
-    return <h5 className="">Loading ...</h5>;
+    return <Spinner />;
   } else if (usersFetchingError === "error") {
     return <h5 className="">Помилка завантаження</h5>;
   }

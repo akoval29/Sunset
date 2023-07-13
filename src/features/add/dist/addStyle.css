@@ -1,0 +1,66 @@
+.add {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  left: 23%;
+  bottom: 10%;
+}
+.add__cross-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(165, 42, 42, 0.4);
+}
+.add__cross-wrap:hover {
+  box-shadow: 0px 0px 6px rgba(165, 42, 42, 0.7);
+  cursor: pointer;
+}
+.add__cross-wrap:hover ~ .add__message-wrap {
+  display: block;
+}
+.add__cross-wrap:active {
+  box-shadow: 0px 0px 12px rgba(165, 42, 42, 0.9);
+}
+.add__cross {
+  color: white;
+  transform: rotate(45deg);
+  font-size: 25px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+.add__cross:hover {
+  transform: rotate(135deg);
+}
+.add__message-wrap {
+  display: none;
+  position: absolute;
+  height: 27px;
+  width: 150px;
+  left: 97%;
+  color: white;
+  background-color: rgba(165, 42, 42, 0.4);
+  box-shadow: 0px -3px 3px rgba(165, 42, 42, 0.4), 0px 3px 3px rgba(165, 42, 42, 0.4);
+}
+.add__message-wrap:hover {
+  cursor: pointer;
+  display: block;
+}
+.add__message-wrap:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent transparent brown;
+  border-width: 15px 0 15px 10px;
+  opacity: 0.4;
+}
+.add__message {
+  margin: 0 5px;
+}
