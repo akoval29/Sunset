@@ -7,7 +7,6 @@ export const ScrollTo = () => {
   const handleClick = () => {
     const container = document.querySelector(".app__main");
     const containerHeight = container.scrollHeight;
-
     setIsScrolled(!isScrolled);
 
     container.scrollTo({
@@ -27,10 +26,14 @@ export const ScrollTo = () => {
   );
 };
 
-export default ScrollTo;
+//  ------------------- HTML ВАРІАНТ -----------------------------
+//  ---------------------- ВЕРСТКА -------------------------------
+//  <div className="scroll" onClick={ScrollTo}>
+//   <span className="scroll__arrow scroll__arrowDown"></span>
+// </div>
 
+// ------------------------  КОД  --------------------------------
 // import "./scrollStyle.css";
-
 // export const ScrollTo = () => {
 //   // Навігація по скролу
 //   const container = document.querySelector(".app__main");

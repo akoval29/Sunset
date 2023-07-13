@@ -47,12 +47,8 @@ export const Posts = () => {
           <p className="post__body">{item.body}</p>
         </div>
       ))}
-
       <Add />
       <ScrollTo />
-      {/* <div className="scroll" onClick={ScrollTo}>
-        <span className="scroll__arrow scroll__arrowDown"></span>
-      </div> */}
     </article>
   );
 };
