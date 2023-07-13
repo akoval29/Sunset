@@ -59,7 +59,7 @@ export const Todos = () => {
           </div>
         </div>
       ))}
-      <Add />
+      <Add item="todo" />
       <ScrollTo />
     </article>
   );

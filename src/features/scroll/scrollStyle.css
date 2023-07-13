@@ -11,6 +11,11 @@
   right: 23%;
   bottom: 10%;
 }
+@media (max-width: 730px) {
+  .scroll {
+    right: 5%;
+  }
+}
 .scroll:hover {
   box-shadow: 0px 0px 6px rgba(165, 42, 42, 0.7);
   cursor: pointer;

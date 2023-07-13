@@ -47,7 +47,7 @@ export const Posts = () => {
           <p className="post__body">{item.body}</p>
         </div>
       ))}
-      <Add />
+      <Add item="post" />
       <ScrollTo />
     </article>
   );

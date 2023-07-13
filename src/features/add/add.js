@@ -1,6 +1,7 @@
+import React from "react";
 import "./addStyle.css";
 
-export const Add = () => {
+export const Add = ({ item }) => {
   const newPost = () => {
     console.log(`newPost btn +`);
   };
@@ -11,7 +12,7 @@ export const Add = () => {
         <span className="add__cross">✕</span>
       </div>
       <div className="add__message-wrap">
-        <div className="add__message">Add new post</div>
+        <div className="add__message">Add new {item}</div>
       </div>
     </div>
   );

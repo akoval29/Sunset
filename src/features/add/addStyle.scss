@@ -7,6 +7,9 @@ $theme-color: brown;
   position: fixed;
   left: 23%;
   bottom: 10%;
+  @media (max-width: 730px) {
+    left: 5%;
+  }
 
   &__cross-wrap {
     display: flex;

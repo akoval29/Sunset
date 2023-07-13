@@ -20,8 +20,7 @@
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: -1;
 }
 .app__footer, .app__header {
@@ -140,7 +139,7 @@
   max-width: 60%;
   line-height: 25px;
   overflow-y: auto;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 2 * $h);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.5));
   padding: 15px 35px;
 }
@@ -148,7 +147,7 @@
   .app__main {
     padding: 15px;
     max-width: 100%;
-    height: calc(100vh - 100px - 100px);
+    height: calc($section-h - (2 * $h));
   }
 }
 .app__paragraph {
@@ -203,4 +202,4 @@
   .app__link-icon {
     display: block;
   }
-}/*# sourceMappingURL=app.css.map */
+}

@@ -22,7 +22,6 @@ export const Users = () => {
     request("https://jsonplaceholder.typicode.com/users")
       .then((data) => dispatch(usersFetched(data)))
       .catch(() => dispatch(usersFetchingError()));
-
     // eslint-disable-next-line
   }, []);
 
@@ -45,7 +44,7 @@ export const Users = () => {
             <p className="user__userId">
               {item.id}. {item.name}
             </p>
-            <p className="user__userId">{item.username}</p>
+            <p className="user__userName">{item.username}</p>
           </div>
         </div>
       ))}

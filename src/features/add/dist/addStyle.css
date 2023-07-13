@@ -6,6 +6,11 @@
   left: 23%;
   bottom: 10%;
 }
+@media (max-width: 730px) {
+  .add {
+    left: 5%;
+  }
+}
 .add__cross-wrap {
   display: flex;
   justify-content: center;
