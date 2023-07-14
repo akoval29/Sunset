@@ -76,3 +76,50 @@ $theme-color: brown;
     margin: 0 5px;
   }
 }
+
+.newEntry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  min-height: 300px;
+  position: fixed;
+  left: 30%;
+  bottom: 10%;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  &--show {
+    opacity: 1;
+  }
+
+  &__textarea {
+    border: 1px solid rgb(129, 127, 127);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 7px;
+    width: 100%;
+    box-shadow: 0 0 5px #cccccc;
+    transition: box-shadow 0.3s ease;
+    &::placeholder {
+      color: #999;
+      font-style: italic;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px $theme-color;
+      border: 0;
+    }
+  }
+
+  &__btn {
+    background-color: $theme-color;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    height: 30px;
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -71,3 +71,48 @@
 .add__message {
   margin: 0 5px;
 }
+
+.newEntry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  min-height: 300px;
+  position: fixed;
+  left: 30%;
+  bottom: 10%;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.newEntry--show {
+  opacity: 1;
+}
+.newEntry__textarea {
+  border: 1px solid #817f7f;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 7px;
+  width: 100%;
+  box-shadow: 0 0 5px #cccccc;
+  transition: box-shadow 0.3s ease;
+}
+.newEntry__textarea::placeholder {
+  color: #999;
+  font-style: italic;
+}
+.newEntry__textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px brown;
+  border: 0;
+}
+.newEntry__btn {
+  background-color: brown;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  height: 30px;
+  width: 100%;
+}
+.newEntry__btn:hover {
+  cursor: pointer;
+}

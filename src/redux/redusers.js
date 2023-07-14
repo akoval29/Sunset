@@ -61,12 +61,12 @@ export const userReducer = (state = initialState, action) => {
     case "USERS_CREATED":
       return {
         ...state,
-        // user: [...state.user, action.payload],
+        // users: [...state.users, action.payload],
       };
     case "USERS_DELETED":
       return {
         ...state,
-        // user: state.user.filter((item) => item.id !== action.payload),
+        // users: state.users.filter((item) => item.id !== action.payload),
       };
     default:
       return state;
