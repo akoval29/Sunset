@@ -12,7 +12,7 @@ import { Posts } from "../posts-page/postPage";
 import { Todos } from "../todos-page/todoPage";
 import { Users } from "../users-page/userPage";
 
-import "./app.css";
+import "./app.scss";
 
 export const App = () => {
   return (

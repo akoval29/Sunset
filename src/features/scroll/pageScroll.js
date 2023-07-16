@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./scrollStyle.css";
+import "./scrollStyle.scss";
 
 export const ScrollTo = () => {
   const [isScrolled, setIsScrolled] = useState(false);

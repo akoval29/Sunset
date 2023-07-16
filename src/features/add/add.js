@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./addStyle.css";
+import "./addStyle.scss";
 
 export const Add = ({ item }) => {
   const [showNewPost, setShowNewPost] = useState(false);
@@ -9,7 +9,7 @@ export const Add = ({ item }) => {
   }
 
   return (
-    <div>
+    <article>
       {showNewPost ? (
         <div className="newEntry newEntry--show">
           <textarea
@@ -18,8 +18,11 @@ export const Add = ({ item }) => {
             placeholder={`Write new ${item}`}
           ></textarea>
           <button className="newEntry__btn" onClick={onShow}>
-            Create
+            Post
           </button>
+          <div className="newEntry__cross-wrap" onClick={onShow}>
+            <span className="newEntry__cross">✕</span>
+          </div>
         </div>
       ) : (
         <div className="add" onClick={onShow}>
@@ -31,6 +34,6 @@ export const Add = ({ item }) => {
           </div>
         </div>
       )}
-    </div>
+    </article>
   );
 };

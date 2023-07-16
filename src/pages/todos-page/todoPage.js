@@ -12,7 +12,7 @@ import {
   todosFetchingError,
 } from "../../redux/actions";
 
-import "./todoStyle.css";
+import "./todoStyle.scss";
 
 export const Todos = () => {
   const { todos, todosLoadingStatus } = useSelector((state) => state.todos);

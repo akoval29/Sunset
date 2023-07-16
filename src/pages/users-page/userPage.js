@@ -10,7 +10,7 @@ import {
   usersFetchingError,
 } from "../../redux/actions";
 
-import "./userStyle.css";
+import "./userStyle.scss";
 
 export const Users = () => {
   const { users, usersLoadingStatus } = useSelector((state) => state.users);

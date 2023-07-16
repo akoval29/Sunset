@@ -1,4 +1,4 @@
-$theme-color: brown;
+@use "../../shared/normalize.scss" as *;
 
 .add {
   display: flex;
@@ -78,46 +78,72 @@ $theme-color: brown;
 }
 
 .newEntry {
+  position: fixed;
+  left: 50%;
+  bottom: 50px;
+  transform: translate(-50%, -0%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 400px;
-  min-height: 300px;
-  position: fixed;
-  left: 30%;
-  bottom: 10%;
+  width: 300px;
+  min-height: 50px;
   transition: opacity 0.3s ease;
+
   opacity: 0;
+  @media (max-width: 730px) {
+    bottom: 100px;
+  }
+
   &--show {
     opacity: 1;
   }
 
   &__textarea {
-    border: 1px solid rgb(129, 127, 127);
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    padding: 7px;
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 15px;
+    height: 150px;
     width: 100%;
+    outline: none;
     box-shadow: 0 0 5px #cccccc;
+    opacity: 0.9;
     transition: box-shadow 0.3s ease;
     &::placeholder {
       color: #999;
       font-style: italic;
     }
     &:focus {
-      outline: none;
       box-shadow: 0 0 5px $theme-color;
-      border: 0;
+      border: 1px solid $theme-color;
     }
   }
 
   &__btn {
     background-color: $theme-color;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
     height: 30px;
     width: 100%;
+    color: white;
+    opacity: 0.9;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__cross-wrap {
+    position: fixed;
+    right: 1%;
+    top: 1%;
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &:hover {
       cursor: pointer;
     }

@@ -12,7 +12,7 @@ import {
   postsFetchingError,
 } from "../../redux/actions";
 
-import "./postStyle.css";
+import "./postStyle.scss";
 
 export const Posts = () => {
   const { posts, postsLoadingStatus } = useSelector((state) => state.posts);
