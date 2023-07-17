@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHttp } from "../../shared/useAPI";
 
@@ -10,6 +10,8 @@ import {
   postsFetching,
   postsFetched,
   postsFetchingError,
+  postsCreated,
+  postsDeleted,
 } from "../../redux/actions";
 
 import "./postStyle.scss";
@@ -27,6 +29,17 @@ export const Posts = () => {
 
     // eslint-disable-next-line
   }, []);
+
+  const onDelete = useCallback(
+    (id) => {
+      request(`https://jsonplaceholder.typicode.com/posts/${id}`, "DELETE")
+        .then((data) => console.log(data, "Deleted"))
+        .then(dispatch(postsDeleted(id)))
+        .catch((err) => console.log(err));
+      // eslint-disable-next-line
+    },
+    [request]
+  );
 
   if (postsLoadingStatus === "loading") {
     return <Spinner />;

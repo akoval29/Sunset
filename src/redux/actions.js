@@ -17,6 +17,22 @@ export const postsFetchingError = () => {
   };
 };
 
+export const postsCreated = (post) => {
+  return {
+    type: "POSTS_CREATED",
+    payload: post,
+  };
+};
+
+export const postsDeleted = (id) => {
+  return {
+    type: "POSTS_DELETED",
+    payload: id,
+  };
+};
+
+// ---------------------------------------------------  //
+
 export const todosFetching = () => {
   return {
     type: "TODOS_FETCHING",
@@ -35,6 +51,8 @@ export const todosFetchingError = () => {
     type: "TODOS_FETCHING_ERROR",
   };
 };
+
+// ---------------------------------------------------  //
 
 export const usersFetching = () => {
   return {

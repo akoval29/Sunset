@@ -28,12 +28,12 @@ export const postReducer = (state = initialState, action) => {
     case "POSTS_CREATED":
       return {
         ...state,
-        // posts: [...state.posts, action.payload],
+        posts: [...state.posts, action.payload],
       };
     case "POSTS_DELETED":
       return {
         ...state,
-        // posts: state.posts.filter((item) => item.id !== action.payload),
+        posts: state.posts.filter((item) => item.id !== action.payload),
       };
     default:
       return state;

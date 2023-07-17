@@ -69,7 +69,7 @@ export const App = () => {
               youtube
             </a>
             <a className="app__text-link" href="https://www.instagram.com/">
-              insagram
+              instagram
             </a>
 
             <a className="app__img-link" href="https://www.facebook.com/">
