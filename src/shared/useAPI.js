@@ -28,20 +28,6 @@ export const useHttp = () => {
   return { request };
 };
 
-// export async function getInfo(info) {
-//   try {
-//     const response = await axios.get(
-//       `https://jsonplaceholder.typicode.com/${info}`
-//     );
-//     console.log(`new request: ${info}`);
-//     console.log(response.data);
-//     return response;
-//   } catch (error) {
-//     console.error(error);
-//     throw error;
-//   }
-// }
-
 // Posts: https://jsonplaceholder.typicode.com/posts
 
 // Todo: https://jsonplaceholder.typicode.com/todos

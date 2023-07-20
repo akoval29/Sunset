@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHttp } from "../../shared/useAPI";
 
-import { Add } from "../../features/add/add";
 import { ScrollTo } from "../../features/scroll/pageScroll";
 import { Spinner } from "../../features/loading/spinner";
 
@@ -59,7 +58,6 @@ export const Todos = () => {
           </div>
         </div>
       ))}
-      <Add item="todo" />
       <ScrollTo />
     </article>
   );
