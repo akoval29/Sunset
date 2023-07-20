@@ -19,10 +19,13 @@ export const Posts = () => {
   const { request } = useHttp();
 
   useEffect(() => {
-    dispatch(postsFetching());
-    request("https://jsonplaceholder.typicode.com/posts")
-      .then((data) => dispatch(postsFetched(data)))
-      .catch(() => dispatch(postsFetchingError()));
+    const fetchPosts = async () => {
+      dispatch(postsFetching());
+      const data = await request("https://jsonplaceholder.typicode.com/posts");
+      dispatch(postsFetched(data));
+    };
+
+    fetchPosts();
 
     // eslint-disable-next-line
   }, []);

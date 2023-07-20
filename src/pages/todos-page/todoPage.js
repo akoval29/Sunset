@@ -19,10 +19,13 @@ export const Todos = () => {
   const { request } = useHttp();
 
   useEffect(() => {
-    dispatch(todosFetching());
-    request("https://jsonplaceholder.typicode.com/todos")
-      .then((data) => dispatch(todosFetched(data)))
-      .catch(() => dispatch(todosFetchingError()));
+    const fetchTodosData = async () => {
+      dispatch(todosFetching());
+      const data = await request("https://jsonplaceholder.typicode.com/todos");
+      dispatch(todosFetched(data));
+    };
+
+    fetchTodosData();
 
     // eslint-disable-next-line
   }, []);

@@ -18,10 +18,14 @@ export const Users = () => {
   const { request } = useHttp();
 
   useEffect(() => {
-    dispatch(usersFetching());
-    request("https://jsonplaceholder.typicode.com/users")
-      .then((data) => dispatch(usersFetched(data)))
-      .catch(() => dispatch(usersFetchingError()));
+    const fetchUsersData = async () => {
+      dispatch(usersFetching());
+      const data = await request("https://jsonplaceholder.typicode.com/users");
+      dispatch(usersFetched(data));
+    };
+
+    fetchUsersData();
+
     // eslint-disable-next-line
   }, []);
 
