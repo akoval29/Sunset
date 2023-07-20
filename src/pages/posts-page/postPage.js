@@ -24,9 +24,7 @@ export const Posts = () => {
       const data = await request("https://jsonplaceholder.typicode.com/posts");
       dispatch(postsFetched(data));
     };
-
     fetchPosts();
-
     // eslint-disable-next-line
   }, []);
 

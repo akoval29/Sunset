@@ -23,9 +23,7 @@ export const Users = () => {
       const data = await request("https://jsonplaceholder.typicode.com/users");
       dispatch(usersFetched(data));
     };
-
     fetchUsersData();
-
     // eslint-disable-next-line
   }, []);
 

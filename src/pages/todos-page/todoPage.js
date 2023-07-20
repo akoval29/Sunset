@@ -24,9 +24,7 @@ export const Todos = () => {
       const data = await request("https://jsonplaceholder.typicode.com/todos");
       dispatch(todosFetched(data));
     };
-
     fetchTodosData();
-
     // eslint-disable-next-line
   }, []);
 

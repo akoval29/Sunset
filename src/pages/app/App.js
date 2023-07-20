@@ -19,7 +19,7 @@ export const App = () => {
     <Router>
       <article className="app">
         <img src={cityImage} className="app__bg" alt="bg" />
-        <header className="app__header">Header</header>
+        <header className="app__header">New Company</header>
         <section className="app__container">
           <ul className="app__nav">
             <h3 className="app__nav-title">Navigation</h3>
