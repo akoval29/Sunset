@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { Spinner } from "../../features/loading/spinner";
+import { Spinner } from "../../common/loading/spinner";
 
 import {
   usersFetching,
