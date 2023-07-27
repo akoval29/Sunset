@@ -48,9 +48,6 @@ export const allTodosSelector = createSelector(selectAll, (todos) => todos);
 const { actions, reducer } = todosSlice;
 export default reducer;
 
-// const { actions, todoReducer } = todosSlice;
-// export default todoReducer;
-
 export const {
   todosFetching,
   todosFetched,

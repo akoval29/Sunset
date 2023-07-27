@@ -4,15 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ScrollTo } from "../../common/scroll/pageScroll";
 import { Spinner } from "../../common/loading/spinner";
 
-import {
-  postsFetching,
-  postsFetched,
-  postsFetchingError,
-  postsCreated,
-  postsDeleted,
-  fetchPosts,
-  allPostsSelector,
-} from "./postSlice.js";
+import { fetchPosts, allPostsSelector } from "./postSlice.js";
 
 import "./postStyle.scss";
 

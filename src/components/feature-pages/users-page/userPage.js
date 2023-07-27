@@ -3,15 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { Spinner } from "../../common/loading/spinner";
 
-import {
-  usersFetching,
-  usersFetched,
-  usersFetchingError,
-  usersCreated,
-  usersDeleted,
-  fetchUsers,
-  allUsersSelector,
-} from "./userSlice.js";
+import { fetchUsers, allUsersSelector } from "./userSlice.js";
 
 import "./userStyle.scss";
 
