@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHttp } from "../../shared/useAPI";
 
 import { Spinner } from "../../features/loading/spinner";
 
@@ -8,28 +7,26 @@ import {
   usersFetching,
   usersFetched,
   usersFetchingError,
-} from "../../redux/actions";
+  usersCreated,
+  usersDeleted,
+  fetchUsers,
+  allUsersSelector,
+} from "./userSlice.js";
 
 import "./userStyle.scss";
 
 export const Users = () => {
-  const { users, usersLoadingStatus } = useSelector((state) => state.users);
+  const allUsers = useSelector(allUsersSelector);
+  const { usersLoadingStatus } = useSelector((state) => state.users);
   const dispatch = useDispatch();
-  const { request } = useHttp();
 
   useEffect(() => {
-    const fetchUsersData = async () => {
-      dispatch(usersFetching());
-      const data = await request("https://jsonplaceholder.typicode.com/users");
-      dispatch(usersFetched(data));
-    };
-    fetchUsersData();
-    // eslint-disable-next-line
-  }, []);
+    dispatch(fetchUsers());
+  }, [dispatch]);
 
   if (usersLoadingStatus === "loading") {
     return <Spinner />;
-  } else if (usersFetchingError === "error") {
+  } else if (usersLoadingStatus === "error") {
     return <h5 className="">Помилка завантаження</h5>;
   }
 
@@ -40,7 +37,7 @@ export const Users = () => {
         <p className="user__userId">Name </p>
         <p className="user__userId">User name</p>
       </div>
-      {users.map((item) => (
+      {allUsers.map((item) => (
         <div className="user" key={item.id}>
           <div className="user__wrap">
             <p className="user__userId">

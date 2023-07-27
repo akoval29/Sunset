@@ -1,17 +1,29 @@
-// store.js
 import { configureStore } from "@reduxjs/toolkit";
-import { combineReducers } from "redux";
 
-import { postReducer } from "./redusers";
-import { todoReducer } from "./redusers";
-import { userReducer } from "./redusers";
+import posts from "../pages/posts-page/postSlice";
+import todos from "../pages/todos-page/todoSlice";
+import users from "../pages/users-page/userSlice";
 
-const rootReducer = combineReducers({
-  posts: postReducer,
-  todos: todoReducer,
-  users: userReducer,
+const store = configureStore({
+  reducer: { posts, todos, users },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+  devTools: process.env.NODE_ENV !== "production",
 });
 
-const store = configureStore({ reducer: rootReducer });
-
 export default store;
+
+// const stringMiddleWare = () => (next) => (action) => {
+//   if (typeof action === "string") {
+//     return next({
+//       type: action,
+//     });
+//   }
+//   return next(action);
+// };
+
+// const store = configureStore({
+//   reducer: rootReducer,
+//   middleware: (getDefaultMiddleware) =>
+//     getDefaultMiddleware().concat(stringMiddleWare),
+//   devTools: process.env.NODE_ENV !== "production",
+// });

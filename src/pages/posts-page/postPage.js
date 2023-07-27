@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHttp } from "../../shared/useAPI";
 
 import { ScrollTo } from "../../features/scroll/pageScroll";
 import { Spinner } from "../../features/loading/spinner";
@@ -9,35 +8,33 @@ import {
   postsFetching,
   postsFetched,
   postsFetchingError,
-} from "../../redux/actions";
+  postsCreated,
+  postsDeleted,
+  fetchPosts,
+  allPostsSelector,
+} from "./postSlice.js";
 
 import "./postStyle.scss";
 
 export const Posts = () => {
-  const { posts, postsLoadingStatus } = useSelector((state) => state.posts);
+  const allPosts = useSelector(allPostsSelector);
+  const { postsLoadingStatus } = useSelector((state) => state.posts);
   const dispatch = useDispatch();
-  const { request } = useHttp();
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      dispatch(postsFetching());
-      const data = await request("https://jsonplaceholder.typicode.com/posts");
-      dispatch(postsFetched(data));
-    };
-    fetchPosts();
-    // eslint-disable-next-line
-  }, []);
+    dispatch(fetchPosts());
+  }, [dispatch]);
 
   if (postsLoadingStatus === "loading") {
     return <Spinner />;
-  } else if (postsFetchingError === "error") {
-    return <h5 className="">Помилка завантаження</h5>;
+  } else if (postsLoadingStatus === "error") {
+    return <h5 className="text-center mt-5">Помилка завантаження</h5>;
   }
 
   return (
     <article className="app__main">
       <h3 className="app__main-title">Posts</h3>
-      {posts.map((item) => (
+      {allPosts.map((item) => (
         <div className="post" key={item.id}>
           <div className="post__wrap">
             <p className="post__userId">User № {item.userId}</p>

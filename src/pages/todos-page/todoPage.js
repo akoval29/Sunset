@@ -1,36 +1,25 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHttp } from "../../shared/useAPI";
 
 import { ScrollTo } from "../../features/scroll/pageScroll";
 import { Spinner } from "../../features/loading/spinner";
 
-import {
-  todosFetching,
-  todosFetched,
-  todosFetchingError,
-} from "../../redux/actions";
+import { fetchTodos, allTodosSelector } from "./todoSlice.js";
 
 import "./todoStyle.scss";
 
 export const Todos = () => {
-  const { todos, todosLoadingStatus } = useSelector((state) => state.todos);
+  const allTodos = useSelector(allTodosSelector);
+  const { todosLoadingStatus } = useSelector((state) => state.todos);
   const dispatch = useDispatch();
-  const { request } = useHttp();
 
   useEffect(() => {
-    const fetchTodosData = async () => {
-      dispatch(todosFetching());
-      const data = await request("https://jsonplaceholder.typicode.com/todos");
-      dispatch(todosFetched(data));
-    };
-    fetchTodosData();
-    // eslint-disable-next-line
-  }, []);
+    dispatch(fetchTodos());
+  }, [dispatch]);
 
   if (todosLoadingStatus === "loading") {
     return <Spinner />;
-  } else if (todosFetchingError === "error") {
+  } else if (todosLoadingStatus === "error") {
     return <h5 className="">Помилка завантаження</h5>;
   }
 
@@ -41,7 +30,7 @@ export const Todos = () => {
   return (
     <article className="app__main">
       <h3 className="app__main-title">Todos</h3>
-      {todos.map((item) => (
+      {allTodos.map((item) => (
         <div className="todo" key={item.id}>
           <div className="todo__wrap">
             <p className="todo__userId">User № {item.userId}</p>
