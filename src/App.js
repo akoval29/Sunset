@@ -5,21 +5,21 @@ import {
   NavLink,
 } from "react-router-dom";
 
-import cityImage from "../../img/city.png";
+import cityImage from "./lib/city.png";
 
-import { Main } from "../app-main/MainList";
-import { Posts } from "../app-posts/PostList";
-import { Todos } from "../app-todos/TodoList";
-import { Users } from "../app-users/UserList";
+import { Main } from "./components/feature-pages/main-page/mainPage";
+import { Posts } from "./components/feature-pages/posts-page/postPage";
+import { Todos } from "./components/feature-pages/todos-page/todoPage";
+import { Users } from "./components/feature-pages/users-page/userPage";
 
-import "./app.css";
+import "./style/app.scss";
 
 export const App = () => {
   return (
     <Router>
       <article className="app">
         <img src={cityImage} className="app__bg" alt="bg" />
-        <header className="app__header">Header</header>
+        <header className="app__header">New Company</header>
         <section className="app__container">
           <ul className="app__nav">
             <h3 className="app__nav-title">Navigation</h3>
@@ -37,14 +37,14 @@ export const App = () => {
             </li>
 
             <li className="app__nav-li">
-              <NavLink className="app__nav-link" to="/users">
-                Users<span className="app__span"></span>
+              <NavLink className="app__nav-link" to="/todos">
+                Todos<span className="app__span"></span>
               </NavLink>
             </li>
 
             <li className="app__nav-li">
-              <NavLink className="app__nav-link" to="/todos">
-                Todos<span className="app__span"></span>
+              <NavLink className="app__nav-link" to="/users">
+                Users<span className="app__span"></span>
               </NavLink>
             </li>
           </ul>
@@ -69,7 +69,7 @@ export const App = () => {
               youtube
             </a>
             <a className="app__text-link" href="https://www.instagram.com/">
-              insagram
+              instagram
             </a>
 
             <a className="app__img-link" href="https://www.facebook.com/">

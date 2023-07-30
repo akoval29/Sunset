@@ -1,14 +1,14 @@
+@use "./normalize.scss" as *;
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("./normalize.css");
 
 $h: 50px;
-$section-h: calc(100% - (#{$h * 2}));
+$section-h: calc(100vh - 2 * $h);
 $fz: 26px;
 $theme-font-color: white;
 $theme-font-color2: black;
-$theme-color: brown;
 
 .app {
   display: flex;
@@ -151,9 +151,12 @@ $theme-color: brown;
   }
 
   &__main {
+    position: relative;
     flex-basis: 100%;
     max-width: 60%;
     line-height: 25px;
+    overflow-y: auto;
+    height: $section-h;
     background: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.5),
@@ -165,8 +168,8 @@ $theme-color: brown;
     padding: 15px 35px;
     @media (max-width: 730px) {
       padding: 15px;
-      height: $section-h;
       max-width: 100%;
+      height: calc($section-h - (2 * $h));
     }
   }
 

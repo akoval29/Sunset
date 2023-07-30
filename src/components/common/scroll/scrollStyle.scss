@@ -1,0 +1,66 @@
+@use "../../../style/normalize.scss" as *;
+
+.scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba($theme-color, 0.4);
+  position: fixed;
+  right: 23%;
+  bottom: 10%;
+  @media (max-width: 730px) {
+    right: 5%;
+  }
+  &:hover {
+    box-shadow: 0px 0px 6px rgba($theme-color, 0.7);
+    cursor: pointer;
+  }
+  &:active {
+    box-shadow: 0px 0px 12px rgba($theme-color, 0.9);
+  }
+
+  &__arrow {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-left: none;
+    border-top: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+    transform: rotate(45deg);
+    transition: transform 1s ease;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-left: none;
+      border-top: none;
+      border-right: 1px #fff solid;
+      border-bottom: 1px #fff solid;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-name: arrow;
+    }
+    @keyframes arrow {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-10px, -10px);
+      }
+    }
+  }
+
+  &__arrowUp {
+    transform: rotate(225deg);
+  }
+  &__arrowDown {
+    transform: rotate(45deg);
+  }
+}
