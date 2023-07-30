@@ -172,15 +172,37 @@ $theme-font-color2: black;
   &__footer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: $h;
   }
+
+  &__footer-linkwrap {
+    display: flex;
+    flex-direction: row;
+    margin: 0 20px;
+    @media (max-width: 900px) {
+      margin: 0 10px;
+    }
+  }
+
   &__footer-icon {
     display: block;
     width: 25px;
     height: 25px;
-    margin: 0 5px;
+    margin: 5px;
     filter: invert(1);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+      scale: 1.1;
+    }
+    // for audio player
+    &[disabled] {
+      cursor: default;
+      opacity: 0.3;
+    }
   }
 }

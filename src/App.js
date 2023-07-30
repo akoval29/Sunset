@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import cityImage from "./lib/city.png";
+import { Player } from "./components/common/sound/player";
 
 import { Main } from "./components/feature-pages/main-page/mainPage";
 import { Posts } from "./components/feature-pages/posts-page/postPage";
@@ -58,34 +59,37 @@ export const App = () => {
         </section>
 
         <footer className="app__footer">
-          <a href="https://www.facebook.com/">
-            <img
-              className="app__footer-icon"
-              src="https://cdn-icons-png.flaticon.com/512/254/254390.png"
-              alt="img-facebook"
-            />
-          </a>
-          <a href="https://twitter.com/">
-            <img
-              className="app__footer-icon"
-              src="https://cdn-icons-png.flaticon.com/512/25/25347.png"
-              alt="img-twitter"
-            />
-          </a>
-          <a href="https://www.youtube.com/">
-            <img
-              className="app__footer-icon"
-              src="https://cdn-icons-png.flaticon.com/512/3938/3938035.png"
-              alt="icon-youtube"
-            />
-          </a>
-          <a href="https://www.instagram.com/">
-            <img
-              className="app__footer-icon"
-              src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png"
-              alt="icon-instagram"
-            />
-          </a>
+          <Player />
+          <div className="app__footer-linkwrap">
+            <a href="https://www.facebook.com/">
+              <img
+                className="app__footer-icon"
+                src="https://cdn-icons-png.flaticon.com/512/254/254390.png"
+                alt="img-facebook"
+              />
+            </a>
+            <a href="https://twitter.com/">
+              <img
+                className="app__footer-icon"
+                src="https://cdn-icons-png.flaticon.com/512/25/25347.png"
+                alt="img-twitter"
+              />
+            </a>
+            <a href="https://www.youtube.com/">
+              <img
+                className="app__footer-icon"
+                src="https://cdn-icons-png.flaticon.com/512/3938/3938035.png"
+                alt="icon-youtube"
+              />
+            </a>
+            <a href="https://www.instagram.com/">
+              <img
+                className="app__footer-icon"
+                src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png"
+                alt="icon-instagram"
+              />
+            </a>
+          </div>
         </footer>
       </article>
     </Router>

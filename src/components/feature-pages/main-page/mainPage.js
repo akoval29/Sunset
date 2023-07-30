@@ -1,3 +1,5 @@
+import React from "react";
+
 export const Main = () => {
   return (
     <article className="app__main">
