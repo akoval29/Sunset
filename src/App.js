@@ -5,14 +5,14 @@ import {
   NavLink,
 } from "react-router-dom";
 
-import cityImage from "../../assets/city.png";
+import cityImage from "./lib/city.png";
 
-import { Main } from "../main-page/mainPage";
-import { Posts } from "../posts-page/postPage";
-import { Todos } from "../todos-page/todoPage";
-import { Users } from "../users-page/userPage";
+import { Main } from "./components/feature-pages/main-page/mainPage";
+import { Posts } from "./components/feature-pages/posts-page/postPage";
+import { Todos } from "./components/feature-pages/todos-page/todoPage";
+import { Users } from "./components/feature-pages/users-page/userPage";
 
-import "./app.scss";
+import "./style/app.scss";
 
 export const App = () => {
   return (
