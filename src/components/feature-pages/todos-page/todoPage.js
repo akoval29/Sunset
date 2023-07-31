@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchTodos, allTodosSelector } from "./todoSlice.js";
+import { fetchTodos, allTodosSelector, deleteTodo } from "./todoSlice.js";
 
 // commons
 // import { EditTodo } from "../../common/editForms/todoEditForm.js";
@@ -15,7 +15,9 @@ import "./todoStyle.scss";
 
 export const Todos = () => {
   const allTodos = useSelector(allTodosSelector);
-  const { todosLoadingStatus } = useSelector((state) => state.todos);
+  const { todosLoadingStatus, deletedTodoIds } = useSelector(
+    (state) => state.todos
+  );
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -28,31 +30,28 @@ export const Todos = () => {
     return <h5 className="">Помилка завантаження</h5>;
   }
 
-  const onDelete = () => {
-    console.log(`something deleted`);
+  const onDelete = (todoId) => {
+    dispatch(deleteTodo(todoId));
+    console.log(`todo №${todoId} deleted`);
   };
 
-  const onEdit = () => {
-    console.log(`something edited`);
+  const onEdit = (todoId) => {
+    console.log(`todo №${todoId} edited ?`);
   };
 
   const getCompletedColor = (completed) => {
     return completed ? "greenyellow" : "red";
   };
 
+  const filteredTodos = allTodos.filter(
+    (todo) => !deletedTodoIds.includes(todo.id)
+  );
+
   return (
     <article className="app__main">
       <h3 className="app__main-title">Todos</h3>
-      {allTodos.map((item) => (
-        //  no animation
+      {filteredTodos.map((item) => (
         <div className="post" key={item.id}>
-          {/*
-        // <div
-        //   className={`todo ${
-        //     deletingItemId === item.id ? "todo--deleting" : ""
-        //   }`}
-        //   key={item.id}
-        // >*/}
           <div className="todo__wrap">
             <p className="todo__userId">User № {item.userId}</p>
             <p className="todo__todoId">todo № {item.id}</p>

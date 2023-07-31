@@ -13,10 +13,24 @@ export const fetchTodos = createAsyncThunk("todos/fetchTodos", async () => {
   return await request("https://jsonplaceholder.typicode.com/todos");
 });
 
+// Видалення todo
+export const deleteTodo = createAsyncThunk(
+  "todos/deleteTodo",
+  async (todoId) => {
+    const { request } = useHttp();
+    await request(
+      `https://jsonplaceholder.typicode.com/todos/${todoId}`,
+      "DELETE"
+    );
+    return todoId;
+  }
+);
+
 const todosSlice = createSlice({
   name: "todos",
   initialState: todosAdapter.getInitialState({
     todosLoadingStatus: "idle",
+    deletedTodoIds: [],
   }),
   reducers: {
     todosCreated: (state, action) => {
@@ -37,6 +51,10 @@ const todosSlice = createSlice({
       })
       .addCase(fetchTodos.rejected, (state) => {
         state.todosLoadingStatus = "error";
+      })
+      // Додавання обробки для видалення todo
+      .addCase(deleteTodo.fulfilled, (state, action) => {
+        state.deletedTodoIds = [...state.deletedTodoIds, action.payload];
       })
       .addDefaultCase(() => {});
   },
