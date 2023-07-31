@@ -85,5 +85,5 @@ const todosSlice = createSlice({
 
 const { selectAll } = todosAdapter.getSelectors((state) => state.todos);
 export const allTodosSelector = createSelector(selectAll, (todos) => todos);
-const { actions, reducer } = todosSlice;
+const { reducer } = todosSlice;
 export default reducer;
