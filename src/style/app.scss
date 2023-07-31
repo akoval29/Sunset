@@ -13,6 +13,7 @@ $theme-font-color2: black;
 .app {
   display: flex;
   position: relative;
+  overflow: hidden;
   flex-direction: column;
   width: 100%;
   height: 100vh;
@@ -30,6 +31,13 @@ $theme-font-color2: black;
     background-attachment: fixed;
     object-fit: cover;
     z-index: -1;
+    transition: opacity 1s ease;
+    &--visible {
+      opacity: 1;
+    }
+    &--invisible {
+      opacity: 0;
+    }
   }
 
   &__footer,
@@ -37,7 +45,7 @@ $theme-font-color2: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: $h;
     width: 100%;
     font-size: $fz;
     color: $theme-font-color;
@@ -63,7 +71,7 @@ $theme-font-color2: black;
     align-items: center;
     flex-basis: 100%;
     height: $section-h;
-    max-width: 15%;
+    max-width: 20%;
     background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     padding: 15px;
     flex-direction: column;
@@ -143,7 +151,7 @@ $theme-font-color2: black;
   &__main {
     position: relative;
     flex-basis: 100%;
-    max-width: 85%;
+    max-width: 80%;
     line-height: 25px;
     overflow-y: auto;
     height: $section-h;

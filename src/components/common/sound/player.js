@@ -3,25 +3,24 @@ import React, { useState, useEffect } from "react";
 import "./playerStyle.scss";
 import nomore from "../../../lib/OutsiderNoMore.mp3";
 
-const useAudio = (url) => {
-  const [audio] = useState(new Audio(url));
-  const [playing, setPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.5);
+export const Player = ({ playing, onPlay }) => {
+  const [audio] = useState(new Audio(nomore));
+  const [volume, setVolume] = useState(0.2);
 
   const play = () => {
     audio.play();
-    setPlaying(true);
+    onPlay(true);
   };
 
   const pause = () => {
     audio.pause();
-    setPlaying(false);
+    onPlay(false);
   };
 
   const stop = () => {
     audio.pause();
     audio.currentTime = 0;
-    setPlaying(false);
+    onPlay(false);
   };
 
   const handleVolumeChange = (e) => {
@@ -31,18 +30,12 @@ const useAudio = (url) => {
   };
 
   useEffect(() => {
-    audio.addEventListener("ended", () => setPlaying(false));
+    const handleAudioEnd = () => onPlay(false);
+    audio.addEventListener("ended", handleAudioEnd);
     return () => {
-      audio.removeEventListener("ended", () => setPlaying(false));
+      audio.removeEventListener("ended", handleAudioEnd);
     };
-  }, [audio]);
-
-  return [playing, play, pause, stop, volume, handleVolumeChange];
-};
-
-export const Player = ({ url = nomore }) => {
-  const [playing, play, pause, stop, volume, handleVolumeChange] =
-    useAudio(url);
+  }, [audio, onPlay]);
 
   return (
     <div className="player">
