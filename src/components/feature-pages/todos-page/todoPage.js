@@ -46,8 +46,9 @@ export const Todos = () => {
   };
 
   const filteredTodos = allTodos.filter(
-    (todo) => !deletedTodoIds.includes(todo.id)
+    (item) => !deletedTodoIds.includes(item.id)
   );
+  console.log(filteredTodos);
 
   return (
     <article className="app__main">

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import "./editStyle.scss";
 
+import { updateTodo } from "../../feature-pages/todos-page/todoSlice";
+
 export const EditTodo = ({ showEditTodo, setShowEditTodo, selectedItem }) => {
   const [newTodoText, setNewTodoText] = useState("");
   const [isChecked, setIsChecked] = useState(false);
@@ -30,16 +32,16 @@ export const EditTodo = ({ showEditTodo, setShowEditTodo, selectedItem }) => {
   }
 
   // обробник подій для кнопки "submit"
-  async function onTodoSubmitBtn() {
+  function onTodoSubmitBtn() {
     if (newTodoText.trim() !== "") {
       setShowEditTodo((prevState) => !prevState);
-      const newTodo = {
+      const updatedTodo = {
         userId: selectedItem.userId,
         id: selectedItem.id,
         title: newTodoText,
         completed: isChecked,
       };
-      console.log(newTodo);
+      dispatch(updateTodo({ todoId: selectedItem.id, updatedTodo }));
     }
   }
 

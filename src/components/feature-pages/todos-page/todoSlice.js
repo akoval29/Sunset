@@ -8,12 +8,13 @@ import { useHttp } from "../../../hooks/useAPI";
 
 const todosAdapter = createEntityAdapter();
 
+// Отримуєм todo
 export const fetchTodos = createAsyncThunk("todos/fetchTodos", async () => {
   const { request } = useHttp();
   return await request("https://jsonplaceholder.typicode.com/todos");
 });
 
-// Видалення todo
+// Видаляєм todo
 export const deleteTodo = createAsyncThunk(
   "todos/deleteTodo",
   async (todoId) => {
@@ -23,6 +24,20 @@ export const deleteTodo = createAsyncThunk(
       "DELETE"
     );
     return todoId;
+  }
+);
+
+// Редагуєм todo
+export const updateTodo = createAsyncThunk(
+  "todos/updateTodo",
+  async ({ todoId, updatedTodo }) => {
+    // const { request } = useHttp();
+    // await request(
+    //   `https://jsonplaceholder.typicode.com/todos/${todoId}`,
+    //   "PUT",
+    //   updatedTodo
+    // );
+    return { todoId, updatedTodo };
   }
 );
 
@@ -36,8 +51,9 @@ const todosSlice = createSlice({
     todosCreated: (state, action) => {
       todosAdapter.addOne(state, action.payload);
     },
-    todosDeleted: (state, action) => {
+    todoDeleted: (state, action) => {
       todosAdapter.removeOne(state, action.payload);
+      state.deletedTodoIds.push(action.payload.id);
     },
   },
   extraReducers: (builder) => {
@@ -52,9 +68,16 @@ const todosSlice = createSlice({
       .addCase(fetchTodos.rejected, (state) => {
         state.todosLoadingStatus = "error";
       })
-      // Додавання обробки для видалення todo
       .addCase(deleteTodo.fulfilled, (state, action) => {
         state.deletedTodoIds = [...state.deletedTodoIds, action.payload];
+      })
+      .addCase(updateTodo.fulfilled, (state, action) => {
+        const { id, title, completed } = action.payload.updatedTodo;
+        const existingTodo = state.entities[id];
+        if (existingTodo) {
+          existingTodo.title = title;
+          existingTodo.completed = completed;
+        }
       })
       .addDefaultCase(() => {});
   },
@@ -62,14 +85,5 @@ const todosSlice = createSlice({
 
 const { selectAll } = todosAdapter.getSelectors((state) => state.todos);
 export const allTodosSelector = createSelector(selectAll, (todos) => todos);
-
 const { actions, reducer } = todosSlice;
 export default reducer;
-
-export const {
-  todosFetching,
-  todosFetched,
-  todosFetchingError,
-  todosCreated,
-  todosDeleted,
-} = actions;
