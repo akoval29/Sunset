@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { v4 as uuidv4 } from "uuid";
 import "./editStyle.scss";
 
-import { todosCreated } from "../../redux/actions/TodoActions";
-
-import userIcon from "../../assets/user.png";
-
-export const EditTodo = ({ item }) => {
-  const [showNewTodo, setShowNewTodo] = useState(false);
+export const EditTodo = ({ showEditTodo, setShowEditTodo, selectedItem }) => {
   const [newTodoText, setNewTodoText] = useState("");
   const [isChecked, setIsChecked] = useState(false);
+
+  // Оновлюємо стан після отримання selectedItem
+  useEffect(() => {
+    setNewTodoText(selectedItem?.title || "");
+    setIsChecked(selectedItem?.completed || false);
+  }, [selectedItem]);
 
   const dispatch = useDispatch();
 
   // показати/сховати модальне вікно з textarea
   function onShow() {
-    setShowNewTodo((prevState) => !prevState);
+    setShowEditTodo((prevState) => !prevState);
   }
 
   // записуєм в стейт текст нового TITLE
@@ -30,50 +30,37 @@ export const EditTodo = ({ item }) => {
   }
 
   // обробник подій для кнопки "submit"
-  async function onTodoButtonClick() {
+  async function onTodoSubmitBtn() {
     if (newTodoText.trim() !== "") {
-      setShowNewTodo((prevState) => !prevState);
+      setShowEditTodo((prevState) => !prevState);
       const newTodo = {
-        userId: 999,
-        id: uuidv4().substring(0, 5),
+        userId: selectedItem.userId,
+        id: selectedItem.id,
         title: newTodoText,
         completed: isChecked,
       };
-
-      // try {
-      //   const response = await request(
-      //     "https://jsonplaceholder.typicode.com/todos",
-      //     "POST",
-      //     JSON.stringify(newTodo)
-      //   );
-      //   if (!response) {
-      //     throw new Error("Failed to add a new Todo.");
-      //   }
-
-      //   dispatch(todosCreated(newTodo));
-      //   setNewTodoText(""); // Очищуємо текстове поле
-      // } catch (error) {
-      //   console.error(error);
-      // }
+      console.log(newTodo);
     }
   }
+
   return (
     <article>
-      {showNewTodo ? (
+      {showEditTodo ? (
         <div className="newEntry newEntry--show">
           <section className="newEntry__wrap">
             <div className="newEntry__userWrap">
               <img
                 className="newEntry__userImg"
-                src={userIcon}
+                src="https://cdn-icons-png.flaticon.com/512/666/666201.png"
                 alt="userIcon"
               />
-              <p className="newEntry__userName">User 999</p>
+              <p className="newEntry__userName">
+                User №{selectedItem.userId} / todo №{selectedItem.id}
+              </p>
             </div>
             <textarea
               className="newEntry__textarea"
               id="newText"
-              placeholder={`Write new ${item}`}
               value={newTodoText}
               onChange={onTextChange}
             ></textarea>
@@ -84,9 +71,7 @@ export const EditTodo = ({ item }) => {
                 id="switch"
                 checked={isChecked}
                 onChange={handleCheckboxChange}
-                className={`checkBox__input ${
-                  isChecked ? "checkBox--act" : "checkBox--disAct"
-                }`}
+                className="checkBox__input"
               ></input>
               <label className="checkBox__label" htmlFor="switch">
                 Autoplay
@@ -94,24 +79,15 @@ export const EditTodo = ({ item }) => {
             </div>
           </section>
 
-          <button className="newEntry__btn" onClick={onTodoButtonClick}>
-            {`Submit ${item}`}
+          <button className="newEntry__btn" onClick={onTodoSubmitBtn}>
+            Submit
           </button>
 
           <div className="newEntry__cross-wrap" onClick={onShow}>
             <span className="newEntry__cross">✕</span>
           </div>
         </div>
-      ) : (
-        <div className="edit" onClick={onShow}>
-          <div className="edit__cross-wrap">
-            <span className="edit__cross">✕</span>
-          </div>
-          <div className="edit__message-wrap">
-            <div className="edit__message">Add new {item}</div>
-          </div>
-        </div>
-      )}
+      ) : null}
     </article>
   );
 };

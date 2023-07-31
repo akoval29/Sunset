@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTodos, allTodosSelector, deleteTodo } from "./todoSlice.js";
 
 // commons
-// import { EditTodo } from "../../common/editForms/todoEditForm.js";
+import { EditTodo } from "../../common/editForms/todoEditForm.js";
 import { ScrollTo } from "../../common/scroll/pageScroll";
 import { Spinner } from "../../common/loading/spinner";
-
-//icon
-import wrenchIcon from "../../../lib/wrench-icon.png";
 
 //style
 import "./todoStyle.scss";
 
 export const Todos = () => {
+  const [showEditTodo, setShowEditTodo] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+
   const allTodos = useSelector(allTodosSelector);
   const { todosLoadingStatus, deletedTodoIds } = useSelector(
     (state) => state.todos
@@ -35,8 +35,10 @@ export const Todos = () => {
     console.log(`todo №${todoId} deleted`);
   };
 
-  const onEdit = (todoId) => {
-    console.log(`todo №${todoId} edited ?`);
+  const onEdit = (item) => {
+    setSelectedItem(item);
+    setShowEditTodo(true);
+    console.log(`todo №${item.id} edited?`);
   };
 
   const getCompletedColor = (completed) => {
@@ -56,21 +58,22 @@ export const Todos = () => {
             <p className="todo__userId">User № {item.userId}</p>
             <p className="todo__todoId">todo № {item.id}</p>
             <div className="todo__edit-wrap">
-              <button
-                className="todo__wrench-wrap"
-                onClick={() => onEdit(item.id)}
-              >
+              <button className="todo__item-wrap" onClick={() => onEdit(item)}>
                 <img
-                  src={wrenchIcon}
-                  className="todo__wrench"
+                  src="https://cdn-icons-png.flaticon.com/512/3524/3524762.png"
+                  className="todo__item"
                   alt="wrench-icon"
                 />
               </button>
               <button
-                className="todo__cross-wrap"
+                className="todo__item-wrap"
                 onClick={() => onDelete(item.id)}
               >
-                <span className="todo__cross">✕</span>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/57/57165.png"
+                  className="todo__item"
+                  alt="cross-icon"
+                />
               </button>
             </div>
           </div>
@@ -86,7 +89,11 @@ export const Todos = () => {
           </div>
         </div>
       ))}
-
+      <EditTodo
+        showEditTodo={showEditTodo}
+        setShowEditTodo={setShowEditTodo}
+        selectedItem={selectedItem}
+      />
       <ScrollTo />
     </article>
   );
