@@ -5,7 +5,7 @@ import nomore from "../../../lib/OutsiderNoMore.mp3";
 
 export const Player = ({ playing, onPlay }) => {
   const [audio] = useState(new Audio(nomore));
-  const [volume, setVolume] = useState(0.15);
+  const [volume, setVolume] = useState(0.4);
 
   const play = () => {
     audio.play();

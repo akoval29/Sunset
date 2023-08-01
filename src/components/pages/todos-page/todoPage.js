@@ -6,6 +6,7 @@ import { fetchTodos, allTodosSelector, deleteTodo } from "./todoSlice.js";
 import { EditTodo } from "../../common/editForms/todoEditForm.js";
 import { ScrollTo } from "../../common/scroll/pageScroll";
 import { Spinner } from "../../common/loading/spinner";
+import { AddForm } from "../../common/addForms/addForm.js";
 
 //style
 import "./todoStyle.scss";
@@ -96,6 +97,7 @@ export const Todos = () => {
         selectedItem={selectedItem}
       />
       <ScrollTo />
+      <AddForm flag="todo" />
     </article>
   );
 };
