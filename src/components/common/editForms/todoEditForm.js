@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import "./editStyle.scss";
 
-import { updateTodo } from "../../feature-pages/todos-page/todoSlice";
+import { updateTodo } from "../../pages/todos-page/todoSlice";
 
 export const EditTodo = ({ showEditTodo, setShowEditTodo, selectedItem }) => {
   const [newTodoText, setNewTodoText] = useState("");

@@ -7,10 +7,10 @@ import {
   NavLink,
 } from "react-router-dom";
 
-import { Main } from "./components/feature-pages/main-page/mainPage";
-import { Posts } from "./components/feature-pages/posts-page/postPage";
-import { Todos } from "./components/feature-pages/todos-page/todoPage";
-import { Users } from "./components/feature-pages/users-page/userPage";
+import { Main } from "./components/pages/main-page/mainPage";
+import { Posts } from "./components/pages/posts-page/postPage";
+import { Todos } from "./components/pages/todos-page/todoPage";
+import { Users } from "./components/pages/users-page/userPage";
 import { Player } from "./components/common/sound/player";
 import defaultBg from "./lib/city.png";
 import cyberBg from "./lib/cyber.png";
