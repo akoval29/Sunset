@@ -13,6 +13,7 @@ $theme-font-color2: black;
 .app {
   display: flex;
   position: relative;
+  overflow: hidden;
   flex-direction: column;
   width: 100%;
   height: 100vh;
@@ -30,6 +31,13 @@ $theme-font-color2: black;
     background-attachment: fixed;
     object-fit: cover;
     z-index: -1;
+    transition: opacity 1s ease;
+    &--visible {
+      opacity: 1;
+    }
+    &--invisible {
+      opacity: 0;
+    }
   }
 
   &__footer,
@@ -37,7 +45,7 @@ $theme-font-color2: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: $h;
     width: 100%;
     font-size: $fz;
     color: $theme-font-color;
@@ -62,14 +70,15 @@ $theme-font-color2: black;
     display: flex;
     align-items: center;
     flex-basis: 100%;
+    height: $section-h;
     max-width: 20%;
     background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     padding: 15px;
     flex-direction: column;
-    @media (max-width: 730px) {
+    @media (max-width: 900px) {
+      flex-direction: row;
       height: $h;
       max-width: 100%;
-      flex-direction: row;
       align-items: center;
       justify-content: space-around;
       padding: 0;
@@ -87,7 +96,7 @@ $theme-font-color2: black;
         transform: scale(1);
       }
     }
-    @media (max-width: 730px) {
+    @media (max-width: 900px) {
       font-size: 0.75em;
       padding: 6px;
       margin: 0;
@@ -124,8 +133,7 @@ $theme-font-color2: black;
   }
 
   &__main-title,
-  &__nav-title,
-  &__links-title {
+  &__nav-title {
     font-family: "Poppins", sans-serif;
     color: $theme-font-color2;
     margin-bottom: 20px;
@@ -135,17 +143,7 @@ $theme-font-color2: black;
   }
 
   &__nav-title {
-    @media (max-width: 730px) {
-      display: none;
-    }
-  }
-
-  &__links-title {
-    @media (max-width: 730px) {
-      text-align: unset;
-      margin-bottom: 0px;
-    }
-    @media (max-width: 400px) {
+    @media (max-width: 900px) {
       display: none;
     }
   }
@@ -153,7 +151,7 @@ $theme-font-color2: black;
   &__main {
     position: relative;
     flex-basis: 100%;
-    max-width: 60%;
+    max-width: 80%;
     line-height: 25px;
     overflow-y: auto;
     height: $section-h;
@@ -166,10 +164,10 @@ $theme-font-color2: black;
       rgba(0, 0, 0, 0.5)
     );
     padding: 15px 35px;
-    @media (max-width: 730px) {
+    @media (max-width: 900px) {
       padding: 15px;
       max-width: 100%;
-      height: calc($section-h - (2 * $h));
+      height: calc($section-h - $h);
     }
   }
 
@@ -179,47 +177,40 @@ $theme-font-color2: black;
     letter-spacing: 1px;
   }
 
-  &__links {
+  &__footer {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    flex-basis: 100%;
-    max-width: 20%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    padding: 15px;
-    @media (max-width: 730px) {
-      height: $h;
-      max-width: 100%;
-      justify-content: center;
-      flex-direction: row;
-      padding: 0 15px;
+    height: $h;
+  }
+
+  &__footer-linkwrap {
+    display: flex;
+    flex-direction: row;
+    margin: 0 20px;
+    @media (max-width: 900px) {
+      margin: 0 10px;
     }
   }
 
-  &__text-link {
-    vertical-align: middle;
-    color: $theme-font-color;
-    list-style: none;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  &__footer-icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    filter: invert(1);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
     &:hover {
       cursor: pointer;
-      text-decoration: underline;
+      opacity: 1;
+      scale: 1.1;
     }
-    @media (max-width: 730px) {
-      display: none;
-    }
-  }
-  &__link-icon {
-    display: none;
-    width: 35px;
-    height: 35px;
-    margin: 0 10px;
-    filter: invert(1);
-    @media (max-width: 730px) {
-      display: block;
+    // for audio player
+    &[disabled] {
+      cursor: default;
+      opacity: 0.3;
     }
   }
 }

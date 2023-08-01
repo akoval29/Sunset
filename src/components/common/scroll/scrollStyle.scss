@@ -10,11 +10,9 @@
   height: 40px;
   background-color: rgba($theme-color, 0.4);
   position: fixed;
-  right: 23%;
-  bottom: 10%;
-  @media (max-width: 730px) {
-    right: 5%;
-  }
+  right: 2%;
+  bottom: 9%;
+
   &:hover {
     box-shadow: 0px 0px 6px rgba($theme-color, 0.7);
     cursor: pointer;
