@@ -164,7 +164,7 @@
       $theme-color
     );
     height: 30px;
-    width: 100%;
+    width: 500px;
     color: white;
     opacity: 0.9;
     border-bottom-left-radius: 10px;
@@ -176,6 +176,12 @@
     &:hover {
       cursor: pointer;
       background: $theme-color;
+    }
+    &--error {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      text-align: center;
     }
   }
 

@@ -23,7 +23,6 @@ export const AddEditForm = ({ flag }) => {
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
-            // Ваш код обробки відправки форми тут
             console.log(values);
             setSubmitting(false);
           }}
@@ -48,12 +47,6 @@ export const AddEditForm = ({ flag }) => {
                   placeholder="Type something ..."
                 />
 
-                <ErrorMessage
-                  name="inputTodo"
-                  component="div"
-                  className="newEntry__btn"
-                />
-
                 <div className="checkBox">
                   <Field
                     className="checkBox__input"
@@ -67,14 +60,21 @@ export const AddEditForm = ({ flag }) => {
                 </div>
               </section>
 
-              <button
-                type="submit"
-                className="newEntry__btn"
-                disabled={isSubmitting || Object.keys(errors).length > 0}
-                tabIndex={0}
-              >
-                submit
-              </button>
+              <div className="newEntry__submitContainer">
+                <button
+                  type="submit"
+                  className="newEntry__btn"
+                  disabled={isSubmitting || Object.keys(errors).length > 0}
+                  tabIndex={0}
+                >
+                  submit
+                </button>
+              </div>
+              <ErrorMessage
+                name="inputTodo"
+                component="div"
+                className="newEntry__btn newEntry__btn--error"
+              />
 
               <div className="newEntry__cross-wrap" onClick={onShowHandler}>
                 <span className="newEntry__cross">✕</span>
