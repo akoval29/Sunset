@@ -99,6 +99,8 @@
   }
 
   &__wrap {
+    display: flex;
+    flex-direction: column;
     border: 1px solid white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -136,7 +138,7 @@
   }
 
   &__textarea {
-    height: 140px;
+    height: 100%;
   }
 
   &__userWrap {
@@ -156,6 +158,13 @@
     margin: 0 5px;
   }
 
+  &__submitContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // кнопка Submit
   &__btn {
     background: linear-gradient(
       to right,
@@ -172,14 +181,13 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: bold;
-    transition: background 0.3s ease;
     &:hover {
       cursor: pointer;
       background: $theme-color;
     }
+    // стилі до ErrorMessage
     &--error {
       position: absolute;
-      left: 0;
       bottom: 0;
       text-align: center;
     }

@@ -5,6 +5,7 @@ import "./editStyle.scss";
 
 export const AddEditForm = ({ flag }) => {
   const [showForm, setShowForm] = useState(false);
+  const [checked, setChecked] = useState(false);
 
   function onShowHandler() {
     setShowForm(!showForm);
@@ -18,13 +19,13 @@ export const AddEditForm = ({ flag }) => {
           validate={(values) => {
             const errors = {};
             if (!values.inputTodo) {
-              errors.inputTodo = "ENTER TEXT";
+              errors.inputTodo = `ENTER ${flag}`;
             }
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
-            console.log(values);
-            setSubmitting(false);
+            // console.log(values);
+            // setSubmitting(false);
           }}
         >
           {({ isSubmitting, errors }) => (
@@ -51,8 +52,10 @@ export const AddEditForm = ({ flag }) => {
                   <Field
                     className="checkBox__input"
                     type="checkbox"
-                    // name="acceptTerms"
+                    name="acceptTerms"
                     id="switch"
+                    checked={checked}
+                    onChange={(e) => setChecked(e.target.checked)}
                   />
                   <label className="checkBox__label" htmlFor="switch">
                     checkbox
