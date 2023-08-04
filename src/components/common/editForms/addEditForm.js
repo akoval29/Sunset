@@ -11,7 +11,7 @@ export const AddEditForm = ({ flag }) => {
   }
 
   return (
-    <section className="newEntry newEntry--show">
+    <section>
       {showForm ? (
         <Formik
           initialValues={{ inputTodo: "" }}
@@ -19,65 +19,66 @@ export const AddEditForm = ({ flag }) => {
             const errors = {};
             if (!values.inputTodo) {
               errors.inputTodo = "ENTER TEXT";
-              // } else if (!values.inputAmount) {
-              //   errors.inputAmount = "AMOUNT";
-              // } else if (isNaN(values.inputAmount)) {
-              //   errors.inputAmount = "ONLY DIGITS";
-              // } else if (
-              //   values.inputAmount.includes(".") ||
-              //   values.inputAmount.includes(",")
-              // ) {
-              //   errors.inputAmount = "INTEGERS";
-              // } else if (values.inputAmount > 50) {
-              //   errors.inputAmount = "50 MAX";
             }
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
-            // FormikHandler(values);
-            // setSubmitting(false);
+            // Ваш код обробки відправки форми тут
+            console.log(values);
+            setSubmitting(false);
           }}
         >
-          {({ isSubmitting }) => (
-            <Form className="newEntry__wrap">
-              <div className="newEntry__userWrap">
-                <img
-                  className="newEntry__userImg"
-                  src="https://cdn-icons-png.flaticon.com/512/666/666201.png"
-                  alt="userIcon"
+          {({ isSubmitting, errors }) => (
+            <Form className="newEntry newEntry--show">
+              <section className="newEntry__wrap">
+                <div className="newEntry__userWrap">
+                  <img
+                    className="newEntry__userImg"
+                    src="https://cdn-icons-png.flaticon.com/512/666/666201.png"
+                    alt="userIcon"
+                  />
+                  <p className="newEntry__userName">User № 999 / todo № 999</p>
+                </div>
+
+                <Field
+                  className="newEntry__textarea"
+                  type="inputTodo"
+                  name="inputTodo"
+                  tabIndex={0}
+                  placeholder="Type something ..."
                 />
-                <p className="newEntry__userName">User № 999 / todo № 999</p>
-              </div>
 
-              <Field
-                className="newEntry__textarea"
-                type="inputTodo"
-                name="inputTodo"
-                tabIndex={0}
-                placeholder="Type something ..."
-              />
+                <ErrorMessage
+                  name="inputTodo"
+                  component="div"
+                  className="newEntry__btn"
+                />
 
-              <ErrorMessage
-                name="inputTodo"
-                component="div"
-                className="formGroup__row__error formGroup__row__error--left"
-              />
-
-              <Field
-                className="checkBox"
-                type="checkBox"
-                // name="acceptTerms"
-                id="switch"
-              />
+                <div className="checkBox">
+                  <Field
+                    className="checkBox__input"
+                    type="checkbox"
+                    // name="acceptTerms"
+                    id="switch"
+                  />
+                  <label className="checkBox__label" htmlFor="switch">
+                    checkbox
+                  </label>
+                </div>
+              </section>
 
               <button
                 type="submit"
                 className="newEntry__btn"
-                // disabled={isSubmitting}
+                disabled={isSubmitting || Object.keys(errors).length > 0}
                 tabIndex={0}
               >
                 submit
               </button>
+
+              <div className="newEntry__cross-wrap" onClick={onShowHandler}>
+                <span className="newEntry__cross">✕</span>
+              </div>
             </Form>
           )}
         </Formik>

@@ -76,7 +76,7 @@ export const EditTodo = ({ showEditTodo, setShowEditTodo, selectedItem }) => {
                 className="checkBox__input"
               ></input>
               <label className="checkBox__label" htmlFor="switch">
-                Autoplay
+                checkbox
               </label>
             </div>
           </section>
