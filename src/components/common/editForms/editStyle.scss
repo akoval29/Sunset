@@ -1,16 +1,15 @@
 @use "../../../style/normalize.scss" as *;
 
-.edit {
+.addBtn {
   display: flex;
   flex-direction: row;
   align-items: center;
   position: fixed;
-  left: 23%;
+  left: 22%;
   bottom: 10%;
-  @media (max-width: 730px) {
+  @media (max-width: 900px) {
     left: 5%;
   }
-
   &__cross-wrap {
     display: flex;
     justify-content: center;
@@ -23,7 +22,7 @@
     &:hover {
       box-shadow: 0px 0px 6px rgba($theme-color, 0.7);
       cursor: pointer;
-      ~ .add__message-wrap {
+      ~ .addBtn__message-wrap {
         display: block;
       }
     }
@@ -38,9 +37,16 @@
     font-size: 25px;
     font-weight: bold;
     transition: transform 0.3s ease-in-out;
-
     &:hover {
-      transform: rotate(135deg);
+      animation: rotateAnimation 2s infinite;
+    }
+    @keyframes rotateAnimation {
+      from {
+        transform: rotate(45deg);
+      }
+      to {
+        transform: rotate(405deg);
+      }
     }
   }
 
@@ -51,6 +57,8 @@
     width: 150px;
     left: 93%;
     color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     background-color: rgba($theme-color, 0.4);
     box-shadow: 0px -3px 3px rgba($theme-color, 0.4),
       0px 3px 3px rgba($theme-color, 0.4);
@@ -61,18 +69,6 @@
     }
     &:active {
       box-shadow: 0px 0px 12px rgba($theme-color, 0.7);
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: -10px;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-color: transparent transparent transparent $theme-color;
-      border-width: 15px 0 15px 10px;
-      opacity: 0.4;
     }
   }
 
@@ -89,6 +85,7 @@
   flex-direction: column;
   width: 500px;
   bottom: 50px;
+
   transition: opacity 0.3s ease, transform 0.3s ease;
   left: 50%;
   opacity: 0;
@@ -170,6 +167,8 @@
     width: 100%;
     color: white;
     opacity: 0.9;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: bold;

@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchTodos, allTodosSelector, deleteTodo } from "./todoSlice.js";
 
 // commons
-import { EditTodo } from "../../common/editForms/todoEditForm.js";
 import { ScrollTo } from "../../common/scroll/pageScroll";
 import { Spinner } from "../../common/loading/spinner";
-import { AddForm } from "../../common/addForms/addForm.js";
+import { EditTodo } from "../../common/editForms/todoEditForm.js";
+import { AddEditForm } from "../../common/editForms/addEditForm.js";
 
 //style
 import "./todoStyle.scss";
@@ -97,7 +97,7 @@ export const Todos = () => {
         selectedItem={selectedItem}
       />
       <ScrollTo />
-      <AddForm flag="todo" />
+      <AddEditForm flag="todo" />
     </article>
   );
 };
