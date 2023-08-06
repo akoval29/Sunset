@@ -85,7 +85,6 @@
   flex-direction: column;
   width: 500px;
   bottom: 50px;
-
   transition: opacity 0.3s ease, transform 0.3s ease;
   left: 50%;
   opacity: 0;
@@ -115,11 +114,9 @@
   &__titlearea,
   &__textarea {
     padding: 5px;
-    border-radius: 5px;
-    // margin-bottom: 10px;
+    border-radius: 7px;
     outline: none;
     border: 1px solid $theme-color;
-    width: 100%;
     transition: box-shadow 0.3s ease;
     resize: none;
     &::placeholder {
@@ -129,7 +126,6 @@
     }
     &:focus {
       box-shadow: 0 0 5px $theme-color;
-      border: 1px solid $theme-color;
     }
   }
 
@@ -142,7 +138,7 @@
   }
 
   &__userWrap {
-    display: inline-flex;
+    display: flex;
     width: 100%;
     justify-content: center;
   }

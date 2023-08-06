@@ -1,11 +1,15 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { useDispatch } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
-
 import "./editStyle.scss";
+
+import { createTodo } from "../../pages/todos-page/todoSlice";
 
 export const AddEditForm = ({ flag }) => {
   const [showForm, setShowForm] = useState(false);
-  const [checked, setChecked] = useState(false);
+
+  const dispatch = useDispatch();
 
   function onShowHandler() {
     setShowForm(!showForm);
@@ -15,7 +19,10 @@ export const AddEditForm = ({ flag }) => {
     <section>
       {showForm ? (
         <Formik
-          initialValues={{ inputTodo: "" }}
+          initialValues={{
+            inputTodo: "",
+            checked: false,
+          }}
           validate={(values) => {
             const errors = {};
             if (!values.inputTodo) {
@@ -23,9 +30,19 @@ export const AddEditForm = ({ flag }) => {
             }
             return errors;
           }}
-          onSubmit={(values, { setSubmitting }) => {
-            // console.log(values);
-            // setSubmitting(false);
+          onSubmit={(values, { setSubmitting, resetForm }) => {
+            const newTodo = {
+              userId: "999",
+              id: uuidv4().substring(0, 4),
+              title: values.inputTodo,
+              completed: values.checked,
+            };
+            console.log(newTodo);
+            dispatch(createTodo(newTodo)); // відправка форми в слайс
+
+            resetForm(); // очищуєм форму
+            setSubmitting(false); // розблоковуєм форму для нового вводу
+            setShowForm(false); // закриваєм вікно з формаю
           }}
         >
           {({ isSubmitting, errors }) => (
@@ -37,10 +54,11 @@ export const AddEditForm = ({ flag }) => {
                     src="https://cdn-icons-png.flaticon.com/512/666/666201.png"
                     alt="userIcon"
                   />
-                  <p className="newEntry__userName">User № 999 / todo № 999</p>
+                  <p className="newEntry__userName">User № 999</p>
                 </div>
 
                 <Field
+                  as="textarea"
                   className="newEntry__textarea"
                   type="inputTodo"
                   name="inputTodo"
@@ -52,10 +70,8 @@ export const AddEditForm = ({ flag }) => {
                   <Field
                     className="checkBox__input"
                     type="checkbox"
-                    name="acceptTerms"
+                    name="checked"
                     id="switch"
-                    checked={checked}
-                    onChange={(e) => setChecked(e.target.checked)}
                   />
                   <label className="checkBox__label" htmlFor="switch">
                     checkbox
@@ -72,12 +88,12 @@ export const AddEditForm = ({ flag }) => {
                 >
                   submit
                 </button>
+                <ErrorMessage
+                  name="inputTodo"
+                  component="div"
+                  className="newEntry__btn newEntry__btn--error"
+                />
               </div>
-              <ErrorMessage
-                name="inputTodo"
-                component="div"
-                className="newEntry__btn newEntry__btn--error"
-              />
 
               <div className="newEntry__cross-wrap" onClick={onShowHandler}>
                 <span className="newEntry__cross">✕</span>

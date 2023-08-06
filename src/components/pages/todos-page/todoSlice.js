@@ -14,6 +14,20 @@ export const fetchTodos = createAsyncThunk("todos/fetchTodos", async () => {
   return await request("https://jsonplaceholder.typicode.com/todos");
 });
 
+// Нове todo
+export const createTodo = createAsyncThunk(
+  "todos/createTodo",
+  async (newTodo) => {
+    const { request } = useHttp();
+    const response = await request(
+      "https://jsonplaceholder.typicode.com/todos",
+      "POST",
+      newTodo
+    );
+    return response;
+  }
+);
+
 // Видаляєм todo
 export const deleteTodo = createAsyncThunk(
   "todos/deleteTodo",
