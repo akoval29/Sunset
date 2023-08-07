@@ -27,7 +27,8 @@ export const AddPost = ({ flag }) => {
             const errors = {};
             if (!values.inputTitle) {
               errors.inputTitle = "ENTER TITLE";
-            } else if (!values.inputPost) {
+            }
+            if (!values.inputPost) {
               errors.inputPost = "ENTER POST";
             }
             return errors;
@@ -44,6 +45,14 @@ export const AddPost = ({ flag }) => {
             resetForm(); // очищуєм форму
             setSubmitting(false); // розблоковуєм форму для нового вводу
             setShowForm(false); // закриваєм вікно з формаю
+
+            // Прокрутка вниз після додавання нового елемента
+            const container = document.querySelector(".app__main");
+            const containerHeight = container.scrollHeight;
+            container.scrollTo({
+              top: containerHeight,
+              behavior: "smooth",
+            });
           }}
         >
           {({ isSubmitting, errors }) => (
@@ -59,43 +68,45 @@ export const AddPost = ({ flag }) => {
                 </div>
 
                 <Field
-                  as="textarea"
                   className="newEntry__titlearea"
                   type="inputTitle"
                   name="inputTitle"
                   tabIndex={0}
                   placeholder="title ..."
                 />
+                <ErrorMessage
+                  name="inputTitle"
+                  component="div"
+                  className="newEntry__error-message"
+                />
 
                 <Field
-                  as="textarea"
                   className="newEntry__textarea"
                   type="inputPost"
                   name="inputPost"
                   tabIndex={0}
                   placeholder="post ..."
                 />
-              </section>
-
-              <div className="newEntry__submitContainer">
-                <ErrorMessage
-                  name="inputTitle"
-                  component="div"
-                  className="newEntry__btn newEntry__btn--error"
-                />
                 <ErrorMessage
                   name="inputPost"
                   component="div"
-                  className="newEntry__btn newEntry__btn--error"
+                  className="newEntry__error-message"
                 />
-                <button
-                  type="submit"
-                  className="newEntry__btn"
-                  disabled={isSubmitting || Object.keys(errors).length > 0}
-                  tabIndex={0}
-                >
-                  submit
-                </button>
+              </section>
+
+              <div className="newEntry__submitContainer">
+                {Object.keys(errors).length > 0 ? (
+                  <div className="newEntry__btn">ENTER DATA PLEASE</div>
+                ) : (
+                  <button
+                    type="submit"
+                    className="newEntry__btn"
+                    disabled={isSubmitting}
+                    tabIndex={0}
+                  >
+                    submit
+                  </button>
+                )}
               </div>
 
               <div className="newEntry__cross-wrap" onClick={onShowHandler}>

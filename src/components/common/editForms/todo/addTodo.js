@@ -42,6 +42,14 @@ export const AddTodo = ({ flag }) => {
             resetForm(); // очищуєм форму
             setSubmitting(false); // розблоковуєм форму для нового вводу
             setShowForm(false); // закриваєм вікно з формаю
+
+            // Прокрутка вниз після додавання нового елемента
+            const container = document.querySelector(".app__main");
+            const containerHeight = container.scrollHeight;
+            container.scrollTo({
+              top: containerHeight,
+              behavior: "smooth",
+            });
           }}
         >
           {({ isSubmitting, errors }) => (
@@ -64,6 +72,11 @@ export const AddTodo = ({ flag }) => {
                   tabIndex={0}
                   placeholder="Type something ..."
                 />
+                <ErrorMessage
+                  name="inputTodo"
+                  component="div"
+                  className="newEntry__error-message"
+                />
 
                 <div className="checkBox">
                   <Field
@@ -79,19 +92,18 @@ export const AddTodo = ({ flag }) => {
               </section>
 
               <div className="newEntry__submitContainer">
-                <button
-                  type="submit"
-                  className="newEntry__btn"
-                  disabled={isSubmitting || Object.keys(errors).length > 0}
-                  tabIndex={0}
-                >
-                  submit
-                </button>
-                <ErrorMessage
-                  name="inputTodo"
-                  component="div"
-                  className="newEntry__btn newEntry__btn--error"
-                />
+                {Object.keys(errors).length > 0 ? (
+                  <div className="newEntry__btn">ENTER DATA PLEASE</div>
+                ) : (
+                  <button
+                    type="submit"
+                    className="newEntry__btn"
+                    disabled={isSubmitting || Object.keys(errors).length > 0}
+                    tabIndex={0}
+                  >
+                    submit
+                  </button>
+                )}
               </div>
 
               <div className="newEntry__cross-wrap" onClick={onShowHandler}>

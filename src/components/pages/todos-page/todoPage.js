@@ -45,10 +45,10 @@ export const Todos = () => {
   };
 
   return (
-    <article className="app__main">
+    <ul className="app__main">
       <h3 className="app__main-title">Todos</h3>
       {allTodos.map((item) => (
-        <div className="post" key={item.id}>
+        <li className="todo" key={item.id}>
           <div className="todo__wrap">
             <p className="todo__userId">User № {item.userId}</p>
             <p className="todo__todoId">todo № {item.id}</p>
@@ -82,7 +82,7 @@ export const Todos = () => {
               {item.completed?.toString()}
             </p>
           </div>
-        </div>
+        </li>
       ))}
       <EditTodo
         showEditTodo={showEditTodo}
@@ -91,6 +91,6 @@ export const Todos = () => {
       />
       <AddTodo flag="todo" />
       <ScrollTo />
-    </article>
+    </ul>
   );
 };

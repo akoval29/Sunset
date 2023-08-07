@@ -40,10 +40,10 @@ export const Posts = () => {
   };
 
   return (
-    <article className="app__main">
+    <ul className="app__main">
       <h3 className="app__main-title">Posts</h3>
       {allPosts.map((item) => (
-        <div className="post" key={item.id}>
+        <li className="post" key={item.id}>
           <div className="post__wrap">
             <p className="post__userId">User № {item.userId}</p>
             <p className="post__postId">Post № {item.id}</p>
@@ -69,7 +69,7 @@ export const Posts = () => {
           </div>
           <h4 className="post__title">{item.title}</h4>
           <p className="post__body">{item.body}</p>
-        </div>
+        </li>
       ))}
       <EditPost
         showEditPost={showEditPost}
@@ -79,6 +79,6 @@ export const Posts = () => {
 
       <AddPost flag="post" />
       <ScrollTo />
-    </article>
+    </ul>
   );
 };
