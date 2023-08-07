@@ -22,9 +22,7 @@ export const useHttp = () => {
   return { request };
 };
 
-// Posts: https://jsonplaceholder.typicode.com/posts
+// -------------------- вибери API - розкоментуй потрібне ---------------  //
 
-// Todo: https://jsonplaceholder.typicode.com/todos
-
-// Users: https://jsonplaceholder.typicode.com/users
-// -  show only "name" and "username" for this list
+export const url = "http://localhost:3001"; // локальна БД
+// export const url = "https://jsonplaceholder.typicode.com"; // фейковий API

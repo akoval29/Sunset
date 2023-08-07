@@ -16,8 +16,8 @@ export const Todos = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const allTodos = useSelector(allTodosSelector);
-  const { todosLoadingStatus, deletedTodoIds } = useSelector(
-    (state) => state.todos
+  const todosLoadingStatus = useSelector(
+    (state) => state.todos.todosLoadingStatus
   );
   const dispatch = useDispatch();
 
@@ -39,22 +39,17 @@ export const Todos = () => {
   const onEdit = (item) => {
     setSelectedItem(item);
     setShowEditTodo(true);
-    console.log(`todo №${item.id} edited?`);
+    console.log(`todo №${item.id} edited`);
   };
 
   const getCompletedColor = (completed) => {
     return completed ? "greenyellow" : "red";
   };
 
-  const filteredTodos = allTodos.filter(
-    (item) => !deletedTodoIds.includes(item.id)
-  );
-  console.log(filteredTodos);
-
   return (
     <article className="app__main">
       <h3 className="app__main-title">Todos</h3>
-      {filteredTodos.map((item) => (
+      {allTodos.map((item) => (
         <div className="post" key={item.id}>
           <div className="todo__wrap">
             <p className="todo__userId">User № {item.userId}</p>
@@ -86,7 +81,7 @@ export const Todos = () => {
               className="todo__completed"
               style={{ color: getCompletedColor(item.completed) }}
             >
-              {item.completed.toString()}
+              {item.completed?.toString()}
             </p>
           </div>
         </div>

@@ -33,13 +33,13 @@ export const AddEditForm = ({ flag }) => {
           onSubmit={(values, { setSubmitting, resetForm }) => {
             const newTodo = {
               userId: "999",
-              id: uuidv4().substring(0, 4),
+              id: uuidv4().substring(0, 3),
               title: values.inputTodo,
               completed: values.checked,
             };
+
             console.log(newTodo);
             dispatch(createTodo(newTodo)); // відправка форми в слайс
-
             resetForm(); // очищуєм форму
             setSubmitting(false); // розблоковуєм форму для нового вводу
             setShowForm(false); // закриваєм вікно з формаю
