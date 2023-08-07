@@ -2,11 +2,11 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
-import "./editStyle.scss";
+import "../editStyle.scss";
 
-import { createTodo } from "../../pages/todos-page/todoSlice";
+import { createPost } from "../../../pages/posts-page/postSlice";
 
-export const AddEditForm = ({ flag }) => {
+export const AddPost = ({ flag }) => {
   const [showForm, setShowForm] = useState(false);
 
   const dispatch = useDispatch();
@@ -20,26 +20,27 @@ export const AddEditForm = ({ flag }) => {
       {showForm ? (
         <Formik
           initialValues={{
-            inputTodo: "",
-            checked: false,
+            inputTilte: "",
+            inputPost: "",
           }}
           validate={(values) => {
             const errors = {};
-            if (!values.inputTodo) {
-              errors.inputTodo = `ENTER ${flag}`;
+            if (!values.inputTitle) {
+              errors.inputTitle = "ENTER TITLE";
+            } else if (!values.inputPost) {
+              errors.inputPost = "ENTER POST";
             }
             return errors;
           }}
           onSubmit={(values, { setSubmitting, resetForm }) => {
-            const newTodo = {
+            const newPost = {
               userId: "999",
               id: uuidv4().substring(0, 3),
-              title: values.inputTodo,
-              completed: values.checked,
+              title: values.inputTitle,
+              body: values.inputPost,
             };
 
-            console.log(newTodo);
-            dispatch(createTodo(newTodo)); // відправка форми в слайс
+            dispatch(createPost(newPost)); // відправка форми в слайс
             resetForm(); // очищуєм форму
             setSubmitting(false); // розблоковуєм форму для нового вводу
             setShowForm(false); // закриваєм вікно з формаю
@@ -59,27 +60,34 @@ export const AddEditForm = ({ flag }) => {
 
                 <Field
                   as="textarea"
-                  className="newEntry__textarea"
-                  type="inputTodo"
-                  name="inputTodo"
+                  className="newEntry__titlearea"
+                  type="inputTitle"
+                  name="inputTitle"
                   tabIndex={0}
-                  placeholder="Type something ..."
+                  placeholder="title ..."
                 />
 
-                <div className="checkBox">
-                  <Field
-                    className="checkBox__input"
-                    type="checkbox"
-                    name="checked"
-                    id="switch"
-                  />
-                  <label className="checkBox__label" htmlFor="switch">
-                    checkbox
-                  </label>
-                </div>
+                <Field
+                  as="textarea"
+                  className="newEntry__textarea"
+                  type="inputPost"
+                  name="inputPost"
+                  tabIndex={0}
+                  placeholder="post ..."
+                />
               </section>
 
               <div className="newEntry__submitContainer">
+                <ErrorMessage
+                  name="inputTitle"
+                  component="div"
+                  className="newEntry__btn newEntry__btn--error"
+                />
+                <ErrorMessage
+                  name="inputPost"
+                  component="div"
+                  className="newEntry__btn newEntry__btn--error"
+                />
                 <button
                   type="submit"
                   className="newEntry__btn"
@@ -88,11 +96,6 @@ export const AddEditForm = ({ flag }) => {
                 >
                   submit
                 </button>
-                <ErrorMessage
-                  name="inputTodo"
-                  component="div"
-                  className="newEntry__btn newEntry__btn--error"
-                />
               </div>
 
               <div className="newEntry__cross-wrap" onClick={onShowHandler}>

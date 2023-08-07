@@ -5,27 +5,60 @@ import {
   createSelector,
 } from "@reduxjs/toolkit";
 import { useHttp } from "../../../hooks/useAPI";
+import { url } from "../../../hooks/useAPI";
 
 const postsAdapter = createEntityAdapter();
 
+// Отримуєм post
 export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
   const { request } = useHttp();
-  return await request("https://jsonplaceholder.typicode.com/posts");
+  return await request(`${url}/posts`);
 });
+
+// Нове post
+export const createPost = createAsyncThunk(
+  "posts/createPost",
+  async (newPost) => {
+    const { request } = useHttp();
+    const response = await request(
+      `${url}/posts`,
+      "POST",
+      JSON.stringify(newPost)
+    );
+    return response;
+  }
+);
+
+// Видаляєм post
+export const deletePost = createAsyncThunk(
+  "posts/deletePost",
+  async (postId) => {
+    const { request } = useHttp();
+    await request(`${url}/posts/${postId}`, "DELETE");
+    return postId;
+  }
+);
+
+// Редагуєм post
+export const updatePost = createAsyncThunk(
+  "posts/updatePost",
+  async ({ postId, updatedPost }) => {
+    const { request } = useHttp();
+    await request(
+      `${url}/posts/${postId}`,
+      "PATCH",
+      JSON.stringify(updatedPost)
+    );
+    return { postId, updatedPost };
+  }
+);
 
 const postsSlice = createSlice({
   name: "posts",
   initialState: postsAdapter.getInitialState({
     postsLoadingStatus: "idle",
   }),
-  reducers: {
-    postsCreated: (state, action) => {
-      postsAdapter.addOne(state, action.payload);
-    },
-    postsDeleted: (state, action) => {
-      postsAdapter.removeOne(state, action.payload);
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchPosts.pending, (state) => {
@@ -38,20 +71,24 @@ const postsSlice = createSlice({
       .addCase(fetchPosts.rejected, (state) => {
         state.postsLoadingStatus = "error";
       })
+      .addCase(createPost.fulfilled, (state, action) => {
+        postsAdapter.addOne(state, action.payload);
+      })
+      .addCase(deletePost.fulfilled, (state, action) => {
+        postsAdapter.removeOne(state, action.payload);
+      })
+      .addCase(updatePost.fulfilled, (state, action) => {
+        const { postId, updatedPost } = action.payload;
+        postsAdapter.updateOne(state, {
+          id: postId,
+          changes: updatedPost,
+        });
+      })
       .addDefaultCase(() => {});
   },
 });
 
 const { selectAll } = postsAdapter.getSelectors((state) => state.posts);
 export const allPostsSelector = createSelector(selectAll, (posts) => posts);
-
-const { actions, reducer } = postsSlice;
+const { reducer } = postsSlice;
 export default reducer;
-
-export const {
-  postsFetching,
-  postsFetched,
-  postsFetchingError,
-  postsCreated,
-  postsDeleted,
-} = actions;

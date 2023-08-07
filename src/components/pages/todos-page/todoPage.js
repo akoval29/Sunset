@@ -5,8 +5,8 @@ import { fetchTodos, allTodosSelector, deleteTodo } from "./todoSlice.js";
 // commons
 import { ScrollTo } from "../../common/scroll/pageScroll";
 import { Spinner } from "../../common/loading/spinner";
-import { EditTodo } from "../../common/editForms/todoEditForm.js";
-import { AddEditForm } from "../../common/editForms/addEditForm.js";
+import { EditTodo } from "../../common/editForms/todo/editTodo.js";
+import { AddTodo } from "../../common/editForms/todo/addTodo.js";
 
 //style
 import "./todoStyle.scss";
@@ -33,13 +33,11 @@ export const Todos = () => {
 
   const onDelete = (todoId) => {
     dispatch(deleteTodo(todoId));
-    console.log(`todo №${todoId} deleted`);
   };
 
   const onEdit = (item) => {
     setSelectedItem(item);
     setShowEditTodo(true);
-    console.log(`todo №${item.id} edited`);
   };
 
   const getCompletedColor = (completed) => {
@@ -91,8 +89,8 @@ export const Todos = () => {
         setShowEditTodo={setShowEditTodo}
         selectedItem={selectedItem}
       />
+      <AddTodo flag="todo" />
       <ScrollTo />
-      <AddEditForm flag="todo" />
     </article>
   );
 };

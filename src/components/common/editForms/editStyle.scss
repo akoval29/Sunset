@@ -119,6 +119,7 @@
     border: 1px solid $theme-color;
     transition: box-shadow 0.3s ease;
     resize: none;
+    z-index: 1;
     &::placeholder {
       text-align: center;
       color: #999;
@@ -183,6 +184,7 @@
     }
     // стилі до ErrorMessage
     &--error {
+      z-index: 2;
       position: absolute;
       bottom: 0;
       text-align: center;
