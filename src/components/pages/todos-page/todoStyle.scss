@@ -1,10 +1,13 @@
 @use "../../../style/normalize.scss" as *;
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 .todo {
   border: 2px solid black;
   border-radius: 15px;
   padding: 10px;
   margin: 15px 10px;
+  font-family: "Roboto", sans-serif;
   background-color: rgba(255, 255, 255, 0.1);
   overflow: hidden; // delete animation
   transition: all 0.3s ease; // delete animation

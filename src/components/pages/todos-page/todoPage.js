@@ -7,6 +7,7 @@ import { ScrollTo } from "../../common/scroll/pageScroll";
 import { Spinner } from "../../common/loading/spinner";
 import { EditTodo } from "../../common/editForms/todo/editTodo.js";
 import { AddTodo } from "../../common/editForms/todo/addTodo.js";
+import { ErrorMessage } from "../../common/error/errorMessage";
 
 //style
 import "./todoStyle.scss";
@@ -28,7 +29,7 @@ export const Todos = () => {
   if (todosLoadingStatus === "loading") {
     return <Spinner />;
   } else if (todosLoadingStatus === "error") {
-    return <h5 className="">Помилка завантаження</h5>;
+    return <ErrorMessage />;
   }
 
   const onDelete = (todoId) => {

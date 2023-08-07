@@ -7,6 +7,7 @@ import { ScrollTo } from "../../common/scroll/pageScroll";
 import { Spinner } from "../../common/loading/spinner";
 import { EditPost } from "../../common/editForms/post/editPost";
 import { AddPost } from "../../common/editForms/post/addPost";
+import { ErrorMessage } from "../../common/error/errorMessage";
 
 import "./postStyle.scss";
 
@@ -27,7 +28,7 @@ export const Posts = () => {
   if (postsLoadingStatus === "loading") {
     return <Spinner />;
   } else if (postsLoadingStatus === "error") {
-    return <h5 className="text-center mt-5">Помилка завантаження</h5>;
+    return <ErrorMessage />;
   }
 
   const onDelete = (postId) => {
@@ -76,7 +77,6 @@ export const Posts = () => {
         setShowEditPost={setShowEditPost}
         selectedItem={selectedItem}
       />
-
       <AddPost flag="post" />
       <ScrollTo />
     </ul>

@@ -3,2035 +3,985 @@
     {
       "userId": 1,
       "id": 1,
-      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+      "title": "Як створити ефективні запити до бази даних в JavaScript",
+      "body": "При розробці веб-додатків важливо знати, як ефективно взаємодіяти з базою даних. В статті розглядаються підходи до створення оптимальних запитів до бази даних за допомогою JavaScript та інших технологій."
     },
     {
       "userId": 1,
       "id": 2,
-      "title": "qui est esse",
-      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+      "title": "Огляд найновіших трендів у розробці програмного забезпечення",
+      "body": "ІТ-індустрія постійно змінюється, і нові тренди з'являються в розробці програмного забезпечення. У цій статті розглядаються ключові напрямки розвитку, такі як розширена реальність, штучний інтелект та мікросервісна архітектура."
     },
     {
       "userId": 1,
       "id": 3,
-      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+      "title": "5 корисних порад щодо оптимізації веб-сайту",
+      "body": "Швидкість та продуктивність веб-сайту грають важливу роль у залученні користувачів. У цій статті розглядаються п'ять корисних порад щодо оптимізації завантаження сторінок, зменшення часу відгуку та покращення загальної взаємодії з користувачами."
     },
     {
       "userId": 1,
       "id": 4,
-      "title": "eum et est occaecati",
-      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+      "title": "Вступ до розробки ігор за допомогою JavaScript",
+      "body": "JavaScript може бути потужним інструментом для створення власних веб-ігор. У цій статті розглядаються основні принципи розробки ігор, включаючи анімацію, обробку подій та роботу з графікою."
     },
     {
       "userId": 1,
       "id": 5,
-      "title": "nesciunt quas odio",
-      "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
+      "title": "Як забезпечити безпеку мережі: основні кроки",
+      "body": "Забезпечення безпеки мережі є критично важливим завданням для будь-якого ІТ-спеціаліста. У цій статті розглядаються основні кроки, які допоможуть забезпечити конфіденційність даних та запобігти кібератакам."
     },
     {
       "userId": 1,
       "id": 6,
-      "title": "dolorem eum magni eos aperiam quia",
-      "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+      "title": "Розгортання додатків за допомогою контейнерів Docker",
+      "body": "Docker є популярним інструментом для розгортання додатків у контейнерах, що забезпечує їх ізольованість та переносимість. У цій статті детально розглядається процес створення, налаштування та розгортання контейнерів Docker."
     },
     {
       "userId": 1,
       "id": 7,
-      "title": "magnam facilis autem",
-      "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
+      "title": "Як вибрати найкращий фреймворк для фронтенд-розробки",
+      "body": "Незалежно від того, чи ви новачок у фронтенд-розробці, чи досвідчений веб-розробник, вибір правильного фреймворка може вплинути на продуктивність та якість вашого проекту. У цій статті розглядаються ключові фактори вибору та популярні фреймворки."
     },
     {
-      "userId": 1,
+      "userId": 2,
       "id": 8,
-      "title": "dolorem dolore est ipsam",
-      "body": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
+      "title": "Оптимізація продуктивності веб-додатків з використанням React",
+      "body": "React - це один з найпопулярніших фреймворків для розробки фронтенду. У статті розглядаються підходи до оптимізації продуктивності веб-додатків за допомогою React, такі як використання мемоізації, ліниве завантаження та інші техніки."
     },
     {
-      "userId": 1,
+      "userId": 2,
       "id": 9,
-      "title": "nesciunt iure omnis dolorem tempora et accusantium",
-      "body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
+      "title": "Використання REST API в програмуванні",
+      "body": "REST (Representational State Transfer) - це архітектурний стиль для взаємодії між розподіленими системами. У статті детально розглядаються принципи та практичні аспекти використання REST API в програмуванні."
     },
     {
-      "userId": 1,
+      "userId": 2,
       "id": 10,
-      "title": "optio molestias id quia eum",
-      "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
+      "title": "Основи алгоритмів та структур даних",
+      "body": "Розуміння алгоритмів та структур даних є ключовим для розробки ефективних програм. У статті розглядаються основні поняття, такі як сортування, пошук, стеки, черги та інші структури даних."
     },
     {
       "userId": 2,
       "id": 11,
-      "title": "et ea vero quia laudantium autem",
-      "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+      "title": "Розробка мобільних додатків з використанням React Native",
+      "body": "React Native дозволяє розробляти мобільні додатки для iOS та Android за допомогою JavaScript. У цій статті розглядаються переваги використання React Native, процес розробки та відладки мобільних додатків."
     },
     {
       "userId": 2,
       "id": 12,
-      "title": "in quibusdam tempore odit est dolorem",
-      "body": "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
+      "title": "Шаблони проектування в програмуванні",
+      "body": "Шаблони проектування - це відповідно структуровані підходи до вирішення типових задач у програмуванні. У статті розглядаються різні шаблони проектування та їх використання для покращення архітектури додатків."
     },
     {
-      "userId": 2,
+      "userId": 3,
       "id": 13,
-      "title": "dolorum ut in voluptas mollitia et saepe quo animi",
-      "body": "aut dicta possimus sint mollitia voluptas commodi quo doloremque\niste corrupti reiciendis voluptatem eius rerum\nsit cumque quod eligendi laborum minima\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam"
+      "title": "Штучний інтелект у веб-розробці",
+      "body": "Штучний інтелект (ШІ) відіграє все більш важливу роль у веб-розробці. У статті розглядаються застосування ШІ, такі як рекомендаційні системи, обробка природної мови та візуальне розпізнавання."
     },
     {
-      "userId": 2,
+      "userId": 3,
       "id": 14,
-      "title": "voluptatem eligendi optio",
-      "body": "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
+      "title": "Основи криптографії та кібербезпеки",
+      "body": "Кібербезпека є критично важливою для захисту даних та інформації в сучасному світі. У статті розглядаються основи криптографії, шифрування та заходи для забезпечення кібербезпеки."
     },
     {
-      "userId": 2,
+      "userId": 3,
       "id": 15,
-      "title": "eveniet quod temporibus",
-      "body": "reprehenderit quos placeat\nvelit minima officia dolores impedit repudiandae molestiae nam\nvoluptas recusandae quis delectus\nofficiis harum fugiat vitae"
+      "title": "Розробка інтерфейсів користувача з використанням HTML та CSS",
+      "body": "HTML та CSS є основами веб-розробки і використовуються для створення інтерфейсів користувача. У статті розглядаються техніки створення адаптивних та привабливих веб-інтерфейсів."
     },
     {
-      "userId": 2,
+      "userId": 3,
       "id": 16,
-      "title": "sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio",
-      "body": "suscipit nam nisi quo aperiam aut\nasperiores eos fugit maiores voluptatibus quia\nvoluptatem quis ullam qui in alias quia est\nconsequatur magni mollitia accusamus ea nisi voluptate dicta"
+      "title": "Як використовувати Git для контролю версій",
+      "body": "Git є популярною системою контролю версій, яка дозволяє зберігати та відстежувати зміни у коді. У статті розглядаються основи використання Git, команди та робочий процес розробників."
     },
     {
-      "userId": 2,
+      "userId": 4,
       "id": 17,
-      "title": "fugit voluptas sed molestias voluptatem provident",
-      "body": "eos voluptas et aut odit natus earum\naspernatur fuga molestiae ullam\ndeserunt ratione qui eos\nqui nihil ratione nemo velit ut aut id quo"
+      "title": "Паттерни проектування у Java",
+      "body": "Паттерни проектування - це відповідно структуровані підходи до вирішення типових задач у програмуванні. У статті розглядаються різні паттерни проектування та їх використання в мові програмування Java."
     },
     {
-      "userId": 2,
+      "userId": 4,
       "id": 18,
-      "title": "voluptate et itaque vero tempora molestiae",
-      "body": "eveniet quo quis\nlaborum totam consequatur non dolor\nut et est repudiandae\nest voluptatem vel debitis et magnam"
+      "title": "Тестування програмного забезпечення: основні принципи",
+      "body": "Тестування програмного забезпечення - це важлива частина розробки, яка допомагає забезпечити якість та надійність продукту. У статті розглядаються основні види тестування та принципи його проведення."
     },
     {
-      "userId": 2,
+      "userId": 4,
       "id": 19,
-      "title": "adipisci placeat illum aut reiciendis qui",
-      "body": "illum quis cupiditate provident sit magnam\nea sed aut omnis\nveniam maiores ullam consequatur atque\nadipisci quo iste expedita sit quos voluptas"
+      "title": "Як створити власний веб-сервер на Node.js",
+      "body": "Node.js - це платформа, яка дозволяє розробникам створювати серверні додатки на JavaScript. У статті розглядається процес створення веб-сервера на Node.js та взаємодія з ним за допомогою HTTP-запитів."
     },
     {
-      "userId": 2,
+      "userId": 4,
       "id": 20,
-      "title": "doloribus ad provident suscipit at",
-      "body": "qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo"
+      "title": "Принципи рефакторінгу коду",
+      "body": "Рефакторінг - це процес поліпшення структури та якості коду без зміни його функціональності. У статті розглядаються ключові принципи рефакторінгу та популярні методики."
     },
     {
-      "userId": 3,
+      "userId": 5,
       "id": 21,
-      "title": "asperiores ea ipsam voluptatibus modi minima quia sint",
-      "body": "repellat aliquid praesentium dolorem quo\nsed totam minus non itaque\nnihil labore molestiae sunt dolor eveniet hic recusandae veniam\ntempora et tenetur expedita sunt"
+      "title": "Автоматизація тестування з використанням Selenium",
+      "body": "Selenium - це інструмент для автоматизації тестування веб-додатків. У статті розглядаються підходи до створення та виконання автоматизованих тестів з використанням Selenium."
     },
     {
-      "userId": 3,
+      "userId": 5,
       "id": 22,
-      "title": "dolor sint quo a velit explicabo quia nam",
-      "body": "eos qui et ipsum ipsam suscipit aut\nsed omnis non odio\nexpedita earum mollitia molestiae aut atque rem suscipit\nnam impedit esse"
+      "title": "Способи оптимізації завантаження веб-сторінок",
+      "body": "Швидкість завантаження веб-сторінок має велике значення для користувачів. У статті розглядаються різні способи оптимізації завантаження, включаючи стиснення зображень, кешування та асинхронне завантаження ресурсів."
     },
     {
-      "userId": 3,
+      "userId": 5,
       "id": 23,
-      "title": "maxime id vitae nihil numquam",
-      "body": "veritatis unde neque eligendi\nquae quod architecto quo neque vitae\nest illo sit tempora doloremque fugit quod\net et vel beatae sequi ullam sed tenetur perspiciatis"
+      "title": "Створення анімацій з CSS та JavaScript",
+      "body": "Анімації можуть зробити веб-сайт більш привабливим та динамічним. У статті розглядаються методи створення анімацій з використанням CSS-переходів та JavaScript-бібліотек."
     },
     {
-      "userId": 3,
+      "userId": 5,
       "id": 24,
-      "title": "autem hic labore sunt dolores incidunt",
-      "body": "enim et ex nulla\nomnis voluptas quia qui\nvoluptatem consequatur numquam aliquam sunt\ntotam recusandae id dignissimos aut sed asperiores deserunt"
+      "title": "Підходи до тестування безпеки веб-додатків",
+      "body": "Тестування безпеки - важлива складова розробки веб-додатків. У статті розглядаються підходи до тестування на вразливості та заходи для забезпечення безпеки даних."
     },
     {
-      "userId": 3,
+      "userId": 5,
       "id": 25,
-      "title": "rem alias distinctio quo quis",
-      "body": "ullam consequatur ut\nomnis quis sit vel consequuntur\nipsa eligendi ipsum molestiae et omnis error nostrum\nmolestiae illo tempore quia et distinctio"
+      "title": "Основи асинхронного програмування в JavaScript",
+      "body": "Асинхронне програмування - це підхід, який дозволяє виконувати нечекаючі дії та забезпечує більш високу продуктивність додатків. У статті розглядаються основні концепції та методики асинхронного програмування в JavaScript."
     },
     {
-      "userId": 3,
+      "userId": 6,
       "id": 26,
-      "title": "est et quae odit qui non",
-      "body": "similique esse doloribus nihil accusamus\nomnis dolorem fuga consequuntur reprehenderit fugit recusandae temporibus\nperspiciatis cum ut laudantium\nomnis aut molestiae vel vero"
+      "title": "Розробка ігор на Unity: від ідеї до релізу",
+      "body": "Unity - популярний інструмент для розробки ігор у 2D та 3D форматах. У статті розглядається процес створення власної гри на Unity, від концепції до випуску."
     },
     {
-      "userId": 3,
+      "userId": 6,
       "id": 27,
-      "title": "quasi id et eos tenetur aut quo autem",
-      "body": "eum sed dolores ipsam sint possimus debitis occaecati\ndebitis qui qui et\nut placeat enim earum aut odit facilis\nconsequatur suscipit necessitatibus rerum sed inventore temporibus consequatur"
+      "title": "Створення відомих веб-сайтів на WordPress",
+      "body": "WordPress - платформа для створення веб-сайтів та блогів. У статті розглядаються практичні кроки створення власного веб-сайту на базі WordPress."
     },
     {
-      "userId": 3,
+      "userId": 6,
       "id": 28,
-      "title": "delectus ullam et corporis nulla voluptas sequi",
-      "body": "non et quaerat ex quae ad maiores\nmaiores recusandae totam aut blanditiis mollitia quas illo\nut voluptatibus voluptatem\nsimilique nostrum eum"
+      "title": "Як використовувати API Google Maps у веб-додатках",
+      "body": "API Google Maps дозволяє інтегрувати карти та геолокацію у веб-додатки. У статті розглядається використання API Google Maps для відображення мап та реалізації функціональності зв'язаної з місцезнаходженням."
     },
     {
-      "userId": 3,
+      "userId": 6,
       "id": 29,
-      "title": "iusto eius quod necessitatibus culpa ea",
-      "body": "odit magnam ut saepe sed non qui\ntempora atque nihil\naccusamus illum doloribus illo dolor\neligendi repudiandae odit magni similique sed cum maiores"
+      "title": "Способи оптимізації веб-додатків для мобільних пристроїв",
+      "body": "Веб-додатки повинні працювати ефективно та зручно на мобільних пристроях. У статті розглядаються підходи до оптимізації веб-додатків для мобільних платформ."
     },
     {
-      "userId": 3,
+      "userId": 7,
       "id": 30,
-      "title": "a quo magni similique perferendis",
-      "body": "alias dolor cumque\nimpedit blanditiis non eveniet odio maxime\nblanditiis amet eius quis tempora quia autem rem\na provident perspiciatis quia"
+      "title": "Штучний інтелект у медичній діагностиці",
+      "body": "Штучний інтелект знаходить застосування у різних галузях, включаючи медичну діагностику. У статті розглядаються приклади використання ШІ для покращення точності діагностики та лікування."
     },
     {
-      "userId": 4,
+      "userId": 7,
       "id": 31,
-      "title": "ullam ut quidem id aut vel consequuntur",
-      "body": "debitis eius sed quibusdam non quis consectetur vitae\nimpedit ut qui consequatur sed aut in\nquidem sit nostrum et maiores adipisci atque\nquaerat voluptatem adipisci repudiandae"
+      "title": "Створення ефективних запитів до API за допомогою GraphQL",
+      "body": "GraphQL - це мова запитів для API, яка дозволяє отримувати лише необхідні дані. У статті розглядаються переваги використання GraphQL та основні принципи створення запитів."
     },
     {
-      "userId": 4,
+      "userId": 7,
       "id": 32,
-      "title": "doloremque illum aliquid sunt",
-      "body": "deserunt eos nobis asperiores et hic\nest debitis repellat molestiae optio\nnihil ratione ut eos beatae quibusdam distinctio maiores\nearum voluptates et aut adipisci ea maiores voluptas maxime"
+      "title": "Робототехніка: від теорії до практики",
+      "body": "Робототехніка - це галузь, яка досліджує створення та використання роботів. У статті розглядаються основи робототехніки та приклади практичних застосувань."
     },
     {
-      "userId": 4,
+      "userId": 7,
       "id": 33,
-      "title": "qui explicabo molestiae dolorem",
-      "body": "rerum ut et numquam laborum odit est sit\nid qui sint in\nquasi tenetur tempore aperiam et quaerat qui in\nrerum officiis sequi cumque quod"
+      "title": "Секрети успішної командної роботи в програмуванні",
+      "body": "Робота у команді важлива для досягнення високої продуктивності та якості. У статті розглядаються секрети успішної командної роботи у програмуванні, включаючи розподіл завдань, спільний код та зворотний зв'язок."
     },
     {
-      "userId": 4,
+      "userId": 7,
       "id": 34,
-      "title": "magnam ut rerum iure",
-      "body": "ea velit perferendis earum ut voluptatem voluptate itaque iusto\ntotam pariatur in\nnemo voluptatem voluptatem autem magni tempora minima in\nest distinctio qui assumenda accusamus dignissimos officia nesciunt nobis"
+      "title": "Основи розробки розширень для браузерів",
+      "body": "Розширення для браузерів дозволяють розширити функціональність веб-переглядача. У статті розглядаються основи розробки розширень для популярних браузерів, таких як Chrome та Firefox."
     },
     {
-      "userId": 4,
+      "userId": 8,
       "id": 35,
-      "title": "id nihil consequatur molestias animi provident",
-      "body": "nisi error delectus possimus ut eligendi vitae\nplaceat eos harum cupiditate facilis reprehenderit voluptatem beatae\nmodi ducimus quo illum voluptas eligendi\net nobis quia fugit"
+      "title": "Як створити власний блог на платформі Ghost",
+      "body": "Ghost - платформа для створення та управління власним блогом. У статті розглядаються кроки створення та налаштування власного блогу на платформі Ghost."
     },
     {
-      "userId": 4,
+      "userId": 8,
       "id": 36,
-      "title": "fuga nam accusamus voluptas reiciendis itaque",
-      "body": "ad mollitia et omnis minus architecto odit\nvoluptas doloremque maxime aut non ipsa qui alias veniam\nblanditiis culpa aut quia nihil cumque facere et occaecati\nqui aspernatur quia eaque ut aperiam inventore"
+      "title": "Оптимізація баз даних для високої продуктивності",
+      "body": "Ефективна робота з базами даних важлива для продуктивності додатків. У статті розглядаються методи оптимізації баз даних для забезпечення високої продуктивності та відгуку."
     },
     {
-      "userId": 4,
+      "userId": 8,
       "id": 37,
-      "title": "provident vel ut sit ratione est",
-      "body": "debitis et eaque non officia sed nesciunt pariatur vel\nvoluptatem iste vero et ea\nnumquam aut expedita ipsum nulla in\nvoluptates omnis consequatur aut enim officiis in quam qui"
+      "title": "Створення адаптивних макетів з використанням CSS Grid",
+      "body": "CSS Grid - це потужний інструмент для створення адаптивних макетів. У статті розглядаються принципи створення адаптивних макетів з використанням CSS Grid."
     },
     {
-      "userId": 4,
+      "userId": 8,
       "id": 38,
-      "title": "explicabo et eos deleniti nostrum ab id repellendus",
-      "body": "animi esse sit aut sit nesciunt assumenda eum voluptas\nquia voluptatibus provident quia necessitatibus ea\nrerum repudiandae quia voluptatem delectus fugit aut id quia\nratione optio eos iusto veniam iure"
+      "title": "Як створити додаток з використанням Electron",
+      "body": "Electron дозволяє розробникам створювати крос-платформені додатки на базі веб-технологій. У статті розглядається процес створення додатка з використанням Electron."
     },
     {
-      "userId": 4,
+      "userId": 8,
       "id": 39,
-      "title": "eos dolorem iste accusantium est eaque quam",
-      "body": "corporis rerum ducimus vel eum accusantium\nmaxime aspernatur a porro possimus iste omnis\nest in deleniti asperiores fuga aut\nvoluptas sapiente vel dolore minus voluptatem incidunt ex"
+      "title": "Основи роботи з Docker для розробників",
+      "body": "Docker дозволяє розробникам створювати, розгортати та управляти контейнерами. У статті розглядаються основи роботи з Docker, включаючи створення образів та контейнерів."
     },
     {
-      "userId": 4,
+      "userId": 8,
       "id": 40,
-      "title": "enim quo cumque",
-      "body": "ut voluptatum aliquid illo tenetur nemo sequi quo facilis\nipsum rem optio mollitia quas\nvoluptatem eum voluptas qui\nunde omnis voluptatem iure quasi maxime voluptas nam"
+      "title": "Як створити чат-додаток з використанням WebSocket",
+      "body": "WebSocket - це технологія для реалізації двостороннього зв'язку між клієнтом та сервером. У статті розглядається процес створення чат-додатка з використанням WebSocket."
     },
     {
-      "userId": 5,
+      "userId": 9,
       "id": 41,
-      "title": "non est facere",
-      "body": "molestias id nostrum\nexcepturi molestiae dolore omnis repellendus quaerat saepe\nconsectetur iste quaerat tenetur asperiores accusamus ex ut\nnam quidem est ducimus sunt debitis saepe"
+      "title": "Використання Redux для керування станом додатків",
+      "body": "Redux є популярною бібліотекою для керування станом додатків. У статті розглядаються основи використання Redux та практичні приклади його застосування."
     },
     {
-      "userId": 5,
+      "userId": 9,
       "id": 42,
-      "title": "commodi ullam sint et excepturi error explicabo praesentium voluptas",
-      "body": "odio fugit voluptatum ducimus earum autem est incidunt voluptatem\nodit reiciendis aliquam sunt sequi nulla dolorem\nnon facere repellendus voluptates quia\nratione harum vitae ut"
+      "title": "Основи тестування розробки на React",
+      "body": "Тестування є важливою складовою розробки на React. У статті розглядаються основні підходи до тестування компонентів та додатків на React."
     },
     {
-      "userId": 5,
+      "userId": 9,
       "id": 43,
-      "title": "eligendi iste nostrum consequuntur adipisci praesentium sit beatae perferendis",
-      "body": "similique fugit est\nillum et dolorum harum et voluptate eaque quidem\nexercitationem quos nam commodi possimus cum odio nihil nulla\ndolorum exercitationem magnam ex et a et distinctio debitis"
+      "title": "Архітектурні підходи у веб-розробці: MVC, MVP, MVVM",
+      "body": "Розробка веб-додатків вимагає вибору відповідної архітектури. У статті розглядаються популярні архітектурні підходи, такі як MVC, MVP та MVVM, та їх вплив на організацію коду."
     },
     {
-      "userId": 5,
+      "userId": 9,
       "id": 44,
-      "title": "optio dolor molestias sit",
-      "body": "temporibus est consectetur dolore\net libero debitis vel velit laboriosam quia\nipsum quibusdam qui itaque fuga rem aut\nea et iure quam sed maxime ut distinctio quae"
+      "title": "Принципи розробки масштабованих систем",
+      "body": "Масштабованість є важливою якістю системи. У статті розглядаються принципи розробки масштабованих систем, включаючи горизонтальне та вертикальне масштабування."
     },
     {
-      "userId": 5,
+      "userId": 9,
       "id": 45,
-      "title": "ut numquam possimus omnis eius suscipit laudantium iure",
-      "body": "est natus reiciendis nihil possimus aut provident\nex et dolor\nrepellat pariatur est\nnobis rerum repellendus dolorem autem"
+      "title": "Основи роботи з API та HTTP-запитами",
+      "body": "Взаємодія між додатками часто здійснюється за допомогою API та HTTP-запитів. У статті розглядаються основи роботи з API, види запитів та обробка відповідей."
     },
     {
-      "userId": 5,
+      "userId": 10,
       "id": 46,
-      "title": "aut quo modi neque nostrum ducimus",
-      "body": "voluptatem quisquam iste\nvoluptatibus natus officiis facilis dolorem\nquis quas ipsam\nvel et voluptatum in aliquid"
+      "title": "Оптимізація баз даних для аналітики",
+      "body": "Бази даних відіграють важливу роль у зборі та аналізі даних. У статті розглядаються підходи до оптимізації баз даних для забезпечення ефективної аналітики."
     },
     {
-      "userId": 5,
+      "userId": 10,
       "id": 47,
-      "title": "quibusdam cumque rem aut deserunt",
-      "body": "voluptatem assumenda ut qui ut cupiditate aut impedit veniam\noccaecati nemo illum voluptatem laudantium\nmolestiae beatae rerum ea iure soluta nostrum\neligendi et voluptate"
+      "title": "Підходи до безпеки даних в хмарних сервісах",
+      "body": "Хмарні сервіси надають зручність та доступність для зберігання даних. У статті розглядаються підходи до забезпечення безпеки даних у хмарних сервісах."
     },
     {
-      "userId": 5,
+      "userId": 10,
       "id": 48,
-      "title": "ut voluptatem illum ea doloribus itaque eos",
-      "body": "voluptates quo voluptatem facilis iure occaecati\nvel assumenda rerum officia et\nillum perspiciatis ab deleniti\nlaudantium repellat ad ut et autem reprehenderit"
+      "title": "Як використовувати аутентифікацію та авторизацію в додатках",
+      "body": "Аутентифікація та авторизація - важливі аспекти забезпечення безпеки додатків. У статті розглядаються методи та практики використання аутентифікації та авторизації."
     },
     {
-      "userId": 5,
+      "userId": 10,
       "id": 49,
-      "title": "laborum non sunt aut ut assumenda perspiciatis voluptas",
-      "body": "inventore ab sint\nnatus fugit id nulla sequi architecto nihil quaerat\neos tenetur in in eum veritatis non\nquibusdam officiis aspernatur cumque aut commodi aut"
+      "title": "Основи розробки ігор на HTML5 та JavaScript",
+      "body": "HTML5 та JavaScript дозволяють розробляти власні ігри для веб-браузерів. У статті розглядаються основи розробки ігор на HTML5 та JavaScript."
     },
     {
-      "userId": 5,
+      "userId": 10,
       "id": 50,
-      "title": "repellendus qui recusandae incidunt voluptates tenetur qui omnis exercitationem",
-      "body": "error suscipit maxime adipisci consequuntur recusandae\nvoluptas eligendi et est et voluptates\nquia distinctio ab amet quaerat molestiae et vitae\nadipisci impedit sequi nesciunt quis consectetur"
-    },
-    {
-      "userId": 6,
-      "id": 51,
-      "title": "soluta aliquam aperiam consequatur illo quis voluptas",
-      "body": "sunt dolores aut doloribus\ndolore doloribus voluptates tempora et\ndoloremque et quo\ncum asperiores sit consectetur dolorem"
-    },
-    {
-      "userId": 6,
-      "id": 52,
-      "title": "qui enim et consequuntur quia animi quis voluptate quibusdam",
-      "body": "iusto est quibusdam fuga quas quaerat molestias\na enim ut sit accusamus enim\ntemporibus iusto accusantium provident architecto\nsoluta esse reprehenderit qui laborum"
-    },
-    {
-      "userId": 6,
-      "id": 53,
-      "title": "ut quo aut ducimus alias",
-      "body": "minima harum praesentium eum rerum illo dolore\nquasi exercitationem rerum nam\nporro quis neque quo\nconsequatur minus dolor quidem veritatis sunt non explicabo similique"
-    },
-    {
-      "userId": 6,
-      "id": 54,
-      "title": "sit asperiores ipsam eveniet odio non quia",
-      "body": "totam corporis dignissimos\nvitae dolorem ut occaecati accusamus\nex velit deserunt\net exercitationem vero incidunt corrupti mollitia"
-    },
-    {
-      "userId": 6,
-      "id": 55,
-      "title": "sit vel voluptatem et non libero",
-      "body": "debitis excepturi ea perferendis harum libero optio\neos accusamus cum fuga ut sapiente repudiandae\net ut incidunt omnis molestiae\nnihil ut eum odit"
-    },
-    {
-      "userId": 6,
-      "id": 56,
-      "title": "qui et at rerum necessitatibus",
-      "body": "aut est omnis dolores\nneque rerum quod ea rerum velit pariatur beatae excepturi\net provident voluptas corrupti\ncorporis harum reprehenderit dolores eligendi"
-    },
-    {
-      "userId": 6,
-      "id": 57,
-      "title": "sed ab est est",
-      "body": "at pariatur consequuntur earum quidem\nquo est laudantium soluta voluptatem\nqui ullam et est\net cum voluptas voluptatum repellat est"
-    },
-    {
-      "userId": 6,
-      "id": 58,
-      "title": "voluptatum itaque dolores nisi et quasi",
-      "body": "veniam voluptatum quae adipisci id\net id quia eos ad et dolorem\naliquam quo nisi sunt eos impedit error\nad similique veniam"
-    },
-    {
-      "userId": 6,
-      "id": 59,
-      "title": "qui commodi dolor at maiores et quis id accusantium",
-      "body": "perspiciatis et quam ea autem temporibus non voluptatibus qui\nbeatae a earum officia nesciunt dolores suscipit voluptas et\nanimi doloribus cum rerum quas et magni\net hic ut ut commodi expedita sunt"
-    },
-    {
-      "userId": 6,
-      "id": 60,
-      "title": "consequatur placeat omnis quisquam quia reprehenderit fugit veritatis facere",
-      "body": "asperiores sunt ab assumenda cumque modi velit\nqui esse omnis\nvoluptate et fuga perferendis voluptas\nillo ratione amet aut et omnis"
-    },
-    {
-      "userId": 7,
-      "id": 61,
-      "title": "voluptatem doloribus consectetur est ut ducimus",
-      "body": "ab nemo optio odio\ndelectus tenetur corporis similique nobis repellendus rerum omnis facilis\nvero blanditiis debitis in nesciunt doloribus dicta dolores\nmagnam minus velit"
-    },
-    {
-      "userId": 7,
-      "id": 62,
-      "title": "beatae enim quia vel",
-      "body": "enim aspernatur illo distinctio quae praesentium\nbeatae alias amet delectus qui voluptate distinctio\nodit sint accusantium autem omnis\nquo molestiae omnis ea eveniet optio"
-    },
-    {
-      "userId": 7,
-      "id": 63,
-      "title": "voluptas blanditiis repellendus animi ducimus error sapiente et suscipit",
-      "body": "enim adipisci aspernatur nemo\nnumquam omnis facere dolorem dolor ex quis temporibus incidunt\nab delectus culpa quo reprehenderit blanditiis asperiores\naccusantium ut quam in voluptatibus voluptas ipsam dicta"
-    },
-    {
-      "userId": 7,
-      "id": 64,
-      "title": "et fugit quas eum in in aperiam quod",
-      "body": "id velit blanditiis\neum ea voluptatem\nmolestiae sint occaecati est eos perspiciatis\nincidunt a error provident eaque aut aut qui"
-    },
-    {
-      "userId": 7,
-      "id": 65,
-      "title": "consequatur id enim sunt et et",
-      "body": "voluptatibus ex esse\nsint explicabo est aliquid cumque adipisci fuga repellat labore\nmolestiae corrupti ex saepe at asperiores et perferendis\nnatus id esse incidunt pariatur"
-    },
-    {
-      "userId": 7,
-      "id": 66,
-      "title": "repudiandae ea animi iusto",
-      "body": "officia veritatis tenetur vero qui itaque\nsint non ratione\nsed et ut asperiores iusto eos molestiae nostrum\nveritatis quibusdam et nemo iusto saepe"
-    },
-    {
-      "userId": 7,
-      "id": 67,
-      "title": "aliquid eos sed fuga est maxime repellendus",
-      "body": "reprehenderit id nostrum\nvoluptas doloremque pariatur sint et accusantium quia quod aspernatur\net fugiat amet\nnon sapiente et consequatur necessitatibus molestiae"
-    },
-    {
-      "userId": 7,
-      "id": 68,
-      "title": "odio quis facere architecto reiciendis optio",
-      "body": "magnam molestiae perferendis quisquam\nqui cum reiciendis\nquaerat animi amet hic inventore\nea quia deleniti quidem saepe porro velit"
-    },
-    {
-      "userId": 7,
-      "id": 69,
-      "title": "fugiat quod pariatur odit minima",
-      "body": "officiis error culpa consequatur modi asperiores et\ndolorum assumenda voluptas et vel qui aut vel rerum\nvoluptatum quisquam perspiciatis quia rerum consequatur totam quas\nsequi commodi repudiandae asperiores et saepe a"
-    },
-    {
-      "userId": 7,
-      "id": 70,
-      "title": "voluptatem laborum magni",
-      "body": "sunt repellendus quae\nest asperiores aut deleniti esse accusamus repellendus quia aut\nquia dolorem unde\neum tempora esse dolore"
-    },
-    {
-      "userId": 8,
-      "id": 71,
-      "title": "et iusto veniam et illum aut fuga",
-      "body": "occaecati a doloribus\niste saepe consectetur placeat eum voluptate dolorem et\nqui quo quia voluptas\nrerum ut id enim velit est perferendis"
-    },
-    {
-      "userId": 8,
-      "id": 72,
-      "title": "sint hic doloribus consequatur eos non id",
-      "body": "quam occaecati qui deleniti consectetur\nconsequatur aut facere quas exercitationem aliquam hic voluptas\nneque id sunt ut aut accusamus\nsunt consectetur expedita inventore velit"
-    },
-    {
-      "userId": 8,
-      "id": 73,
-      "title": "consequuntur deleniti eos quia temporibus ab aliquid at",
-      "body": "voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabo\naut eum minima consequatur\ntempore cumque quae est et\net in consequuntur voluptatem voluptates aut"
-    },
-    {
-      "userId": 8,
-      "id": 74,
-      "title": "enim unde ratione doloribus quas enim ut sit sapiente",
-      "body": "odit qui et et necessitatibus sint veniam\nmollitia amet doloremque molestiae commodi similique magnam et quam\nblanditiis est itaque\nquo et tenetur ratione occaecati molestiae tempora"
-    },
-    {
-      "userId": 8,
-      "id": 75,
-      "title": "dignissimos eum dolor ut enim et delectus in",
-      "body": "commodi non non omnis et voluptas sit\nautem aut nobis magnam et sapiente voluptatem\net laborum repellat qui delectus facilis temporibus\nrerum amet et nemo voluptate expedita adipisci error dolorem"
-    },
-    {
-      "userId": 8,
-      "id": 76,
-      "title": "doloremque officiis ad et non perferendis",
-      "body": "ut animi facere\ntotam iusto tempore\nmolestiae eum aut et dolorem aperiam\nquaerat recusandae totam odio"
-    },
-    {
-      "userId": 8,
-      "id": 77,
-      "title": "necessitatibus quasi exercitationem odio",
-      "body": "modi ut in nulla repudiandae dolorum nostrum eos\naut consequatur omnis\nut incidunt est omnis iste et quam\nvoluptates sapiente aliquam asperiores nobis amet corrupti repudiandae provident"
-    },
-    {
-      "userId": 8,
-      "id": 78,
-      "title": "quam voluptatibus rerum veritatis",
-      "body": "nobis facilis odit tempore cupiditate quia\nassumenda doloribus rerum qui ea\nillum et qui totam\naut veniam repellendus"
-    },
-    {
-      "userId": 8,
-      "id": 79,
-      "title": "pariatur consequatur quia magnam autem omnis non amet",
-      "body": "libero accusantium et et facere incidunt sit dolorem\nnon excepturi qui quia sed laudantium\nquisquam molestiae ducimus est\nofficiis esse molestiae iste et quos"
-    },
-    {
-      "userId": 8,
-      "id": 80,
-      "title": "labore in ex et explicabo corporis aut quas",
-      "body": "ex quod dolorem ea eum iure qui provident amet\nquia qui facere excepturi et repudiandae\nasperiores molestias provident\nminus incidunt vero fugit rerum sint sunt excepturi provident"
-    },
-    {
-      "userId": 9,
-      "id": 81,
-      "title": "tempora rem veritatis voluptas quo dolores vero",
-      "body": "facere qui nesciunt est voluptatum voluptatem nisi\nsequi eligendi necessitatibus ea at rerum itaque\nharum non ratione velit laboriosam quis consequuntur\nex officiis minima doloremque voluptas ut aut"
-    },
-    {
-      "userId": 9,
-      "id": 82,
-      "title": "laudantium voluptate suscipit sunt enim enim",
-      "body": "ut libero sit aut totam inventore sunt\nporro sint qui sunt molestiae\nconsequatur cupiditate qui iste ducimus adipisci\ndolor enim assumenda soluta laboriosam amet iste delectus hic"
-    },
-    {
-      "userId": 9,
-      "id": 83,
-      "title": "odit et voluptates doloribus alias odio et",
-      "body": "est molestiae facilis quis tempora numquam nihil qui\nvoluptate sapiente consequatur est qui\nnecessitatibus autem aut ipsa aperiam modi dolore numquam\nreprehenderit eius rem quibusdam"
-    },
-    {
-      "userId": 9,
-      "id": 84,
-      "title": "optio ipsam molestias necessitatibus occaecati facilis veritatis dolores aut",
-      "body": "sint molestiae magni a et quos\neaque et quasi\nut rerum debitis similique veniam\nrecusandae dignissimos dolor incidunt consequatur odio"
-    },
-    {
-      "userId": 9,
-      "id": 85,
-      "title": "dolore veritatis porro provident adipisci blanditiis et sunt",
-      "body": "similique sed nisi voluptas iusto omnis\nmollitia et quo\nassumenda suscipit officia magnam sint sed tempora\nenim provident pariatur praesentium atque animi amet ratione"
-    },
-    {
-      "userId": 9,
-      "id": 86,
-      "title": "placeat quia et porro iste",
-      "body": "quasi excepturi consequatur iste autem temporibus sed molestiae beatae\net quaerat et esse ut\nvoluptatem occaecati et vel explicabo autem\nasperiores pariatur deserunt optio"
-    },
-    {
-      "userId": 9,
-      "id": 87,
-      "title": "nostrum quis quasi placeat",
-      "body": "eos et molestiae\nnesciunt ut a\ndolores perspiciatis repellendus repellat aliquid\nmagnam sint rem ipsum est"
-    },
-    {
-      "userId": 9,
-      "id": 88,
-      "title": "sapiente omnis fugit eos",
-      "body": "consequatur omnis est praesentium\nducimus non iste\nneque hic deserunt\nvoluptatibus veniam cum et rerum sed"
-    },
-    {
-      "userId": 9,
-      "id": 89,
-      "title": "sint soluta et vel magnam aut ut sed qui",
-      "body": "repellat aut aperiam totam temporibus autem et\narchitecto magnam ut\nconsequatur qui cupiditate rerum quia soluta dignissimos nihil iure\ntempore quas est"
-    },
-    {
-      "userId": 9,
-      "id": 90,
-      "title": "ad iusto omnis odit dolor voluptatibus",
-      "body": "minus omnis soluta quia\nqui sed adipisci voluptates illum ipsam voluptatem\neligendi officia ut in\neos soluta similique molestias praesentium blanditiis"
-    },
-    {
-      "userId": 10,
-      "id": 91,
-      "title": "aut amet sed",
-      "body": "libero voluptate eveniet aperiam sed\nsunt placeat suscipit molestias\nsimilique fugit nam natus\nexpedita consequatur consequatur dolores quia eos et placeat"
-    },
-    {
-      "userId": 10,
-      "id": 92,
-      "title": "ratione ex tenetur perferendis",
-      "body": "aut et excepturi dicta laudantium sint rerum nihil\nlaudantium et at\na neque minima officia et similique libero et\ncommodi voluptate qui"
-    },
-    {
-      "userId": 10,
-      "id": 93,
-      "title": "beatae soluta recusandae",
-      "body": "dolorem quibusdam ducimus consequuntur dicta aut quo laboriosam\nvoluptatem quis enim recusandae ut sed sunt\nnostrum est odit totam\nsit error sed sunt eveniet provident qui nulla"
-    },
-    {
-      "userId": 10,
-      "id": 94,
-      "title": "qui qui voluptates illo iste minima",
-      "body": "aspernatur expedita soluta quo ab ut similique\nexpedita dolores amet\nsed temporibus distinctio magnam saepe deleniti\nomnis facilis nam ipsum natus sint similique omnis"
-    },
-    {
-      "userId": 10,
-      "id": 95,
-      "title": "id minus libero illum nam ad officiis",
-      "body": "earum voluptatem facere provident blanditiis velit laboriosam\npariatur accusamus odio saepe\ncumque dolor qui a dicta ab doloribus consequatur omnis\ncorporis cupiditate eaque assumenda ad nesciunt"
-    },
-    {
-      "userId": 10,
-      "id": 96,
-      "title": "quaerat velit veniam amet cupiditate aut numquam ut sequi",
-      "body": "in non odio excepturi sint eum\nlabore voluptates vitae quia qui et\ninventore itaque rerum\nveniam non exercitationem delectus aut"
-    },
-    {
-      "userId": 10,
-      "id": 97,
-      "title": "quas fugiat ut perspiciatis vero provident",
-      "body": "eum non blanditiis soluta porro quibusdam voluptas\nvel voluptatem qui placeat dolores qui velit aut\nvel inventore aut cumque culpa explicabo aliquid at\nperspiciatis est et voluptatem dignissimos dolor itaque sit nam"
-    },
-    {
-      "userId": 10,
-      "id": 98,
-      "title": "laboriosam dolor voluptates",
-      "body": "doloremque ex facilis sit sint culpa\nsoluta assumenda eligendi non ut eius\nsequi ducimus vel quasi\nveritatis est dolores"
-    },
-    {
-      "userId": 10,
-      "id": 99,
-      "title": "temporibus sit alias delectus eligendi possimus magni",
-      "body": "quo deleniti praesentium dicta non quod\naut est molestias\nmolestias et officia quis nihil\nitaque dolorem quia"
-    },
-    {
-      "userId": 10,
-      "id": 100,
-      "title": "at nam consequatur ea labore ea harum",
-      "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
+      "title": "Як створити ефективний інтерфейс користувача",
+      "body": "Ефективний інтерфейс користувача є ключем до зручності та задоволення користувачів. У статті розглядаються принципи створення ефективного інтерфейсу користувача."
     }
   ],
   "todos": [
     {
       "userId": 1,
       "id": 1,
-      "title": "delectus aut autem",
+      "title": "Вивчити основи алгоритміки",
       "completed": false
     },
     {
       "userId": 1,
       "id": 2,
-      "title": "quis ut nam facilis et officia qui",
+      "title": "Написати функцію сортування на JavaScript",
       "completed": false
     },
     {
       "userId": 1,
       "id": 3,
-      "title": "fugiat veniam minus",
+      "title": "Дослідити можливості використання штучного інтелекту в розробці",
       "completed": false
     },
     {
       "userId": 1,
       "id": 4,
-      "title": "et porro tempora",
+      "title": "Створити анімаційний ефект на веб-сайті",
       "completed": true
     },
     {
       "userId": 1,
       "id": 5,
-      "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+      "title": "Вивчити принципи роботи Docker",
       "completed": false
     },
     {
       "userId": 1,
       "id": 6,
-      "title": "qui ullam ratione quibusdam voluptatem quia omnis",
+      "title": "Розробити REST API для додатку",
       "completed": false
     },
     {
       "userId": 1,
       "id": 7,
-      "title": "illo expedita consequatur quia in",
+      "title": "Оптимізувати запити до бази даних",
       "completed": false
     },
     {
-      "userId": 1,
+      "userId": 2,
       "id": 8,
-      "title": "quo adipisci enim quam ut ab",
+      "title": "Написати скрипт для автоматизації рутинних завдань",
       "completed": true
     },
     {
-      "userId": 1,
+      "userId": 2,
       "id": 9,
-      "title": "molestiae perspiciatis ipsa",
+      "title": "Вивчити нові можливості ES2022",
       "completed": false
     },
     {
-      "userId": 1,
+      "userId": 2,
       "id": 10,
-      "title": "illo est ratione doloremque quia maiores aut",
+      "title": "Розробити власний інтерфейс користувача на React",
       "completed": true
     },
     {
-      "userId": 1,
+      "userId": 2,
       "id": 11,
-      "title": "vero rerum temporibus dolor",
+      "title": "Дослідити криптовалюти та блокчейн технології",
       "completed": true
     },
     {
-      "userId": 1,
+      "userId": 2,
       "id": 12,
-      "title": "ipsa repellendus fugit nisi",
+      "title": "Написати статтю про переваги використання GraphQL",
       "completed": true
     },
     {
-      "userId": 1,
+      "userId": 2,
       "id": 13,
-      "title": "et doloremque nulla",
+      "title": "Вивчити основи мережевої безпеки",
       "completed": false
     },
     {
-      "userId": 1,
+      "userId": 2,
       "id": 14,
-      "title": "repellendus sunt dolores architecto voluptatum",
+      "title": "Створити додаток для IoT пристрою",
       "completed": true
     },
     {
-      "userId": 1,
+      "userId": 2,
       "id": 15,
-      "title": "ab voluptatum amet voluptas",
+      "title": "Оптимізувати веб-додаток для високої швидкості завантаження",
       "completed": true
     },
     {
-      "userId": 1,
+      "userId": 3,
       "id": 16,
-      "title": "accusamus eos facilis sint et aut voluptatem",
+      "title": "Розробити алгоритм розпізнавання об'єктів на зображеннях",
       "completed": true
     },
     {
-      "userId": 1,
+      "userId": 3,
       "id": 17,
-      "title": "quo laboriosam deleniti aut qui",
+      "title": "Навчитися робити резервні копії баз даних",
       "completed": true
     },
     {
-      "userId": 1,
+      "userId": 3,
       "id": 18,
-      "title": "dolorum est consequatur ea mollitia in culpa",
+      "title": "Розробити власний фреймворк для веб-додатків",
       "completed": false
     },
     {
-      "userId": 1,
+      "userId": 3,
       "id": 19,
-      "title": "molestiae ipsa aut voluptatibus pariatur dolor nihil",
+      "title": "Вивчити основи машинного навчання",
       "completed": true
     },
     {
-      "userId": 1,
+      "userId": 3,
       "id": 20,
-      "title": "ullam nobis libero sapiente ad optio sint",
+      "title": "Дослідити можливості використання WebAssembly",
       "completed": true
     },
     {
-      "userId": 2,
+      "userId": 3,
       "id": 21,
-      "title": "suscipit repellat esse quibusdam voluptatem incidunt",
+      "title": "Розробити адаптивний дизайн для веб-сайту",
       "completed": false
     },
     {
-      "userId": 2,
+      "userId": 3,
       "id": 22,
-      "title": "distinctio vitae autem nihil ut molestias quo",
+      "title": "Написати тестові сценарії для додатку",
       "completed": true
     },
     {
-      "userId": 2,
+      "userId": 4,
       "id": 23,
-      "title": "et itaque necessitatibus maxime molestiae qui quas velit",
+      "title": "Вивчити принципи роботи HTTP/2",
       "completed": false
     },
     {
-      "userId": 2,
+      "userId": 4,
       "id": 24,
-      "title": "adipisci non ad dicta qui amet quaerat doloribus ea",
+      "title": "Створити інтерактивну анімацію на SVG",
       "completed": false
     },
     {
-      "userId": 2,
+      "userId": 4,
       "id": 25,
-      "title": "voluptas quo tenetur perspiciatis explicabo natus",
+      "title": "Навчитися використовувати контейнери в Kubernetes",
       "completed": true
     },
     {
-      "userId": 2,
+      "userId": 4,
       "id": 26,
-      "title": "aliquam aut quasi",
-      "completed": true
+      "title": "Налаштувати інтеграцію з GitHub Actions для автоматичного тестування",
+      "completed": false
     },
     {
-      "userId": 2,
+      "userId": 4,
       "id": 27,
-      "title": "veritatis pariatur delectus",
+      "title": "Розробити функціонал автентифікації для додатку",
       "completed": true
     },
     {
-      "userId": 2,
+      "userId": 4,
       "id": 28,
-      "title": "nesciunt totam sit blanditiis sit",
+      "title": "Оптимізувати завантаження сторінок в React додатку",
       "completed": false
     },
     {
-      "userId": 2,
+      "userId": 4,
       "id": 29,
-      "title": "laborum aut in quam",
-      "completed": false
+      "title": "Навчитися використовувати Redux для управління станом додатку",
+      "completed": true
     },
     {
-      "userId": 2,
+      "userId": 4,
       "id": 30,
-      "title": "nemo perspiciatis repellat ut dolor libero commodi blanditiis omnis",
-      "completed": true
+      "title": "Створити додаток для автоматичного аналізу тексту на наявність ключових слів",
+      "completed": false
     },
     {
-      "userId": 2,
+      "userId": 5,
       "id": 31,
-      "title": "repudiandae totam in est sint facere fuga",
+      "title": "Дослідити можливості використання WebRTC для реалізації відеодзвінків у веб-додатку",
       "completed": false
     },
     {
-      "userId": 2,
+      "userId": 5,
       "id": 32,
-      "title": "earum doloribus ea doloremque quis",
-      "completed": false
+      "title": "Розробити адміністративний розділ для веб-додатку",
+      "completed": true
     },
     {
-      "userId": 2,
+      "userId": 5,
       "id": 33,
-      "title": "sint sit aut vero",
+      "title": "Оптимізувати SQL-запити для покращення продуктивності",
       "completed": false
     },
     {
-      "userId": 2,
+      "userId": 5,
       "id": 34,
-      "title": "porro aut necessitatibus eaque distinctio",
-      "completed": false
+      "title": "Написати інструкцію для встановлення та запуску додатку",
+      "completed": true
     },
     {
-      "userId": 2,
+      "userId": 5,
       "id": 35,
-      "title": "repellendus veritatis molestias dicta incidunt",
+      "title": "Дослідити можливості використання PWA для покращення досвіду користувачів",
       "completed": true
     },
     {
-      "userId": 2,
+      "userId": 5,
       "id": 36,
-      "title": "excepturi deleniti adipisci voluptatem et neque optio illum ad",
-      "completed": true
+      "title": "Створити анімацію логотипу для веб-сайту",
+      "completed": false
     },
     {
-      "userId": 2,
+      "userId": 6,
       "id": 37,
-      "title": "sunt cum tempora",
-      "completed": false
+      "title": "Вивчити основи роботи з Docker Compose",
+      "completed": true
     },
     {
-      "userId": 2,
+      "userId": 6,
       "id": 38,
-      "title": "totam quia non",
+      "title": "Розробити функціонал сповіщень для мобільного додатку",
       "completed": false
     },
     {
-      "userId": 2,
+      "userId": 6,
       "id": 39,
-      "title": "doloremque quibusdam asperiores libero corrupti illum qui omnis",
-      "completed": false
+      "title": "Оптимізувати відображення даних на веб-сайті за допомогою віртуальних списків",
+      "completed": true
     },
     {
-      "userId": 2,
+      "userId": 6,
       "id": 40,
-      "title": "totam atque quo nesciunt",
+      "title": "Навчитися використовувати GraphQL для оптимізації запитів до сервера",
       "completed": true
     },
     {
-      "userId": 3,
+      "userId": 6,
       "id": 41,
-      "title": "aliquid amet impedit consequatur aspernatur placeat eaque fugiat suscipit",
-      "completed": false
+      "title": "Дослідити методи захисту від CSRF-атак",
+      "completed": true
     },
     {
-      "userId": 3,
+      "userId": 6,
       "id": 42,
-      "title": "rerum perferendis error quia ut eveniet",
+      "title": "Розробити інструмент для автоматичного перевірки коду на відповідність стандартам",
       "completed": false
     },
     {
-      "userId": 3,
+      "userId": 6,
       "id": 43,
-      "title": "tempore ut sint quis recusandae",
-      "completed": true
+      "title": "Вивчити принципи роботи Quantum Computing",
+      "completed": false
     },
     {
-      "userId": 3,
+      "userId": 6,
       "id": 44,
-      "title": "cum debitis quis accusamus doloremque ipsa natus sapiente omnis",
+      "title": "Написати статтю про переваги використання контейнерів у розробці",
       "completed": true
     },
     {
-      "userId": 3,
+      "userId": 6,
       "id": 45,
-      "title": "velit soluta adipisci molestias reiciendis harum",
-      "completed": false
+      "title": "Дослідити можливості використання біг даних (Big Data) в аналізі даних",
+      "completed": true
     },
     {
-      "userId": 3,
+      "userId": 7,
       "id": 46,
-      "title": "vel voluptatem repellat nihil placeat corporis",
+      "title": "Розробити ігровий додаток для навчання програмування",
       "completed": false
     },
     {
-      "userId": 3,
+      "userId": 7,
       "id": 47,
-      "title": "nam qui rerum fugiat accusamus",
-      "completed": false
+      "title": "Навчитися використовувати архітектурний паттерн MVC",
+      "completed": true
     },
     {
-      "userId": 3,
+      "userId": 7,
       "id": 48,
-      "title": "sit reprehenderit omnis quia",
+      "title": "Створити додаток для обробки та аналізу зображень",
       "completed": false
     },
     {
-      "userId": 3,
+      "userId": 7,
       "id": 49,
-      "title": "ut necessitatibus aut maiores debitis officia blanditiis velit et",
-      "completed": false
+      "title": "Дослідити принципи роботи квантових комп'ютерів",
+      "completed": true
     },
     {
-      "userId": 3,
+      "userId": 7,
       "id": 50,
-      "title": "cupiditate necessitatibus ullam aut quis dolor voluptate",
+      "title": "Вивчити основи розробки плагінів для IDE",
       "completed": true
     },
     {
-      "userId": 3,
+      "userId": 8,
       "id": 51,
-      "title": "distinctio exercitationem ab doloribus",
+      "title": "Розробити власний редактор коду",
       "completed": false
     },
     {
-      "userId": 3,
+      "userId": 8,
       "id": 52,
-      "title": "nesciunt dolorum quis recusandae ad pariatur ratione",
-      "completed": false
+      "title": "Оптимізувати SQL-запити для покращення продуктивності",
+      "completed": true
     },
     {
-      "userId": 3,
+      "userId": 8,
       "id": 53,
-      "title": "qui labore est occaecati recusandae aliquid quam",
+      "title": "Дослідити технології віртуалізації серверів",
       "completed": false
     },
     {
-      "userId": 3,
+      "userId": 8,
       "id": 54,
-      "title": "quis et est ut voluptate quam dolor",
-      "completed": true
+      "title": "Написати скрипт для генерації тестових даних",
+      "completed": false
     },
     {
-      "userId": 3,
+      "userId": 8,
       "id": 55,
-      "title": "voluptatum omnis minima qui occaecati provident nulla voluptatem ratione",
+      "title": "Вивчити архітектурні патерни програмування",
       "completed": true
     },
     {
-      "userId": 3,
+      "userId": 8,
       "id": 56,
-      "title": "deleniti ea temporibus enim",
-      "completed": true
+      "title": "Реалізувати систему кешування для веб-додатка",
+      "completed": false
     },
     {
-      "userId": 3,
+      "userId": 8,
       "id": 57,
-      "title": "pariatur et magnam ea doloribus similique voluptatem rerum quia",
+      "title": "Дослідити методи захисту від SQL-ін'єкцій",
       "completed": false
     },
     {
-      "userId": 3,
+      "userId": 8,
       "id": 58,
-      "title": "est dicta totam qui explicabo doloribus qui dignissimos",
-      "completed": false
+      "title": "Розробити мобільний додаток з використанням React Native",
+      "completed": true
     },
     {
-      "userId": 3,
+      "userId": 8,
       "id": 59,
-      "title": "perspiciatis velit id laborum placeat iusto et aliquam odio",
+      "title": "Створити додаток для відстеження робочого часу",
       "completed": false
     },
     {
-      "userId": 3,
+      "userId": 9,
       "id": 60,
-      "title": "et sequi qui architecto ut adipisci",
+      "title": "Навчитися використовувати контейнери Docker",
       "completed": true
     },
     {
-      "userId": 4,
+      "userId": 9,
       "id": 61,
-      "title": "odit optio omnis qui sunt",
+      "title": "Дослідити методи тестування безпеки веб-додатків",
       "completed": true
     },
     {
-      "userId": 4,
+      "userId": 9,
       "id": 62,
-      "title": "et placeat et tempore aspernatur sint numquam",
-      "completed": false
+      "title": "Написати скрипт для резервного копіювання файлів",
+      "completed": true
     },
     {
-      "userId": 4,
+      "userId": 9,
       "id": 63,
-      "title": "doloremque aut dolores quidem fuga qui nulla",
-      "completed": true
+      "title": "Вивчити асинхронне програмування на Node.js",
+      "completed": false
     },
     {
-      "userId": 4,
+      "userId": 9,
       "id": 64,
-      "title": "voluptas consequatur qui ut quia magnam nemo esse",
-      "completed": false
+      "title": "Розробити ігровий двигун для власної гри",
+      "completed": true
     },
     {
-      "userId": 4,
+      "userId": 9,
       "id": 65,
-      "title": "fugiat pariatur ratione ut asperiores necessitatibus magni",
-      "completed": false
+      "title": "Створити додаток для аналізу даних за допомогою Python",
+      "completed": true
     },
     {
-      "userId": 4,
+      "userId": 9,
       "id": 66,
-      "title": "rerum eum molestias autem voluptatum sit optio",
-      "completed": false
+      "title": "Дослідити принципи роботи блокчейну Ethereum",
+      "completed": true
     },
     {
-      "userId": 4,
+      "userId": 9,
       "id": 67,
-      "title": "quia voluptatibus voluptatem quos similique maiores repellat",
-      "completed": false
+      "title": "Написати скрипт для автоматичного оновлення додатку",
+      "completed": true
     },
     {
-      "userId": 4,
+      "userId": 10,
       "id": 68,
-      "title": "aut id perspiciatis voluptatem iusto",
+      "title": "Вивчити розробку розширень для веб-браузерів",
       "completed": false
     },
     {
-      "userId": 4,
+      "userId": 10,
       "id": 69,
-      "title": "doloribus sint dolorum ab adipisci itaque dignissimos aliquam suscipit",
-      "completed": false
+      "title": "Розробити систему автоматичного тестування",
+      "completed": true
     },
     {
-      "userId": 4,
+      "userId": 10,
       "id": 70,
-      "title": "ut sequi accusantium et mollitia delectus sunt",
-      "completed": false
+      "title": "Дослідити використання інтернету речей (IoT) у побуті",
+      "completed": true
     },
     {
-      "userId": 4,
+      "userId": 10,
       "id": 71,
-      "title": "aut velit saepe ullam",
+      "title": "Створити веб-сервіс для обміну криптовалют",
       "completed": false
     },
     {
-      "userId": 4,
+      "userId": 10,
       "id": 72,
-      "title": "praesentium facilis facere quis harum voluptatibus voluptatem eum",
-      "completed": false
+      "title": "Навчитися використовувати Gatsby для створення швидких веб-сайтів",
+      "completed": true
     },
     {
-      "userId": 4,
+      "userId": 10,
       "id": 73,
-      "title": "sint amet quia totam corporis qui exercitationem commodi",
-      "completed": true
+      "title": "Дослідити можливості використання GraphQL у мобільних додатках",
+      "completed": false
     },
     {
-      "userId": 4,
+      "userId": 10,
       "id": 74,
-      "title": "expedita tempore nobis eveniet laborum maiores",
+      "title": "Написати скрипт для автоматичного тестування інтерфейсу",
       "completed": false
     },
     {
-      "userId": 4,
+      "userId": 10,
       "id": 75,
-      "title": "occaecati adipisci est possimus totam",
-      "completed": false
-    },
-    {
-      "userId": 4,
-      "id": 76,
-      "title": "sequi dolorem sed",
+      "title": "Вивчити принципи роботи Quantum Computing",
       "completed": true
-    },
-    {
-      "userId": 4,
-      "id": 77,
-      "title": "maiores aut nesciunt delectus exercitationem vel assumenda eligendi at",
-      "completed": false
-    },
-    {
-      "userId": 4,
-      "id": 78,
-      "title": "reiciendis est magnam amet nemo iste recusandae impedit quaerat",
-      "completed": false
-    },
-    {
-      "userId": 4,
-      "id": 79,
-      "title": "eum ipsa maxime ut",
-      "completed": true
-    },
-    {
-      "userId": 4,
-      "id": 80,
-      "title": "tempore molestias dolores rerum sequi voluptates ipsum consequatur",
-      "completed": true
-    },
-    {
-      "userId": 5,
-      "id": 81,
-      "title": "suscipit qui totam",
-      "completed": true
-    },
-    {
-      "userId": 5,
-      "id": 82,
-      "title": "voluptates eum voluptas et dicta",
-      "completed": false
-    },
-    {
-      "userId": 5,
-      "id": 83,
-      "title": "quidem at rerum quis ex aut sit quam",
-      "completed": true
-    },
-    {
-      "userId": 5,
-      "id": 84,
-      "title": "sunt veritatis ut voluptate",
-      "completed": false
-    },
-    {
-      "userId": 5,
-      "id": 85,
-      "title": "et quia ad iste a",
-      "completed": true
-    },
-    {
-      "userId": 5,
-      "id": 86,
-      "title": "incidunt ut saepe autem",
-      "completed": true
-    },
-    {
-      "userId": 5,
-      "id": 87,
-      "title": "laudantium quae eligendi consequatur quia et vero autem",
-      "completed": true
-    },
-    {
-      "userId": 5,
-      "id": 88,
-      "title": "vitae aut excepturi laboriosam sint aliquam et et accusantium",
-      "completed": false
-    },
-    {
-      "userId": 5,
-      "id": 89,
-      "title": "sequi ut omnis et",
-      "completed": true
-    },
-    {
-      "userId": 5,
-      "id": 90,
-      "title": "molestiae nisi accusantium tenetur dolorem et",
-      "completed": true
-    },
-    {
-      "userId": 5,
-      "id": 91,
-      "title": "nulla quis consequatur saepe qui id expedita",
-      "completed": true
-    },
-    {
-      "userId": 5,
-      "id": 92,
-      "title": "in omnis laboriosam",
-      "completed": true
-    },
-    {
-      "userId": 5,
-      "id": 93,
-      "title": "odio iure consequatur molestiae quibusdam necessitatibus quia sint",
-      "completed": true
-    },
-    {
-      "userId": 5,
-      "id": 94,
-      "title": "facilis modi saepe mollitia",
-      "completed": false
-    },
-    {
-      "userId": 5,
-      "id": 95,
-      "title": "vel nihil et molestiae iusto assumenda nemo quo ut",
-      "completed": true
-    },
-    {
-      "userId": 5,
-      "id": 96,
-      "title": "nobis suscipit ducimus enim asperiores voluptas",
-      "completed": false
-    },
-    {
-      "userId": 5,
-      "id": 97,
-      "title": "dolorum laboriosam eos qui iure aliquam",
-      "completed": false
-    },
-    {
-      "userId": 5,
-      "id": 98,
-      "title": "debitis accusantium ut quo facilis nihil quis sapiente necessitatibus",
-      "completed": true
-    },
-    {
-      "userId": 5,
-      "id": 99,
-      "title": "neque voluptates ratione",
-      "completed": false
-    },
-    {
-      "userId": 5,
-      "id": 100,
-      "title": "excepturi a et neque qui expedita vel voluptate",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 101,
-      "title": "explicabo enim cumque porro aperiam occaecati minima",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 102,
-      "title": "sed ab consequatur",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 103,
-      "title": "non sunt delectus illo nulla tenetur enim omnis",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 104,
-      "title": "excepturi non laudantium quo",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 105,
-      "title": "totam quia dolorem et illum repellat voluptas optio",
-      "completed": true
-    },
-    {
-      "userId": 6,
-      "id": 106,
-      "title": "ad illo quis voluptatem temporibus",
-      "completed": true
-    },
-    {
-      "userId": 6,
-      "id": 107,
-      "title": "praesentium facilis omnis laudantium fugit ad iusto nihil nesciunt",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 108,
-      "title": "a eos eaque nihil et exercitationem incidunt delectus",
-      "completed": true
-    },
-    {
-      "userId": 6,
-      "id": 109,
-      "title": "autem temporibus harum quisquam in culpa",
-      "completed": true
-    },
-    {
-      "userId": 6,
-      "id": 110,
-      "title": "aut aut ea corporis",
-      "completed": true
-    },
-    {
-      "userId": 6,
-      "id": 111,
-      "title": "magni accusantium labore et id quis provident",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 112,
-      "title": "consectetur impedit quisquam qui deserunt non rerum consequuntur eius",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 113,
-      "title": "quia atque aliquam sunt impedit voluptatum rerum assumenda nisi",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 114,
-      "title": "cupiditate quos possimus corporis quisquam exercitationem beatae",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 115,
-      "title": "sed et ea eum",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 116,
-      "title": "ipsa dolores vel facilis ut",
-      "completed": true
-    },
-    {
-      "userId": 6,
-      "id": 117,
-      "title": "sequi quae est et qui qui eveniet asperiores",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 118,
-      "title": "quia modi consequatur vero fugiat",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 119,
-      "title": "corporis ducimus ea perspiciatis iste",
-      "completed": false
-    },
-    {
-      "userId": 6,
-      "id": 120,
-      "title": "dolorem laboriosam vel voluptas et aliquam quasi",
-      "completed": false
-    },
-    {
-      "userId": 7,
-      "id": 121,
-      "title": "inventore aut nihil minima laudantium hic qui omnis",
-      "completed": true
-    },
-    {
-      "userId": 7,
-      "id": 122,
-      "title": "provident aut nobis culpa",
-      "completed": true
-    },
-    {
-      "userId": 7,
-      "id": 123,
-      "title": "esse et quis iste est earum aut impedit",
-      "completed": false
-    },
-    {
-      "userId": 7,
-      "id": 124,
-      "title": "qui consectetur id",
-      "completed": false
-    },
-    {
-      "userId": 7,
-      "id": 125,
-      "title": "aut quasi autem iste tempore illum possimus",
-      "completed": false
-    },
-    {
-      "userId": 7,
-      "id": 126,
-      "title": "ut asperiores perspiciatis veniam ipsum rerum saepe",
-      "completed": true
-    },
-    {
-      "userId": 7,
-      "id": 127,
-      "title": "voluptatem libero consectetur rerum ut",
-      "completed": true
-    },
-    {
-      "userId": 7,
-      "id": 128,
-      "title": "eius omnis est qui voluptatem autem",
-      "completed": false
-    },
-    {
-      "userId": 7,
-      "id": 129,
-      "title": "rerum culpa quis harum",
-      "completed": false
-    },
-    {
-      "userId": 7,
-      "id": 130,
-      "title": "nulla aliquid eveniet harum laborum libero alias ut unde",
-      "completed": true
-    },
-    {
-      "userId": 7,
-      "id": 131,
-      "title": "qui ea incidunt quis",
-      "completed": false
-    },
-    {
-      "userId": 7,
-      "id": 132,
-      "title": "qui molestiae voluptatibus velit iure harum quisquam",
-      "completed": true
-    },
-    {
-      "userId": 7,
-      "id": 133,
-      "title": "et labore eos enim rerum consequatur sunt",
-      "completed": true
-    },
-    {
-      "userId": 7,
-      "id": 134,
-      "title": "molestiae doloribus et laborum quod ea",
-      "completed": false
-    },
-    {
-      "userId": 7,
-      "id": 135,
-      "title": "facere ipsa nam eum voluptates reiciendis vero qui",
-      "completed": false
-    },
-    {
-      "userId": 7,
-      "id": 136,
-      "title": "asperiores illo tempora fuga sed ut quasi adipisci",
-      "completed": false
-    },
-    {
-      "userId": 7,
-      "id": 137,
-      "title": "qui sit non",
-      "completed": false
-    },
-    {
-      "userId": 7,
-      "id": 138,
-      "title": "placeat minima consequatur rem qui ut",
-      "completed": true
-    },
-    {
-      "userId": 7,
-      "id": 139,
-      "title": "consequatur doloribus id possimus voluptas a voluptatem",
-      "completed": false
-    },
-    {
-      "userId": 7,
-      "id": 140,
-      "title": "aut consectetur in blanditiis deserunt quia sed laboriosam",
-      "completed": true
-    },
-    {
-      "userId": 8,
-      "id": 141,
-      "title": "explicabo consectetur debitis voluptates quas quae culpa rerum non",
-      "completed": true
-    },
-    {
-      "userId": 8,
-      "id": 142,
-      "title": "maiores accusantium architecto necessitatibus reiciendis ea aut",
-      "completed": true
-    },
-    {
-      "userId": 8,
-      "id": 143,
-      "title": "eum non recusandae cupiditate animi",
-      "completed": false
-    },
-    {
-      "userId": 8,
-      "id": 144,
-      "title": "ut eum exercitationem sint",
-      "completed": false
-    },
-    {
-      "userId": 8,
-      "id": 145,
-      "title": "beatae qui ullam incidunt voluptatem non nisi aliquam",
-      "completed": false
-    },
-    {
-      "userId": 8,
-      "id": 146,
-      "title": "molestiae suscipit ratione nihil odio libero impedit vero totam",
-      "completed": true
-    },
-    {
-      "userId": 8,
-      "id": 147,
-      "title": "eum itaque quod reprehenderit et facilis dolor autem ut",
-      "completed": true
-    },
-    {
-      "userId": 8,
-      "id": 148,
-      "title": "esse quas et quo quasi exercitationem",
-      "completed": false
-    },
-    {
-      "userId": 8,
-      "id": 149,
-      "title": "animi voluptas quod perferendis est",
-      "completed": false
-    },
-    {
-      "userId": 8,
-      "id": 150,
-      "title": "eos amet tempore laudantium fugit a",
-      "completed": false
-    },
-    {
-      "userId": 8,
-      "id": 151,
-      "title": "accusamus adipisci dicta qui quo ea explicabo sed vero",
-      "completed": true
-    },
-    {
-      "userId": 8,
-      "id": 152,
-      "title": "odit eligendi recusandae doloremque cumque non",
-      "completed": false
-    },
-    {
-      "userId": 8,
-      "id": 153,
-      "title": "ea aperiam consequatur qui repellat eos",
-      "completed": false
-    },
-    {
-      "userId": 8,
-      "id": 154,
-      "title": "rerum non ex sapiente",
-      "completed": true
-    },
-    {
-      "userId": 8,
-      "id": 155,
-      "title": "voluptatem nobis consequatur et assumenda magnam",
-      "completed": true
-    },
-    {
-      "userId": 8,
-      "id": 156,
-      "title": "nam quia quia nulla repellat assumenda quibusdam sit nobis",
-      "completed": true
-    },
-    {
-      "userId": 8,
-      "id": 157,
-      "title": "dolorem veniam quisquam deserunt repellendus",
-      "completed": true
-    },
-    {
-      "userId": 8,
-      "id": 158,
-      "title": "debitis vitae delectus et harum accusamus aut deleniti a",
-      "completed": true
-    },
-    {
-      "userId": 8,
-      "id": 159,
-      "title": "debitis adipisci quibusdam aliquam sed dolore ea praesentium nobis",
-      "completed": true
-    },
-    {
-      "userId": 8,
-      "id": 160,
-      "title": "et praesentium aliquam est",
-      "completed": false
-    },
-    {
-      "userId": 9,
-      "id": 161,
-      "title": "ex hic consequuntur earum omnis alias ut occaecati culpa",
-      "completed": true
-    },
-    {
-      "userId": 9,
-      "id": 162,
-      "title": "omnis laboriosam molestias animi sunt dolore",
-      "completed": true
-    },
-    {
-      "userId": 9,
-      "id": 163,
-      "title": "natus corrupti maxime laudantium et voluptatem laboriosam odit",
-      "completed": false
-    },
-    {
-      "userId": 9,
-      "id": 164,
-      "title": "reprehenderit quos aut aut consequatur est sed",
-      "completed": false
-    },
-    {
-      "userId": 9,
-      "id": 165,
-      "title": "fugiat perferendis sed aut quidem",
-      "completed": false
-    },
-    {
-      "userId": 9,
-      "id": 166,
-      "title": "quos quo possimus suscipit minima ut",
-      "completed": false
-    },
-    {
-      "userId": 9,
-      "id": 167,
-      "title": "et quis minus quo a asperiores molestiae",
-      "completed": false
-    },
-    {
-      "userId": 9,
-      "id": 168,
-      "title": "recusandae quia qui sunt libero",
-      "completed": false
-    },
-    {
-      "userId": 9,
-      "id": 169,
-      "title": "ea odio perferendis officiis",
-      "completed": true
-    },
-    {
-      "userId": 9,
-      "id": 170,
-      "title": "quisquam aliquam quia doloribus aut",
-      "completed": false
-    },
-    {
-      "userId": 9,
-      "id": 171,
-      "title": "fugiat aut voluptatibus corrupti deleniti velit iste odio",
-      "completed": true
-    },
-    {
-      "userId": 9,
-      "id": 172,
-      "title": "et provident amet rerum consectetur et voluptatum",
-      "completed": false
-    },
-    {
-      "userId": 9,
-      "id": 173,
-      "title": "harum ad aperiam quis",
-      "completed": false
-    },
-    {
-      "userId": 9,
-      "id": 174,
-      "title": "similique aut quo",
-      "completed": false
-    },
-    {
-      "userId": 9,
-      "id": 175,
-      "title": "laudantium eius officia perferendis provident perspiciatis asperiores",
-      "completed": true
-    },
-    {
-      "userId": 9,
-      "id": 176,
-      "title": "magni soluta corrupti ut maiores rem quidem",
-      "completed": false
-    },
-    {
-      "userId": 9,
-      "id": 177,
-      "title": "et placeat temporibus voluptas est tempora quos quibusdam",
-      "completed": false
-    },
-    {
-      "userId": 9,
-      "id": 178,
-      "title": "nesciunt itaque commodi tempore",
-      "completed": true
-    },
-    {
-      "userId": 9,
-      "id": 179,
-      "title": "omnis consequuntur cupiditate impedit itaque ipsam quo",
-      "completed": true
-    },
-    {
-      "userId": 9,
-      "id": 180,
-      "title": "debitis nisi et dolorem repellat et",
-      "completed": true
-    },
-    {
-      "userId": 10,
-      "id": 181,
-      "title": "ut cupiditate sequi aliquam fuga maiores",
-      "completed": false
-    },
-    {
-      "userId": 10,
-      "id": 182,
-      "title": "inventore saepe cumque et aut illum enim",
-      "completed": true
-    },
-    {
-      "userId": 10,
-      "id": 183,
-      "title": "omnis nulla eum aliquam distinctio",
-      "completed": true
-    },
-    {
-      "userId": 10,
-      "id": 184,
-      "title": "molestias modi perferendis perspiciatis",
-      "completed": false
-    },
-    {
-      "userId": 10,
-      "id": 185,
-      "title": "voluptates dignissimos sed doloribus animi quaerat aut",
-      "completed": false
-    },
-    {
-      "userId": 10,
-      "id": 186,
-      "title": "explicabo odio est et",
-      "completed": false
-    },
-    {
-      "userId": 10,
-      "id": 187,
-      "title": "consequuntur animi possimus",
-      "completed": false
-    },
-    {
-      "userId": 10,
-      "id": 188,
-      "title": "vel non beatae est",
-      "completed": true
-    },
-    {
-      "userId": 10,
-      "id": 189,
-      "title": "culpa eius et voluptatem et",
-      "completed": true
-    },
-    {
-      "userId": 10,
-      "id": 190,
-      "title": "accusamus sint iusto et voluptatem exercitationem",
-      "completed": true
-    },
-    {
-      "userId": 10,
-      "id": 191,
-      "title": "temporibus atque distinctio omnis eius impedit tempore molestias pariatur",
-      "completed": true
-    },
-    {
-      "userId": 10,
-      "id": 192,
-      "title": "ut quas possimus exercitationem sint voluptates",
-      "completed": false
-    },
-    {
-      "userId": 10,
-      "id": 193,
-      "title": "rerum debitis voluptatem qui eveniet tempora distinctio a",
-      "completed": true
-    },
-    {
-      "userId": 10,
-      "id": 194,
-      "title": "sed ut vero sit molestiae",
-      "completed": false
-    },
-    {
-      "userId": 10,
-      "id": 195,
-      "title": "rerum ex veniam mollitia voluptatibus pariatur",
-      "completed": true
-    },
-    {
-      "userId": 10,
-      "id": 196,
-      "title": "consequuntur aut ut fugit similique",
-      "completed": true
-    },
-    {
-      "userId": 10,
-      "id": 197,
-      "title": "dignissimos quo nobis earum saepe",
-      "completed": true
-    },
-    {
-      "userId": 10,
-      "id": 198,
-      "title": "quis eius est sint explicabo",
-      "completed": true
-    },
-    {
-      "userId": 10,
-      "id": 199,
-      "title": "numquam repellendus a magnam",
-      "completed": true
-    },
-    {
-      "userId": 10,
-      "id": 200,
-      "title": "ipsam aperiam voluptates qui",
-      "completed": false
     }
   ],
   "users": [
     {
       "id": 1,
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "Sincere@april.biz",
+      "name": "Марія Іваненко",
+      "username": "MaryIva",
+      "email": "maria.ivanenko@example.com",
       "address": {
-        "street": "Kulas Light",
-        "suite": "Apt. 556",
-        "city": "Gwenborough",
-        "zipcode": "92998-3874",
+        "street": "вул. Шевченка",
+        "suite": "кв. 15",
+        "city": "Київ",
+        "zipcode": "03022",
         "geo": {
-          "lat": "-37.3159",
-          "lng": "81.1496"
+          "lat": "50.4501",
+          "lng": "30.5234"
         }
       },
-      "phone": "1-770-736-8031 x56442",
-      "website": "hildegard.org",
+      "phone": "044-123-4567",
+      "website": "mariiva.com",
       "company": {
-        "name": "Romaguera-Crona",
-        "catchPhrase": "Multi-layered client-server neural-net",
-        "bs": "harness real-time e-markets"
+        "name": "Техносервіс",
+        "catchPhrase": "Розробка інноваційних рішень",
+        "bs": "ефективність та надійність"
       }
     },
     {
       "id": 2,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
+      "name": "Олег Петров",
+      "username": "OlegPetr",
+      "email": "oleg.petrov@example.com",
       "address": {
-        "street": "Victor Plains",
-        "suite": "Suite 879",
-        "city": "Wisokyburgh",
-        "zipcode": "90566-7771",
+        "street": "вул. Гагаріна",
+        "suite": "кв. 7",
+        "city": "Львів",
+        "zipcode": "79000",
         "geo": {
-          "lat": "-43.9509",
-          "lng": "-34.4618"
+          "lat": "49.8397",
+          "lng": "24.0297"
         }
       },
-      "phone": "010-692-6593 x09125",
-      "website": "anastasia.net",
+      "phone": "032-987-6543",
+      "website": "olegpetr.ua",
       "company": {
-        "name": "Deckow-Crist",
-        "catchPhrase": "Proactive didactic contingency",
-        "bs": "synergize scalable supply-chains"
+        "name": "SoftTech",
+        "catchPhrase": "Інновації у розробці програмного забезпечення",
+        "bs": "сучасні технології та креативність"
       }
     },
     {
       "id": 3,
-      "name": "Clementine Bauch",
-      "username": "Samantha",
-      "email": "Nathan@yesenia.net",
+      "name": "Наталія Коваленко",
+      "username": "NataliaKov",
+      "email": "natalia.kovalenko@example.com",
       "address": {
-        "street": "Douglas Extension",
-        "suite": "Suite 847",
-        "city": "McKenziehaven",
-        "zipcode": "59590-4157",
+        "street": "вул. Січових Стрільців",
+        "suite": "кв. 23",
+        "city": "Харків",
+        "zipcode": "61000",
         "geo": {
-          "lat": "-68.6102",
-          "lng": "-47.0653"
+          "lat": "49.9935",
+          "lng": "36.2304"
         }
       },
-      "phone": "1-463-123-4447",
-      "website": "ramiro.info",
+      "phone": "057-765-4321",
+      "website": "nataliakov.ua",
       "company": {
-        "name": "Romaguera-Jacobson",
-        "catchPhrase": "Face to face bifurcated interface",
-        "bs": "e-enable strategic applications"
+        "name": "TechInnovate",
+        "catchPhrase": "Перетворюємо ідеї в реальність",
+        "bs": "творчий підхід до розробки"
       }
     },
     {
       "id": 4,
-      "name": "Patricia Lebsack",
-      "username": "Karianne",
-      "email": "Julianne.OConner@kory.org",
+      "name": "Андрій Семенов",
+      "username": "AndySem",
+      "email": "andriy.semenov@example.com",
       "address": {
-        "street": "Hoeger Mall",
-        "suite": "Apt. 692",
-        "city": "South Elvis",
-        "zipcode": "53919-4257",
+        "street": "просп. Героїв Сталінграду",
+        "suite": "кв. 42",
+        "city": "Дніпро",
+        "zipcode": "49000",
         "geo": {
-          "lat": "29.4572",
-          "lng": "-164.2990"
+          "lat": "48.4647",
+          "lng": "35.0462"
         }
       },
-      "phone": "493-170-9623 x156",
-      "website": "kale.biz",
+      "phone": "056-111-2222",
+      "website": "andysem.net",
       "company": {
-        "name": "Robel-Corkery",
-        "catchPhrase": "Multi-tiered zero tolerance productivity",
-        "bs": "transition cutting-edge web services"
+        "name": "CodeCraft",
+        "catchPhrase": "Творчість у коді",
+        "bs": "інновації та переваги технологій"
       }
     },
     {
       "id": 5,
-      "name": "Chelsey Dietrich",
-      "username": "Kamren",
-      "email": "Lucio_Hettinger@annie.ca",
+      "name": "Оксана Литвиненко",
+      "username": "OksanaLit",
+      "email": "oksana.litvinenko@example.com",
       "address": {
-        "street": "Skiles Walks",
-        "suite": "Suite 351",
-        "city": "Roscoeview",
-        "zipcode": "33263",
+        "street": "вул. Лисенка",
+        "suite": "кв. 9",
+        "city": "Одеса",
+        "zipcode": "65000",
         "geo": {
-          "lat": "-31.8129",
-          "lng": "62.5342"
+          "lat": "46.4825",
+          "lng": "30.7233"
         }
       },
-      "phone": "(254)954-1289",
-      "website": "demarco.info",
+      "phone": "048-555-9999",
+      "website": "oksanalit.com",
       "company": {
-        "name": "Keebler LLC",
-        "catchPhrase": "User-centric fault-tolerant solution",
-        "bs": "revolutionize end-to-end systems"
+        "name": "WebWave",
+        "catchPhrase": "Створюємо світ у Вебі",
+        "bs": "творчість та інновації"
       }
     },
     {
       "id": 6,
-      "name": "Mrs. Dennis Schulist",
-      "username": "Leopoldo_Corkery",
-      "email": "Karley_Dach@jasper.info",
+      "name": "Віталій Сидоренко",
+      "username": "Vitalik",
+      "email": "vitaliy.sydorenko@example.com",
       "address": {
-        "street": "Norberto Crossing",
-        "suite": "Apt. 950",
-        "city": "South Christy",
-        "zipcode": "23505-1337",
+        "street": "вул. Глибока",
+        "suite": "кв. 18",
+        "city": "Івано-Франківськ",
+        "zipcode": "76000",
         "geo": {
-          "lat": "-71.4197",
-          "lng": "71.7478"
+          "lat": "48.9226",
+          "lng": "24.7111"
         }
       },
-      "phone": "1-477-935-8478 x6430",
-      "website": "ola.org",
+      "phone": "034-333-4444",
+      "website": "vitalik.com",
       "company": {
-        "name": "Considine-Lockman",
-        "catchPhrase": "Synchronised bottom-line interface",
-        "bs": "e-enable innovative applications"
+        "name": "InnoTech",
+        "catchPhrase": "Інновації та технології",
+        "bs": "розвиток та прогрес"
       }
     },
     {
       "id": 7,
-      "name": "Kurtis Weissnat",
-      "username": "Elwyn.Skiles",
-      "email": "Telly.Hoeger@billy.biz",
+      "name": "Марина Шевченко",
+      "username": "MarinaS",
+      "email": "marina.shevchenko@example.com",
       "address": {
-        "street": "Rex Trail",
-        "suite": "Suite 280",
-        "city": "Howemouth",
-        "zipcode": "58804-1099",
+        "street": "вул. Шевцова",
+        "suite": "кв. 5",
+        "city": "Запоріжжя",
+        "zipcode": "69000",
         "geo": {
-          "lat": "24.8918",
-          "lng": "21.8984"
+          "lat": "47.8388",
+          "lng": "35.1396"
         }
       },
-      "phone": "210.067.6132",
-      "website": "elvis.io",
+      "phone": "061-777-8888",
+      "website": "marinas.ua",
       "company": {
-        "name": "Johns Group",
-        "catchPhrase": "Configurable multimedia task-force",
-        "bs": "generate enterprise e-tailers"
+        "name": "WebMaster",
+        "catchPhrase": "Творчість та дизайн у Вебі",
+        "bs": "індивідуальний підхід та професіоналізм"
       }
     },
     {
       "id": 8,
-      "name": "Nicholas Runolfsdottir V",
-      "username": "Maxime_Nienow",
-      "email": "Sherwood@rosamond.me",
+      "name": "Максим Іванов",
+      "username": "MaxIvan",
+      "email": "maxim.ivanov@example.com",
       "address": {
-        "street": "Ellsworth Summit",
-        "suite": "Suite 729",
-        "city": "Aliyaview",
-        "zipcode": "45169",
+        "street": "вул. Пролісок",
+        "suite": "кв. 12",
+        "city": "Чернівці",
+        "zipcode": "58000",
         "geo": {
-          "lat": "-14.3990",
-          "lng": "-120.7677"
+          "lat": "48.2925",
+          "lng": "25.9403"
         }
       },
-      "phone": "586.493.6943 x140",
-      "website": "jacynthe.com",
+      "phone": "037-444-5555",
+      "website": "maxivan.net",
       "company": {
-        "name": "Abernathy Group",
-        "catchPhrase": "Implemented secondary concept",
-        "bs": "e-enable extensible e-tailers"
+        "name": "TechWave",
+        "catchPhrase": "Інновації у технологіях",
+        "bs": "зростання та розвиток"
       }
     },
     {
       "id": 9,
-      "name": "Glenna Reichert",
-      "username": "Delphine",
-      "email": "Chaim_McDermott@dana.io",
+      "name": "Світлана Григоренко",
+      "username": "SvitlanaG",
+      "email": "svitlana.grigorenko@example.com",
       "address": {
-        "street": "Dayna Park",
-        "suite": "Suite 449",
-        "city": "Bartholomebury",
-        "zipcode": "76495-3109",
+        "street": "вул. Гайдамацька",
+        "suite": "кв. 6",
+        "city": "Черкаси",
+        "zipcode": "18000",
         "geo": {
-          "lat": "24.6463",
-          "lng": "-168.8889"
+          "lat": "49.4304",
+          "lng": "32.0704"
         }
       },
-      "phone": "(775)976-6794 x41206",
-      "website": "conrad.com",
+      "phone": "047-999-0000",
+      "website": "svitlanag.ua",
       "company": {
-        "name": "Yost and Sons",
-        "catchPhrase": "Switchable contextually-based project",
-        "bs": "aggregate real-time technologies"
+        "name": "InnoWeb",
+        "catchPhrase": "Технології у Вебі",
+        "bs": "творчість та ефективність"
       }
     },
     {
       "id": 10,
-      "name": "Clementina DuBuque",
-      "username": "Moriah.Stanton",
-      "email": "Rey.Padberg@karina.biz",
+      "name": "Ігор Кравченко",
+      "username": "IgorK",
+      "email": "igor.kravchenko@example.com",
       "address": {
-        "street": "Kattie Turnpike",
-        "suite": "Suite 198",
-        "city": "Lebsackbury",
-        "zipcode": "31428-2261",
+        "street": "вул. Шевченка",
+        "suite": "кв. 25",
+        "city": "Луцьк",
+        "zipcode": "43000",
         "geo": {
-          "lat": "-38.2386",
-          "lng": "57.2232"
+          "lat": "50.7472",
+          "lng": "25.3254"
         }
       },
-      "phone": "024-648-3804",
-      "website": "ambrose.net",
+      "phone": "033-222-1111",
+      "website": "igork.com",
       "company": {
-        "name": "Hoeger LLC",
-        "catchPhrase": "Centralized empowering task-force",
-        "bs": "target end-to-end models"
+        "name": "CodeInnovate",
+        "catchPhrase": "Інновації у кодуванні",
+        "bs": "творчість та винаходи"
       }
     }
   ]
