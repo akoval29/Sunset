@@ -20,7 +20,7 @@ export const AddPost = ({ flag }) => {
       {showForm ? (
         <Formik
           initialValues={{
-            inputTilte: "",
+            inputTitle: "",
             inputPost: "",
           }}
           validate={(values) => {
@@ -73,6 +73,7 @@ export const AddPost = ({ flag }) => {
                   name="inputTitle"
                   tabIndex={0}
                   placeholder="title ..."
+                  autoFocus
                 />
                 <ErrorMessage
                   name="inputTitle"

@@ -65,6 +65,7 @@ export const EditTodo = ({ showEditTodo, setShowEditTodo, selectedItem }) => {
               id="newText"
               value={newTodoText}
               onChange={onTextChange}
+              autoFocus
             ></textarea>
 
             <div className="checkBox">

@@ -71,6 +71,7 @@ export const AddTodo = ({ flag }) => {
                   name="inputTodo"
                   tabIndex={0}
                   placeholder="Type something ..."
+                  autoFocus
                 />
                 <ErrorMessage
                   name="inputTodo"
@@ -98,7 +99,7 @@ export const AddTodo = ({ flag }) => {
                   <button
                     type="submit"
                     className="newEntry__btn"
-                    disabled={isSubmitting || Object.keys(errors).length > 0}
+                    disabled={isSubmitting}
                     tabIndex={0}
                   >
                     submit

@@ -65,6 +65,7 @@ export const EditPost = ({ showEditPost, setShowEditPost, selectedItem }) => {
               id="newText"
               value={newTitle}
               onChange={onTitleChange}
+              autoFocus
             ></textarea>
 
             <textarea
