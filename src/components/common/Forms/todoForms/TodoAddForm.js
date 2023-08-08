@@ -4,9 +4,9 @@ import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 import "../editStyle.scss";
 
-import { createTodo } from "../../../pages/todos-page/todoSlice";
+import { createTodo } from "../../../../ducks/todoSlice";
 
-export const AddTodo = ({ flag }) => {
+export const TodoAddForm = ({ flag }) => {
   const [showForm, setShowForm] = useState(false);
 
   const dispatch = useDispatch();

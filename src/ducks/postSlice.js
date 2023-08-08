@@ -4,8 +4,8 @@ import {
   createEntityAdapter,
   createSelector,
 } from "@reduxjs/toolkit";
-import { useHttp } from "../../../hooks/useAPI";
-import { url } from "../../../hooks/useAPI";
+import { useHttp } from "../hooks/useAPI";
+import { url } from "../hooks/useAPI";
 
 const postsAdapter = createEntityAdapter();
 

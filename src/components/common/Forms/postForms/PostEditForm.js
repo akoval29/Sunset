@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import "../editStyle.scss";
 
-import { updatePost } from "../../../pages/posts-page/postSlice";
+import { updatePost } from "../../../../ducks/postSlice";
 
-export const EditPost = ({ showEditPost, setShowEditPost, selectedItem }) => {
+export const PostEditForm = ({
+  showEditPost,
+  setShowEditPost,
+  selectedItem,
+}) => {
   const [newTitle, setNewTitle] = useState("");
   const [newPost, setNewPost] = useState("");
 

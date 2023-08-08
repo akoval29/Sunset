@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import "./playerStyle.scss";
 import nomore from "../../../lib/OutsiderNoMore.mp3";
+import "./playerStyle.scss";
 
 export const Player = ({ playing, onPlay }) => {
   const [audio] = useState(new Audio(nomore));
@@ -40,9 +40,8 @@ export const Player = ({ playing, onPlay }) => {
   return (
     <div className="player">
       <div className="player__icon-wrap">
-        {/* app__footer-icon - its a style from app.scss */}
         <img
-          className="app__footer-icon"
+          className="player__icon"
           src="https://cdn-icons-png.flaticon.com/512/686/686463.png"
           alt="playBtn"
           onClick={play}
@@ -50,7 +49,7 @@ export const Player = ({ playing, onPlay }) => {
         />
 
         <img
-          className="app__footer-icon"
+          className="player__icon"
           src="https://cdn-icons-png.flaticon.com/512/64/64594.png"
           alt="pauseBtn"
           onClick={pause}
@@ -58,7 +57,7 @@ export const Player = ({ playing, onPlay }) => {
         />
 
         <img
-          className="app__footer-icon"
+          className="player__icon"
           src="https://cdn-icons-png.flaticon.com/512/91/91265.png"
           alt="stopBtn"
           onClick={stop}

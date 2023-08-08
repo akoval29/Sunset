@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import "../editStyle.scss";
 
-import { updateTodo } from "../../../pages/todos-page/todoSlice";
+import { updateTodo } from "../../../../ducks/todoSlice";
 
-export const EditTodo = ({ showEditTodo, setShowEditTodo, selectedItem }) => {
+export const TodoEditForm = ({
+  showEditTodo,
+  setShowEditTodo,
+  selectedItem,
+}) => {
   const [newTodoText, setNewTodoText] = useState("");
   const [isChecked, setIsChecked] = useState(false);
 

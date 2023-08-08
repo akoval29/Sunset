@@ -4,9 +4,9 @@ import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 import "../editStyle.scss";
 
-import { createPost } from "../../../pages/posts-page/postSlice";
+import { createPost } from "../../../../ducks/postSlice";
 
-export const AddPost = ({ flag }) => {
+export const PostAddForm = ({ flag }) => {
   const [showForm, setShowForm] = useState(false);
 
   const dispatch = useDispatch();

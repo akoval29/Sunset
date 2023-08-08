@@ -4,7 +4,7 @@ import {
   createEntityAdapter,
   createSelector,
 } from "@reduxjs/toolkit";
-import { useHttp } from "../../../hooks/useAPI";
+import { useHttp } from "../hooks/useAPI";
 
 const usersAdapter = createEntityAdapter();
 

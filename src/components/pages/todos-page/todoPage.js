@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchTodos, allTodosSelector, deleteTodo } from "./todoSlice.js";
+import {
+  fetchTodos,
+  allTodosSelector,
+  deleteTodo,
+} from "../../../ducks/todoSlice";
 
 // commons
 import { ScrollTo } from "../../common/scroll/pageScroll";
 import { Spinner } from "../../common/loading/spinner";
-import { EditTodo } from "../../common/editForms/todo/editTodo.js";
-import { AddTodo } from "../../common/editForms/todo/addTodo.js";
+import { TodoEditForm } from "../../common/Forms/todoForms/TodoEditForm";
+import { TodoAddForm } from "../../common/Forms/todoForms/TodoAddForm";
 import { ErrorMessage } from "../../common/error/errorMessage";
 
 //style
@@ -85,12 +89,12 @@ export const Todos = () => {
           </div>
         </li>
       ))}
-      <EditTodo
+      <TodoEditForm
         showEditTodo={showEditTodo}
         setShowEditTodo={setShowEditTodo}
         selectedItem={selectedItem}
       />
-      <AddTodo flag="todo" />
+      <TodoAddForm flag="todo" />
       <ScrollTo />
     </ul>
   );

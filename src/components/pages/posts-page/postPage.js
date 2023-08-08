@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPosts, allPostsSelector, deletePost } from "./postSlice.js";
+import {
+  fetchPosts,
+  allPostsSelector,
+  deletePost,
+} from "../../../ducks/postSlice";
 
 // commons
 import { ScrollTo } from "../../common/scroll/pageScroll";
 import { Spinner } from "../../common/loading/spinner";
-import { EditPost } from "../../common/editForms/post/editPost";
-import { AddPost } from "../../common/editForms/post/addPost";
+import { PostEditForm } from "../../common/Forms/postForms/PostEditForm";
+import { PostAddForm } from "../../common/Forms/postForms/PostAddForm";
 import { ErrorMessage } from "../../common/error/errorMessage";
 
 import "./postStyle.scss";
@@ -72,12 +76,12 @@ export const Posts = () => {
           <p className="post__body">{item.body}</p>
         </li>
       ))}
-      <EditPost
+      <PostEditForm
         showEditPost={showEditPost}
         setShowEditPost={setShowEditPost}
         selectedItem={selectedItem}
       />
-      <AddPost flag="post" />
+      <PostAddForm flag="post" />
       <ScrollTo />
     </ul>
   );

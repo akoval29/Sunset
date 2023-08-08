@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { Spinner } from "../../common/loading/spinner";
 
-import { fetchUsers, allUsersSelector } from "./userSlice.js";
+import { fetchUsers, allUsersSelector } from "../../../ducks/userSlice";
 
 import "./userStyle.scss";
 
