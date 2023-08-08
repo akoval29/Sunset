@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import { createTodo } from "../../../../ducks/todoSlice";
 import "../editStyle.scss";
 
-export const TodoAddForm = ({ flag }) => {
+export const TodoAddForm = () => {
   const [showForm, setShowForm] = useState(false);
   const [showButton, setShowButton] = useState(true);
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ export const TodoAddForm = ({ flag }) => {
           validate={(values) => {
             const errors = {};
             if (!values.inputTodo) {
-              errors.inputTodo = `ENTER ${flag}`;
+              errors.inputTodo = `ENTER TODO`;
             }
             return errors;
           }}

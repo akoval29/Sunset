@@ -51,7 +51,12 @@ export const PostEditForm = ({
 
   return (
     <>
-      {showEditPost ? (
+      <CSSTransition
+        in={showEditPost}
+        timeout={300}
+        classNames="newEntry"
+        unmountOnExit
+      >
         <div className="newEntry">
           <section className="newEntry__column">
             <div className="newEntry__row">
@@ -62,7 +67,7 @@ export const PostEditForm = ({
                   alt="userIcon"
                 />
                 <p className="newEntry__userName">
-                  User №{selectedItem.userId} / post №{selectedItem.id}
+                  User №{selectedItem?.userId} / post №{selectedItem?.id}
                 </p>
               </div>
               <button className="newEntry__closeBtn" onClick={onShow}>
@@ -96,7 +101,7 @@ export const PostEditForm = ({
             Submit
           </button>
         </div>
-      ) : null}
+      </CSSTransition>
     </>
   );
 };

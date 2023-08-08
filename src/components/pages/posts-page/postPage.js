@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import {
   fetchPosts,
   allPostsSelector,
@@ -47,32 +48,44 @@ export const Posts = () => {
   return (
     <ul className="app__main">
       <h3 className="app__main-title">Posts</h3>
-      {allPosts.map((item) => (
-        <li className="post" key={item.id}>
-          <div className="post__wrap">
-            <p className="post__userId">User № {item.userId}</p>
-            <p className="post__postId">Post № {item.id}</p>
-            <div className="post__edit-wrap">
-              <button className="post__btn" onClick={() => onEdit(item)}>
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/3524/3524762.png"
-                  className="post__item"
-                  alt="wrench-icon"
-                />
-              </button>
-              <button className="post__btn" onClick={() => onDelete(item.id)}>
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/57/57165.png"
-                  className="post__item"
-                  alt="cross-icon"
-                />
-              </button>
-            </div>
-          </div>
-          <h4 className="post__title">{item.title}</h4>
-          <p className="post__body">{item.body}</p>
-        </li>
-      ))}
+      <TransitionGroup>
+        {allPosts.map((item) => (
+          <CSSTransition
+            key={item.id}
+            timeout={300}
+            classNames={"post"}
+            unmountOnExit
+          >
+            <li className="post">
+              <div className="post__wrap">
+                <p className="post__userId">User № {item.userId}</p>
+                <p className="post__postId">Post № {item.id}</p>
+                <div className="post__edit-wrap">
+                  <button className="post__btn" onClick={() => onEdit(item)}>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/3524/3524762.png"
+                      className="post__item"
+                      alt="wrench-icon"
+                    />
+                  </button>
+                  <button
+                    className="post__btn"
+                    onClick={() => onDelete(item.id)}
+                  >
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/57/57165.png"
+                      className="post__item"
+                      alt="cross-icon"
+                    />
+                  </button>
+                </div>
+              </div>
+              <h4 className="post__title">{item.title}</h4>
+              <p className="post__body">{item.body}</p>
+            </li>
+          </CSSTransition>
+        ))}
+      </TransitionGroup>
       <PostEditForm
         showEditPost={showEditPost}
         setShowEditPost={setShowEditPost}
