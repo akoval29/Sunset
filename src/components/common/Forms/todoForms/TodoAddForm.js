@@ -1,23 +1,30 @@
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { CSSTransition } from "react-transition-group";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
-import { useState } from "react";
-import "../editStyle.scss";
-
 import { createTodo } from "../../../../ducks/todoSlice";
+import "../editStyle.scss";
 
 export const TodoAddForm = ({ flag }) => {
   const [showForm, setShowForm] = useState(false);
-
+  const [showButton, setShowButton] = useState(true);
   const dispatch = useDispatch();
 
   function onShowHandler() {
     setShowForm(!showForm);
+    setShowButton(!showButton);
   }
 
   return (
-    <section>
-      {showForm ? (
+    <>
+      <CSSTransition
+        in={showForm}
+        timeout={300}
+        classNames="newEntry"
+        unmountOnExit
+        onExited={() => setShowButton(true)}
+      >
         <Formik
           initialValues={{
             inputTodo: "",
@@ -53,15 +60,28 @@ export const TodoAddForm = ({ flag }) => {
           }}
         >
           {({ isSubmitting, errors }) => (
-            <Form className="newEntry newEntry--show">
-              <section className="newEntry__wrap">
-                <div className="newEntry__userWrap">
-                  <img
-                    className="newEntry__userImg"
-                    src="https://cdn-icons-png.flaticon.com/512/666/666201.png"
-                    alt="userIcon"
-                  />
-                  <p className="newEntry__userName">User № 999</p>
+            <Form className="newEntry">
+              <section className="newEntry__column">
+                <div className="newEntry__row">
+                  <div className="newEntry__user">
+                    <img
+                      className="newEntry__userImg"
+                      src="https://cdn-icons-png.flaticon.com/512/666/666201.png"
+                      alt="userIcon"
+                    />
+                    <p className="newEntry__userName">User № 999</p>
+                  </div>
+
+                  <button
+                    className="newEntry__closeBtn"
+                    onClick={onShowHandler}
+                  >
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/57/57165.png"
+                      className="newEntry__crossImg"
+                      alt="cross-icon"
+                    />
+                  </button>
                 </div>
 
                 <Field
@@ -94,11 +114,11 @@ export const TodoAddForm = ({ flag }) => {
 
               <div className="newEntry__submitContainer">
                 {Object.keys(errors).length > 0 ? (
-                  <div className="newEntry__btn">ENTER DATA PLEASE</div>
+                  <div className="newEntry__submitBtn">ENTER DATA PLEASE</div>
                 ) : (
                   <button
                     type="submit"
-                    className="newEntry__btn"
+                    className="newEntry__submitBtn"
                     disabled={isSubmitting}
                     tabIndex={0}
                   >
@@ -113,16 +133,21 @@ export const TodoAddForm = ({ flag }) => {
             </Form>
           )}
         </Formik>
-      ) : (
+      </CSSTransition>
+
+      <CSSTransition
+        in={showButton}
+        timeout={300}
+        classNames="addBtn"
+        unmountOnExit
+      >
         <div className="addBtn" onClick={onShowHandler}>
           <div className="addBtn__cross-wrap">
             <span className="addBtn__cross">✕</span>
-          </div>
-          <div className="addBtn__message-wrap">
-            <div className="addBtn__message">add new {flag}</div>
+            <div className="addBtn__message">add new post</div>
           </div>
         </div>
-      )}
-    </section>
+      </CSSTransition>
+    </>
   );
 };

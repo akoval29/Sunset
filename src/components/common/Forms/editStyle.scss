@@ -10,14 +10,8 @@
   @media (max-width: 900px) {
     left: 5%;
   }
-
-  &__cross {
-    color: white;
-    transform: rotate(45deg);
-    font-size: 25px;
-    font-weight: bold;
-    transition: transform 0.3s ease-in-out;
-    &:hover {
+  &:hover {
+    .addBtn__cross {
       animation: rotateAnimation 2s infinite;
     }
     @keyframes rotateAnimation {
@@ -30,20 +24,44 @@
     }
   }
 
+  //  -- CSS Transition Group -- //
+  &-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  &-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  &-exit {
+    opacity: 1;
+  }
+  &-exit-active {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 300ms, transform 300ms;
+  }
+
   &__cross-wrap {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: rgba($theme-color, 0.4);
     mix-blend-mode: multiply;
     &:hover {
+      border-radius: 25px;
+      width: 280px; //  ширина
+      transition: width 0.3s ease-in-out; // анімація ширини
       box-shadow: 0px 0px 6px rgba($theme-color, 0.7);
       cursor: pointer;
-      ~ .addBtn__message-wrap {
+      .addBtn__message {
         display: flex;
+        opacity: 1;
+        transition: opacity 1s, transform 0.5s;
       }
     }
     &:active {
@@ -51,34 +69,22 @@
     }
   }
 
-  &__message-wrap {
-    display: none;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    height: 35px;
-    width: 180px;
-    left: 93%;
-    vertical-align: middle;
+  &__cross {
     color: white;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: rgba($theme-color, 0.4);
-    box-shadow: 0px -3px 3px rgba($theme-color, 0.4),
-      0px 3px 3px rgba($theme-color, 0.4);
-    mix-blend-mode: multiply;
-    &:hover {
-      cursor: pointer;
-      display: flex;
-    }
-    &:active {
-      box-shadow: 0px 0px 12px rgba($theme-color, 0.7);
-    }
+    font-size: 30px;
+    margin: 0 12px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(45deg);
   }
 
   &__message {
-    margin: 0 5px;
-    font-size: 20px;
+    margin-left: 20px;
+    font-size: 25px;
+    color: white;
+    opacity: 0;
+    transform: translateX(-10px); // зсув
+    transition: opacity 0.3s, transform 0.3s;
   }
 }
 
@@ -89,33 +95,103 @@
   align-items: center;
   flex-direction: column;
   width: 500px;
-  bottom: 50px;
-  left: 50%;
-  opacity: 0;
-  transform: translate(-50%, -10%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  top: 35%;
+  left: 38%;
   @media (max-width: 730px) {
     width: 300px;
-  }
-  &--show {
-    opacity: 1;
-    transform: translate(-50%, -100%);
+    top: 35%;
+    left: 15%;
   }
 
-  &__wrap {
+  //  -- CSS Transition Group -- //
+  &-enter {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  &-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  &-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &-exit-active {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  // поле вводу текста
+  &__column {
     display: flex;
     flex-direction: column;
     border: 1px solid white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding: 15px;
-    height: 250px;
+    padding: 0 15px 15px 15px;
+    height: 300px;
     width: 100%;
     box-shadow: 0 0 5px #cccccc;
     background-color: lighten($theme-color, 55%);
     opacity: 0.95;
   }
 
+  &__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 40px;
+  }
+  &__user {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  &__userImg {
+    object-fit: cover;
+    object-position: center;
+    width: 20px;
+    height: 20px;
+  }
+  &__userName {
+    margin: 0 5px;
+  }
+  // Кнопка закривання форми
+  &__closeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: rgba($theme-color, 0.2);
+    &:hover {
+      cursor: pointer;
+      background-color: rgba($theme-color, 0.5);
+      box-shadow: 0px 0px 5px rgba($theme-color, 0.7);
+      .newEntry__crossImg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &:active {
+      box-shadow: 0px 0px 7px rgba($theme-color, 0.9);
+    }
+  }
+  &__crossImg {
+    width: 15px;
+    height: 15px;
+  }
+
+  &__textBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+  }
   &__titlearea,
   &__textarea {
     padding: 5px;
@@ -134,30 +210,8 @@
       box-shadow: 0 0 5px $theme-color;
     }
   }
-
-  &__titlearea {
-    margin-bottom: 15px;
-  }
-
   &__textarea {
     height: 100%;
-  }
-
-  &__userWrap {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-
-  &__userImg {
-    object-fit: cover;
-    object-position: center;
-    width: 20px;
-    height: 20px;
-  }
-
-  &__userName {
-    margin: 0 5px;
   }
 
   // кнопка Submit
@@ -166,8 +220,7 @@
     justify-content: center;
     align-items: center;
   }
-
-  &__btn {
+  &__submitBtn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,22 +245,6 @@
     }
     @media (max-width: 730px) {
       width: 300px;
-    }
-  }
-
-  // Кнопка закривання форми
-  &__cross-wrap {
-    position: fixed;
-    right: 1%;
-    top: 1%;
-    width: 25px;
-    height: 25px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &:hover {
-      cursor: pointer;
     }
   }
 

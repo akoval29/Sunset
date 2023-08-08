@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { CSSTransition } from "react-transition-group";
 import { useDispatch } from "react-redux";
 import "../editStyle.scss";
 
@@ -11,14 +12,13 @@ export const TodoEditForm = ({
 }) => {
   const [newTodoText, setNewTodoText] = useState("");
   const [isChecked, setIsChecked] = useState(false);
+  const dispatch = useDispatch();
 
   // Оновлюємо стан після отримання selectedItem
   useEffect(() => {
     setNewTodoText(selectedItem?.title || "");
     setIsChecked(selectedItem?.completed || false);
   }, [selectedItem]);
-
-  const dispatch = useDispatch();
 
   // показати/сховати модальне вікно з textarea
   function onShow() {
@@ -50,19 +50,28 @@ export const TodoEditForm = ({
   }
 
   return (
-    <article>
+    <>
       {showEditTodo ? (
-        <div className="newEntry newEntry--show">
-          <section className="newEntry__wrap">
-            <div className="newEntry__userWrap">
-              <img
-                className="newEntry__userImg"
-                src="https://cdn-icons-png.flaticon.com/512/666/666201.png"
-                alt="userIcon"
-              />
-              <p className="newEntry__userName">
-                User №{selectedItem.userId} / todo №{selectedItem.id}
-              </p>
+        <div className="newEntry">
+          <section className="newEntry__column">
+            <div className="newEntry__row">
+              <div className="newEntry__user">
+                <img
+                  className="newEntry__userImg"
+                  src="https://cdn-icons-png.flaticon.com/512/666/666201.png"
+                  alt="userIcon"
+                />
+                <p className="newEntry__userName">
+                  User №{selectedItem.userId} / todo №{selectedItem.id}
+                </p>
+              </div>
+              <button className="newEntry__closeBtn" onClick={onShow}>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/57/57165.png"
+                  className="newEntry__crossImg"
+                  alt="cross-icon"
+                />
+              </button>
             </div>
             <textarea
               className="newEntry__textarea"
@@ -86,15 +95,11 @@ export const TodoEditForm = ({
             </div>
           </section>
 
-          <button className="newEntry__btn" onClick={onTodoSubmitBtn}>
+          <button className="newEntry__submitBtn" onClick={onTodoSubmitBtn}>
             Submit
           </button>
-
-          <div className="newEntry__cross-wrap" onClick={onShow}>
-            <span className="newEntry__cross">✕</span>
-          </div>
         </div>
       ) : null}
-    </article>
+    </>
   );
 };

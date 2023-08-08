@@ -53,17 +53,14 @@ export const Posts = () => {
             <p className="post__userId">User № {item.userId}</p>
             <p className="post__postId">Post № {item.id}</p>
             <div className="post__edit-wrap">
-              <button className="post__item-wrap" onClick={() => onEdit(item)}>
+              <button className="post__btn" onClick={() => onEdit(item)}>
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/3524/3524762.png"
                   className="post__item"
                   alt="wrench-icon"
                 />
               </button>
-              <button
-                className="post__item-wrap"
-                onClick={() => onDelete(item.id)}
-              >
+              <button className="post__btn" onClick={() => onDelete(item.id)}>
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/57/57165.png"
                   className="post__item"
@@ -81,7 +78,7 @@ export const Posts = () => {
         setShowEditPost={setShowEditPost}
         selectedItem={selectedItem}
       />
-      <PostAddForm flag="post" />
+      <PostAddForm />
       <ScrollTo />
     </ul>
   );

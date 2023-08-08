@@ -58,17 +58,15 @@ export const Todos = () => {
             <p className="todo__userId">User № {item.userId}</p>
             <p className="todo__todoId">todo № {item.id}</p>
             <div className="todo__edit-wrap">
-              <button className="todo__item-wrap" onClick={() => onEdit(item)}>
+              <button className="todo__btn" onClick={() => onEdit(item)}>
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/3524/3524762.png"
                   className="todo__item"
                   alt="wrench-icon"
                 />
               </button>
-              <button
-                className="todo__item-wrap"
-                onClick={() => onDelete(item.id)}
-              >
+
+              <button className="todo__btn" onClick={() => onDelete(item.id)}>
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/57/57165.png"
                   className="todo__item"

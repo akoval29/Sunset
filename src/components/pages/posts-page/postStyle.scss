@@ -34,7 +34,15 @@
     flex-direction: row;
   }
 
-  &__item-wrap {
+  &__postId {
+    font-weight: bold;
+  }
+
+  &__userId {
+    font-style: italic;
+  }
+
+  &__btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,12 +51,11 @@
     margin: 0 5px;
     border-radius: 50%;
     background-color: rgba($theme-color, 0.2);
-    transition: background-color 0.3s ease; // delete animation
     &:hover {
       cursor: pointer;
       background-color: rgba($theme-color, 0.5);
       box-shadow: 0px 0px 5px rgba($theme-color, 0.7);
-      .todo__item {
+      .post__item {
         width: 20px;
         height: 20px;
       }

@@ -29,12 +29,20 @@
     justify-content: space-between;
   }
 
+  &__userId {
+    font-style: italic;
+  }
+
+  &__todoId {
+    font-weight: bold;
+  }
+
   &__edit-wrap {
     display: flex;
     flex-direction: row;
   }
 
-  &__item-wrap {
+  &__btn {
     display: flex;
     justify-content: center;
     align-items: center;
