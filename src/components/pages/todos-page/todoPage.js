@@ -46,6 +46,28 @@ export const Todos = () => {
     setShowEditTodo(true);
   };
 
+  if (allTodos.length === 0) {
+    return (
+      <ul
+        className="app__main"
+        style={{
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <h3 className="app__main-title">Todos</h3>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/42/42849.png"
+          className=""
+          alt="noTodos"
+        />
+      </ul>
+    );
+  }
+
   const getCompletedColor = (completed) => {
     return completed ? "greenyellow" : "red";
   };

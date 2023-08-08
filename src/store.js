@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import posts from "./postSlice";
-import todos from "./todoSlice";
-import users from "./userSlice";
+import posts from "./ducks/postSlice";
+import todos from "./ducks/todoSlice";
+import users from "./ducks/userSlice";
 
 const store = configureStore({
   reducer: { posts, todos, users },
