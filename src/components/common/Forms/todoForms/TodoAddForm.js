@@ -144,7 +144,7 @@ export const TodoAddForm = ({ flag }) => {
         <div className="addBtn" onClick={onShowHandler}>
           <div className="addBtn__cross-wrap">
             <span className="addBtn__cross">✕</span>
-            <div className="addBtn__message">add new post</div>
+            <div className="addBtn__message">add new todo</div>
           </div>
         </div>
       </CSSTransition>
