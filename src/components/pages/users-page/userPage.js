@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { Spinner } from "../../common/loading/spinner";
-
 import { fetchUsers, allUsersSelector } from "../../../ducks/userSlice";
+import { ErrorMessage } from "../../common/error/errorMessage";
+import { Spinner } from "../../common/loading/spinner";
 
 import "./userStyle.scss";
 
@@ -19,7 +19,7 @@ export const Users = () => {
   if (usersLoadingStatus === "loading") {
     return <Spinner />;
   } else if (usersLoadingStatus === "error") {
-    return <h5 className="">Помилка завантаження</h5>;
+    return <ErrorMessage />;
   }
 
   return (

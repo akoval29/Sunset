@@ -160,13 +160,13 @@
     margin: 0 5px;
   }
 
+  // кнопка Submit
   &__submitContainer {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  // кнопка Submit
   &__btn {
     display: flex;
     justify-content: center;
@@ -195,12 +195,7 @@
     }
   }
 
-  &__error-message {
-    font-size: 13px;
-    color: red;
-    font-style: italic;
-  }
-
+  // Кнопка закривання форми
   &__cross-wrap {
     position: fixed;
     right: 1%;
@@ -214,6 +209,13 @@
     &:hover {
       cursor: pointer;
     }
+  }
+
+  // помилка
+  &__error-message {
+    font-size: 13px;
+    color: red;
+    font-style: italic;
   }
 }
 

@@ -1,7 +1,5 @@
 @use "../../../style/normalize.scss" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
 .todo {
   border: 2px solid black;
   border-radius: 15px;
@@ -9,14 +7,7 @@
   margin: 15px 10px;
   font-family: "Roboto", sans-serif;
   background-color: rgba(255, 255, 255, 0.1);
-  overflow: hidden; // delete animation
-  transition: all 0.3s ease; // delete animation
-  &--deleting {
-    opacity: 0;
-    transform: scale(0);
-    pointer-events: none;
-  } // delete animation
-
+  list-style: none;
   &__wrap {
     display: flex;
     flex-wrap: wrap;
@@ -52,7 +43,6 @@
     margin: 0 5px;
     border-radius: 50%;
     background-color: rgba($theme-color, 0.2);
-    transition: background-color 0.3s ease; // delete animation
     &:hover {
       cursor: pointer;
       background-color: rgba($theme-color, 0.5);

@@ -1,7 +1,5 @@
 @use "../../../style/normalize.scss" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
 .post {
   border: 2px solid black;
   border-radius: 15px;
@@ -9,14 +7,7 @@
   margin: 15px 10px;
   font-family: "Roboto", sans-serif;
   background-color: rgba(255, 255, 255, 0.1);
-  overflow: hidden; // delete animation
-  transition: all 0.3s ease; // delete animation
-  &--deleting {
-    opacity: 0;
-    transform: scale(0);
-    pointer-events: none;
-  } // delete animation
-
+  list-style: none;
   &__wrap {
     display: flex;
     flex-wrap: wrap;
@@ -81,31 +72,3 @@
     font-weight: bold;
   }
 }
-
-// @use "../../../style/normalize.scss" as *;
-
-// .post {
-//   border: 2px solid black;
-//   border-radius: 15px;
-//   padding: 10px;
-//   margin: 15px 10px;
-//   background-color: rgba(255, 255, 255, 0.1);
-//   &__wrap {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//     width: 100%;
-//     &::after {
-//       content: "";
-//       display: block;
-//       width: 100%;
-//       margin: 0 auto;
-//       padding-top: 10px;
-//       border-bottom: 1px solid black;
-//     }
-//   }
-//   &__title {
-//     margin-bottom: 5px;
-//     text-align: center;
-//   }
-// }
