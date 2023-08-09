@@ -6,12 +6,13 @@
   padding: 10px;
   font-family: "Roboto", sans-serif;
   margin: 15px 10px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   list-style: none;
   &__wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    font-size: 20px;
   }
 
   &__container {
@@ -19,6 +20,7 @@
     justify-content: space-between;
     text-decoration: underline;
     margin: 0 25px;
+    font-size: 20px;
   }
 
   &__userId {

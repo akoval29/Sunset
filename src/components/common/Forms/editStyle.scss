@@ -64,7 +64,7 @@
     font-size: 25px;
     color: white;
     opacity: 0;
-    transform: translateX(-100%); // Зсув вліво
+    // transform: translateX(-100%); // Зсув вліво
     transition: opacity 0.3s, transform 0.3s; // Анімація текста
   }
 
