@@ -24,25 +24,6 @@
     }
   }
 
-  //  -- CSS Transition Group -- //
-  &-enter {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  &-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 300ms, transform 300ms;
-  }
-  &-exit {
-    opacity: 1;
-  }
-  &-exit-active {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 300ms, transform 300ms;
-  }
-
   &__cross-wrap {
     display: flex;
     justify-content: flex-start;
@@ -50,18 +31,18 @@
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    background-color: rgba($theme-color, 0.4);
+    background-color: rgba($theme-color, 0.7);
     mix-blend-mode: multiply;
     &:hover {
       border-radius: 25px;
       width: 280px; //  ширина
       transition: width 0.3s ease-in-out; // анімація ширини
-      box-shadow: 0px 0px 6px rgba($theme-color, 0.7);
+      box-shadow: 0px 0px 10px rgba($theme-color, 0.7);
       cursor: pointer;
       .addBtn__message {
         display: flex;
         opacity: 1;
-        transition: opacity 1s, transform 0.5s;
+        transform: translateX(0);
       }
     }
     &:active {
@@ -79,12 +60,31 @@
   }
 
   &__message {
-    margin-left: 20px;
+    margin-left: 10px;
     font-size: 25px;
     color: white;
     opacity: 0;
-    transform: translateX(-10px); // зсув
-    transition: opacity 0.3s, transform 0.3s;
+    transform: translateX(-100%); // Зсув вліво
+    transition: opacity 0.3s, transform 0.3s; // Анімація текста
+  }
+
+  //  -- CSS Transition Group -- //
+  &-enter {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  &-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  &-exit {
+    opacity: 1;
+  }
+  &-exit-active {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 300ms, transform 300ms;
   }
 }
 
@@ -101,26 +101,6 @@
     width: 300px;
     top: 35%;
     left: 15%;
-  }
-
-  //  -- CSS Transition Group -- //
-  &-enter {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  &-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 300ms, transform 300ms;
-  }
-  &-exit {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  &-exit-active {
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: opacity 300ms, transform 300ms;
   }
 
   // поле вводу текста
@@ -253,6 +233,26 @@
     font-size: 13px;
     color: red;
     font-style: italic;
+  }
+
+  //  -- CSS Transition Group -- //
+  &-enter {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  &-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  &-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &-exit-active {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 300ms, transform 300ms;
   }
 }
 

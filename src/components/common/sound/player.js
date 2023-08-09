@@ -27,11 +27,6 @@ export const Player = ({ playing, onPlay }) => {
     play(playList[randomIndex]);
   };
 
-  const pause = () => {
-    audio.pause();
-    onPlay(false);
-  };
-
   const stop = () => {
     audio.pause();
     audio.currentTime = 0;
@@ -45,42 +40,36 @@ export const Player = ({ playing, onPlay }) => {
   };
 
   useEffect(() => {
-    const handleAudioEnd = () => onPlay(false);
+    const handleAudioEnd = () => {
+      stop();
+    };
     audio.addEventListener("ended", handleAudioEnd);
     return () => {
       audio.removeEventListener("ended", handleAudioEnd);
     };
-  }, [audio, onPlay]);
+  }, [audio]);
 
   return (
     <div className="player">
       <div className="player__icon-wrap">
-        <img
-          className="player__icon"
-          src="https://cdn-icons-png.flaticon.com/512/686/686463.png"
-          alt="playBtn"
-          onClick={playRandomSong}
-          disabled={playing}
-        />
-
-        <img
-          className="player__icon"
-          src="https://cdn-icons-png.flaticon.com/512/64/64594.png"
-          alt="pauseBtn"
-          onClick={pause}
-          disabled={!playing}
-        />
-
-        <img
-          className="player__icon"
-          src="https://cdn-icons-png.flaticon.com/512/91/91265.png"
-          alt="stopBtn"
-          onClick={stop}
-          disabled={!playing}
-        />
+        {playing ? (
+          <img
+            className="player__icon"
+            src="https://cdn-icons-png.flaticon.com/512/91/91265.png"
+            alt="stopBtn"
+            onClick={stop}
+          />
+        ) : (
+          <img
+            className="player__icon"
+            src="https://cdn-icons-png.flaticon.com/512/686/686463.png"
+            alt="playBtn"
+            onClick={playRandomSong}
+          />
+        )}
       </div>
 
-      {playing ? (
+      {playing && (
         <div className="player__volume-wrap">
           <input
             className="player__volume-input"
@@ -93,7 +82,7 @@ export const Player = ({ playing, onPlay }) => {
           />
           {/* <span>{volume}</span> */}
         </div>
-      ) : null}
+      )}
     </div>
   );
 };
