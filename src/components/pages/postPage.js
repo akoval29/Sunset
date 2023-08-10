@@ -5,16 +5,16 @@ import {
   fetchPosts,
   allPostsSelector,
   deletePost,
-} from "../../../ducks/postSlice";
+} from "../../ducks/postSlice";
 
 // commons
-import { ScrollTo } from "../../common/scroll/pageScroll";
-import { Spinner } from "../../common/loading/spinner";
-import { PostEditForm } from "../../common/Forms/postForms/PostEditForm";
-import { PostAddForm } from "../../common/Forms/postForms/PostAddForm";
-import { ErrorMessage } from "../../common/error/errorMessage";
+import { ScrollTo } from "../common/scroll/pageScroll";
+import { Spinner } from "../common/loading/spinner";
+import { PostEditForm } from "../common/Forms/postForms/PostEditForm";
+import { PostAddForm } from "../common/Forms/postForms/PostAddForm";
+import { ErrorMessage } from "../common/error/errorMessage";
 
-import "../../../style/pageStyle.scss";
+import "../../style/pageStyle.scss";
 
 export const Posts = () => {
   const [showEditPost, setShowEditPost] = useState(false);

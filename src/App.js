@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import { Main } from "./components/pages/main-page/mainPage";
-import { Posts } from "./components/pages/posts-page/postPage";
-import { Todos } from "./components/pages/todos-page/todoPage";
-import { Users } from "./components/pages/users-page/userPage";
+import { Main } from "./components/pages/mainPage";
+import { Posts } from "./components/pages/postPage";
+import { Todos } from "./components/pages/todoPage";
+import { Users } from "./components/pages/userPage";
 
 import { NavBar } from "./components/navigation/navBar";
 import { Footer } from "./components/footer/footer";
 
-import defaultBg from "./lib/city.png";
+import defaultBg from "./lib/009.jpg";
 import cyberBg from "./lib/cyber.png";
 import "./style/app.scss";
 

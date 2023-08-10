@@ -5,17 +5,17 @@ import {
   fetchTodos,
   allTodosSelector,
   deleteTodo,
-} from "../../../ducks/todoSlice";
+} from "../../ducks/todoSlice";
 
 // commons
-import { ScrollTo } from "../../common/scroll/pageScroll";
-import { Spinner } from "../../common/loading/spinner";
-import { TodoEditForm } from "../../common/Forms/todoForms/TodoEditForm";
-import { TodoAddForm } from "../../common/Forms/todoForms/TodoAddForm";
-import { ErrorMessage } from "../../common/error/errorMessage";
+import { ScrollTo } from "../common/scroll/pageScroll";
+import { Spinner } from "../common/loading/spinner";
+import { TodoEditForm } from "../common/Forms/todoForms/TodoEditForm";
+import { TodoAddForm } from "../common/Forms/todoForms/TodoAddForm";
+import { ErrorMessage } from "../common/error/errorMessage";
 
 //style
-import "../../../style/pageStyle.scss";
+import "../../style/pageStyle.scss";
 
 export const Todos = () => {
   const [showEditTodo, setShowEditTodo] = useState(false);

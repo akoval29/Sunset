@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchUsers, allUsersSelector } from "../../../ducks/userSlice";
-import { ErrorMessage } from "../../common/error/errorMessage";
-import { Spinner } from "../../common/loading/spinner";
+import { fetchUsers, allUsersSelector } from "../../ducks/userSlice";
+import { ErrorMessage } from "../common/error/errorMessage";
+import { Spinner } from "../common/loading/spinner";
 
-import "../../../style/pageStyle.scss";
+import "../../style/pageStyle.scss";
 
 export const Users = () => {
   const allUsers = useSelector(allUsersSelector);
