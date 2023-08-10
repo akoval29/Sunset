@@ -26,7 +26,7 @@
   },
   "scripts": {
     "dev": "react-scripts start",
-    "start": "concurrently \"react-scripts start\" \"npx json-server src/lib/db.json --port 3001\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

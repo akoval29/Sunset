@@ -5,8 +5,8 @@ import {
   createSelector,
 } from "@reduxjs/toolkit";
 import { useHttp } from "../hooks/useAPI";
-import { url } from "../lib/source";
 
+const url = "https://jsonplaceholder.typicode.com";
 const postsAdapter = createEntityAdapter();
 
 // Отримуєм post
