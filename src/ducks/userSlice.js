@@ -9,46 +9,61 @@ import { useHttp } from "../hooks/useAPI";
 const url = "https://jsonplaceholder.typicode.com";
 const usersAdapter = createEntityAdapter();
 
+// Отримуємо дані з локального сховища
+const getUsersFromLocalStorage = () => {
+  const usersData = localStorage.getItem("users");
+  if (usersData) {
+    return JSON.parse(usersData);
+  }
+  return null;
+};
+
+// Зберігаємо дані у локальне сховище
+const saveUsersToLocalStorage = (data) => {
+  localStorage.setItem("users", JSON.stringify(data));
+};
+
 // Отримуєм user
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
   const { request } = useHttp();
-  return await request(`${url}/users`);
+
+  // Повертаємо дані з локального сховища,
+  // якщо вони є і на вихід з функції fetchUsers
+  const cachedUsers = getUsersFromLocalStorage();
+  if (cachedUsers) {
+    return cachedUsers;
+  }
+
+  const response = await request(`${url}/users`);
+  saveUsersToLocalStorage(response);
+  return response;
 });
 
-// Нове user
-export const createUser = createAsyncThunk(
-  "users/createUser",
-  async (newUser) => {
-    const { request } = useHttp();
-    const response = await request(
-      `${url}/users`,
-      "POST",
-      JSON.stringify(newUser)
-    );
-    return response;
-  }
-);
+// Новий user
+export const createUser = createAsyncThunk("users/createUser", (newUser) => {
+  const cachedUsers = getUsersFromLocalStorage();
+  const updatedUsers = [...cachedUsers, newUser];
+  saveUsersToLocalStorage(updatedUsers);
+  return newUser;
+});
 
 // Видаляєм user
-export const deleteUser = createAsyncThunk(
-  "users/deleteUser",
-  async (userId) => {
-    const { request } = useHttp();
-    await request(`${url}/users/${userId}`, "DELETE");
-    return userId;
-  }
-);
+export const deleteUser = createAsyncThunk("users/deleteUser", (userId) => {
+  const cachedUsers = getUsersFromLocalStorage();
+  const updatedUsers = cachedUsers.filter((user) => user.id !== userId);
+  saveUsersToLocalStorage(updatedUsers);
+  return userId;
+});
 
 // Редагуєм user
 export const updateUser = createAsyncThunk(
   "users/updateUser",
-  async ({ userId, updatedUser }) => {
-    const { request } = useHttp();
-    await request(
-      `${url}/users/${userId}`,
-      "PATCH",
-      JSON.stringify(updatedUser)
+  ({ userId, updatedUser }) => {
+    const cachedUsers = getUsersFromLocalStorage();
+    const updatedUsers = cachedUsers.map((user) =>
+      user.id === userId ? { ...user, ...updatedUser } : user
     );
+    saveUsersToLocalStorage(updatedUsers);
     return { userId, updatedUser };
   }
 );

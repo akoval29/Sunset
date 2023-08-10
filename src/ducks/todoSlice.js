@@ -9,46 +9,61 @@ import { useHttp } from "../hooks/useAPI";
 const url = "https://jsonplaceholder.typicode.com";
 const todosAdapter = createEntityAdapter();
 
+// Отримуємо дані з локального сховища
+const getTodosFromLocalStorage = () => {
+  const todosData = localStorage.getItem("todos");
+  if (todosData) {
+    return JSON.parse(todosData);
+  }
+  return null;
+};
+
+// Зберігаємо дані у локальне сховище
+const saveTodosToLocalStorage = (data) => {
+  localStorage.setItem("todos", JSON.stringify(data));
+};
+
 // Отримуєм todo
 export const fetchTodos = createAsyncThunk("todos/fetchTodos", async () => {
   const { request } = useHttp();
-  return await request(`${url}/todos`);
+
+  // Повертаємо дані з локального сховища,
+  // якщо вони є і на вихід з функції fetchTodos
+  const cachedTodos = getTodosFromLocalStorage();
+  if (cachedTodos) {
+    return cachedTodos;
+  }
+
+  const response = await request(`${url}/todos`);
+  saveTodosToLocalStorage(response);
+  return response;
 });
 
-// Нове todo
-export const createTodo = createAsyncThunk(
-  "todos/createTodo",
-  async (newTodo) => {
-    const { request } = useHttp();
-    const response = await request(
-      `${url}/todos`,
-      "POST",
-      JSON.stringify(newTodo)
-    );
-    return response;
-  }
-);
+// Новий todo
+export const createTodo = createAsyncThunk("todos/createTodo", (newTodo) => {
+  const cachedTodos = getTodosFromLocalStorage();
+  const updatedTodos = [...cachedTodos, newTodo];
+  saveTodosToLocalStorage(updatedTodos);
+  return newTodo;
+});
 
 // Видаляєм todo
-export const deleteTodo = createAsyncThunk(
-  "todos/deleteTodo",
-  async (todoId) => {
-    const { request } = useHttp();
-    await request(`${url}/todos/${todoId}`, "DELETE");
-    return todoId;
-  }
-);
+export const deleteTodo = createAsyncThunk("todos/deleteTodo", (todoId) => {
+  const cachedTodos = getTodosFromLocalStorage();
+  const updatedTodos = cachedTodos.filter((todo) => todo.id !== todoId);
+  saveTodosToLocalStorage(updatedTodos);
+  return todoId;
+});
 
 // Редагуєм todo
 export const updateTodo = createAsyncThunk(
   "todos/updateTodo",
-  async ({ todoId, updatedTodo }) => {
-    const { request } = useHttp();
-    await request(
-      `${url}/todos/${todoId}`,
-      "PATCH",
-      JSON.stringify(updatedTodo)
+  ({ todoId, updatedTodo }) => {
+    const cachedTodos = getTodosFromLocalStorage();
+    const updatedTodos = cachedTodos.map((todo) =>
+      todo.id === todoId ? { ...todo, ...updatedTodo } : todo
     );
+    saveTodosToLocalStorage(updatedTodos);
     return { todoId, updatedTodo };
   }
 );

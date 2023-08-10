@@ -40,33 +40,26 @@ export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
 });
 
 // Новий post
-export const createPost = createAsyncThunk(
-  "posts/createPost",
-  async (newPost) => {
-    const cachedPosts = getPostsFromLocalStorage();
-    const updatedPosts = [...cachedPosts, newPost];
-    savePostsToLocalStorage(updatedPosts);
-    return newPost;
-  }
-);
+export const createPost = createAsyncThunk("posts/createPost", (newPost) => {
+  const cachedPosts = getPostsFromLocalStorage();
+  const updatedPosts = [...cachedPosts, newPost];
+  savePostsToLocalStorage(updatedPosts);
+  return newPost;
+});
 
 // Видаляєм post
-export const deletePost = createAsyncThunk(
-  "posts/deletePost",
-  async (postId) => {
-    const cachedPosts = getPostsFromLocalStorage();
-    const updatedPosts = cachedPosts.filter((post) => post.id !== postId);
-    savePostsToLocalStorage(updatedPosts);
-    return postId;
-  }
-);
+export const deletePost = createAsyncThunk("posts/deletePost", (postId) => {
+  const cachedPosts = getPostsFromLocalStorage();
+  const updatedPosts = cachedPosts.filter((post) => post.id !== postId);
+  savePostsToLocalStorage(updatedPosts);
+  return postId;
+});
 
 // Редагуєм post
 export const updatePost = createAsyncThunk(
   "posts/updatePost",
-  async ({ postId, updatedPost }) => {
+  ({ postId, updatedPost }) => {
     const cachedPosts = getPostsFromLocalStorage();
-
     const updatedPosts = cachedPosts.map((post) =>
       post.id === postId ? { ...post, ...updatedPost } : post
     );
