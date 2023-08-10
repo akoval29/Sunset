@@ -14,14 +14,14 @@ import { PostEditForm } from "../../common/Forms/postForms/PostEditForm";
 import { PostAddForm } from "../../common/Forms/postForms/PostAddForm";
 import { ErrorMessage } from "../../common/error/errorMessage";
 
-import "./postStyle.scss";
+import "../../../style/pageStyle.scss";
 
 export const Posts = () => {
   const [showEditPost, setShowEditPost] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
   const allPosts = useSelector(allPostsSelector);
-  const { postsLoadingStatus } = useSelector(
+  const postsLoadingStatus = useSelector(
     (state) => state.posts.postsLoadingStatus
   );
   const dispatch = useDispatch();
@@ -53,35 +53,35 @@ export const Posts = () => {
           <CSSTransition
             key={item.id}
             timeout={300}
-            classNames={"post"}
+            classNames={"page"}
             unmountOnExit
           >
-            <li className="post">
-              <div className="post__wrap">
-                <p className="post__userId">User № {item.userId}</p>
-                <p className="post__postId">Post № {item.id}</p>
-                <div className="post__edit-wrap">
-                  <button className="post__btn" onClick={() => onEdit(item)}>
+            <li className="page">
+              <div className="page__wrap">
+                <p className="page__userId">User № {item.userId}</p>
+                <p className="page__postId">Post № {item.id}</p>
+                <div className="page__edit-wrap">
+                  <button className="page__btn" onClick={() => onEdit(item)}>
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/3524/3524762.png"
-                      className="post__item"
+                      className="page__item"
                       alt="wrench-icon"
                     />
                   </button>
                   <button
-                    className="post__btn"
+                    className="page__btn"
                     onClick={() => onDelete(item.id)}
                   >
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/57/57165.png"
-                      className="post__item"
+                      className="page__item"
                       alt="cross-icon"
                     />
                   </button>
                 </div>
               </div>
-              <h4 className="post__title">{item.title}</h4>
-              <p className="post__body">{item.body}</p>
+              <h4 className="page__title">{item.title}</h4>
+              <p className="page__body">{item.body}</p>
             </li>
           </CSSTransition>
         ))}

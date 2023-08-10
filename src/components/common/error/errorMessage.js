@@ -6,7 +6,7 @@ export const ErrorMessage = () => {
     <div className="error">
       <img
         className="error__image"
-        src="https://icon-library.com/images/image-error-icon/image-error-icon-17.jpg"
+        src="https://cdn-icons-png.flaticon.com/512/2766/2766474.png"
         alt="Помилка завантаження"
       />
       <p className="error__text">Помилка завантаження</p>

@@ -15,7 +15,7 @@ import { TodoAddForm } from "../../common/Forms/todoForms/TodoAddForm";
 import { ErrorMessage } from "../../common/error/errorMessage";
 
 //style
-import "./todoStyle.scss";
+import "../../../style/pageStyle.scss";
 
 export const Todos = () => {
   const [showEditTodo, setShowEditTodo] = useState(false);
@@ -80,39 +80,39 @@ export const Todos = () => {
           <CSSTransition
             key={item.id}
             timeout={300}
-            classNames={"todo"}
+            classNames={"page"}
             unmountOnExit
           >
-            <li className="todo" key={item.id}>
-              <div className="todo__wrap">
-                <p className="todo__userId">User № {item.userId}</p>
-                <p className="todo__todoId">todo № {item.id}</p>
-                <div className="todo__edit-wrap">
-                  <button className="todo__btn" onClick={() => onEdit(item)}>
+            <li className="page" key={item.id}>
+              <div className="page__wrap">
+                <p className="page__userId">User № {item.userId}</p>
+                <p className="page__todoId">todo № {item.id}</p>
+                <div className="page__edit-wrap">
+                  <button className="page__btn" onClick={() => onEdit(item)}>
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/3524/3524762.png"
-                      className="todo__item"
+                      className="page__item"
                       alt="wrench-icon"
                     />
                   </button>
 
                   <button
-                    className="todo__btn"
+                    className="page__btn"
                     onClick={() => onDelete(item.id)}
                   >
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/57/57165.png"
-                      className="todo__item"
+                      className="page__item"
                       alt="cross-icon"
                     />
                   </button>
                 </div>
               </div>
 
-              <div className="todo__container">
-                <h4 className="todo__title">{item.title}</h4>
+              <div className="page__container">
+                <h4 className="page__title">{item.title}</h4>
                 <p
-                  className="todo__completed"
+                  className="page__completed"
                   style={{ color: getCompletedColor(item.completed) }}
                 >
                   {item.completed?.toString()}

@@ -5,11 +5,13 @@ import { fetchUsers, allUsersSelector } from "../../../ducks/userSlice";
 import { ErrorMessage } from "../../common/error/errorMessage";
 import { Spinner } from "../../common/loading/spinner";
 
-import "./userStyle.scss";
+import "../../../style/pageStyle.scss";
 
 export const Users = () => {
   const allUsers = useSelector(allUsersSelector);
-  const { usersLoadingStatus } = useSelector((state) => state.users);
+  const usersLoadingStatus = useSelector(
+    (state) => state.users.usersLoadingStatus
+  );
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,17 +27,17 @@ export const Users = () => {
   return (
     <ul className="app__main">
       <h3 className="app__main-title">Users</h3>
-      <div className="user__container">
-        <p className="user__userId">Name </p>
-        <p className="user__userId">User name</p>
+      <div className="page__userContainer">
+        <p className="page__userId">Name </p>
+        <p className="page__userId">User name</p>
       </div>
       {allUsers.map((item) => (
-        <li className="user" key={item.id}>
-          <div className="user__wrap">
-            <p className="user__userId">
+        <li className="page" key={item.id}>
+          <div className="page__userWrap">
+            <p className="page__userID">
               {item.id}. {item.name}
             </p>
-            <p className="user__userName">{item.username}</p>
+            <p className="page__userName">{item.username}</p>
           </div>
         </li>
       ))}
