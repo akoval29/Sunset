@@ -12,6 +12,8 @@ export const useHttp = () => {
         throw new Error(`Could not fetch ${url}, status: ${response.status}`);
       }
 
+      console.log(`request !`);
+
       const data = await response.json();
       return data;
     } catch (e) {
@@ -21,10 +23,3 @@ export const useHttp = () => {
 
   return { request };
 };
-
-// Posts: https://jsonplaceholder.typicode.com/posts
-
-// Todo: https://jsonplaceholder.typicode.com/todos
-
-// Users: https://jsonplaceholder.typicode.com/users
-// -  show only "name" and "username" for this list

@@ -1,15 +1,5 @@
 @use "./normalize.scss" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-$h: 50px;
-$section-h: calc(100vh - 2 * $h);
-$fz: 26px;
-$theme-font-color: white;
-$theme-font-color2: black;
-
 .app {
   display: flex;
   position: relative;
@@ -40,7 +30,6 @@ $theme-font-color2: black;
     }
   }
 
-  &__footer,
   &__header {
     display: flex;
     justify-content: center;
@@ -50,13 +39,7 @@ $theme-font-color2: black;
     font-size: $fz;
     color: $theme-font-color;
     font-weight: bold;
-    background-color: black;
-    opacity: 0.3;
-  }
-  &__footer {
-    bottom: 0;
-  }
-  &__header {
+    background: rgba(0, 0, 0, 0.3);
     top: 0;
   }
 
@@ -66,92 +49,24 @@ $theme-font-color2: black;
     flex: 1;
   }
 
-  &__nav {
-    display: flex;
-    align-items: center;
-    flex-basis: 100%;
-    height: $section-h;
-    max-width: 20%;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    padding: 15px;
-    flex-direction: column;
-    @media (max-width: 900px) {
-      flex-direction: row;
-      height: $h;
-      max-width: 100%;
-      align-items: center;
-      justify-content: space-around;
-      padding: 0;
-    }
-  }
-
-  &__nav-li {
-    position: relative;
-    padding: 6px 30px;
-    list-style: none;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    &:hover {
-      .app__span {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-    @media (max-width: 900px) {
-      font-size: 0.75em;
-      padding: 6px;
-      margin: 0;
-    }
-  }
-
-  &__nav-link {
-    font-size: 1.5em;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    list-style: none;
-    text-decoration: none;
-    vertical-align: middle;
-    color: $theme-font-color;
-    &:hover {
-      cursor: pointer;
-    }
-    &.active {
-      color: $theme-color;
-    }
-  }
-
-  &__span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border: 2px solid $theme-color;
-    border-radius: 7px;
-    transform: scale(0);
-    transition: 0.5s;
-    opacity: 0;
-  }
-
   &__main-title,
   &__nav-title {
     font-family: "Poppins", sans-serif;
     color: $theme-font-color2;
     margin-bottom: 20px;
+    font-size: 27px;
     text-align: center;
     vertical-align: middle;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-
-  &__nav-title {
-    @media (max-width: 900px) {
-      display: none;
+    @media (max-width: 1150px) {
+      font-size: 18px;
     }
   }
 
   &__main {
     position: relative;
     flex-basis: 100%;
-    max-width: 80%;
+    max-width: 85%;
     line-height: 25px;
     overflow-y: auto;
     height: $section-h;
@@ -163,7 +78,7 @@ $theme-font-color2: black;
       rgba(0, 0, 0, 0) 95%,
       rgba(0, 0, 0, 0.5)
     );
-    padding: 15px 35px;
+    padding: 15px 65px;
     @media (max-width: 900px) {
       padding: 15px;
       max-width: 100%;
@@ -175,42 +90,5 @@ $theme-font-color2: black;
     color: $theme-font-color2;
     margin-bottom: 5px;
     letter-spacing: 1px;
-  }
-
-  &__footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: $h;
-  }
-
-  &__footer-linkwrap {
-    display: flex;
-    flex-direction: row;
-    margin: 0 20px;
-    @media (max-width: 900px) {
-      margin: 0 10px;
-    }
-  }
-
-  &__footer-icon {
-    display: block;
-    width: 25px;
-    height: 25px;
-    margin: 5px;
-    filter: invert(1);
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-    &:hover {
-      cursor: pointer;
-      opacity: 1;
-      scale: 1.1;
-    }
-    // for audio player
-    &[disabled] {
-      cursor: default;
-      opacity: 0.3;
-    }
   }
 }

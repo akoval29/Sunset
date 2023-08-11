@@ -1,0 +1,39 @@
+@use "../../style/normalize.scss" as *;
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: $theme-font-color;
+  background: rgba(0, 0, 0, 0.3);
+  height: $h;
+  width: 100%;
+  &__icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    filter: invert(1);
+
+    transition: opacity 0.3s ease;
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+      scale: 1.1;
+    }
+    // for audio player
+    &[disabled] {
+      cursor: default;
+      opacity: 0.3;
+    }
+  }
+  &__linkwrap {
+    display: flex;
+    flex-direction: row;
+    margin: 0 20px;
+    @media (max-width: 900px) {
+      margin: 0 10px;
+    }
+  }
+}

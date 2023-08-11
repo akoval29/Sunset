@@ -1,0 +1,37 @@
+@use "../../../style/normalize.scss" as *;
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 100%;
+  max-width: 85%;
+  overflow-y: auto;
+  height: calc(100vh - 100px);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0) 5%,
+    rgba(0, 0, 0, 0) 5%,
+    rgba(0, 0, 0, 0) 95%,
+    rgba(0, 0, 0, 0.5)
+  );
+
+  &__image {
+    display: block;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  &__text {
+    margin: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: red;
+    text-align: center;
+  }
+}

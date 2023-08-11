@@ -1,5 +1,7 @@
 @use "../../../style/normalize.scss" as *;
 
+$inverted-theme-color: invert($theme-color);
+
 .player {
   display: flex;
   align-items: center;
@@ -7,6 +9,21 @@
   flex-direction: row;
   @media (max-width: 500px) {
     flex-direction: column;
+  }
+
+  &__icon {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    border-radius: 50%;
+    filter: invert(1);
+    transition: scale 0.3s ease, opacity 0.3s ease;
+    background: $inverted-theme-color;
+    &:hover {
+      cursor: pointer;
+      scale: 1.1;
+    }
   }
 
   &__icon-wrap {
@@ -37,6 +54,7 @@
       height: 20px;
       background: $theme-color;
       border-radius: 50%;
+      border: 1px solid white;
       &:hover {
         cursor: pointer;
         scale: 1.1;
