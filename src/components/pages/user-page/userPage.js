@@ -25,7 +25,7 @@ export const Users = () => {
   if (usersLoadingStatus === "loading") {
     return <Spinner />;
   } else if (usersLoadingStatus === "error") {
-    return <ErrorMessage />;
+    return <ErrorMessage message="Помилка завантаження" />;
   }
 
   return (

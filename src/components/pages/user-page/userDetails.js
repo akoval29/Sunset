@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
+import { ErrorMessage } from "../../common/error/errorMessage";
+
 export const UserDetails = () => {
   const { id } = useParams();
   const users = useSelector((state) => state.users.entities);
@@ -10,7 +12,7 @@ export const UserDetails = () => {
   const user = users[id];
 
   if (!user) {
-    return <div>User not found</div>;
+    return <ErrorMessage message="Користувач відсутній" />;
   }
 
   return (
