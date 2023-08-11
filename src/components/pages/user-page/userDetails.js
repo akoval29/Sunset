@@ -112,7 +112,7 @@ export const UserDetails = () => {
 
               <Link to="/users" className="detailedUser__backBtn">
                 <img
-                  className="detailedUser__backBtn-icon"
+                  className="detailedUser__icon--back"
                   src="https://cdn-icons-png.flaticon.com/512/7168/7168657.png"
                   alt="img-goBack"
                 />
