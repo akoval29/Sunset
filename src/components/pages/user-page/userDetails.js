@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { Link } from "react-router-dom";
 
 import { ErrorMessage } from "../../common/error/errorMessage";
 
@@ -22,7 +23,14 @@ export const UserDetails = () => {
         <CSSTransition
           key={user.id}
           timeout={300}
-          classNames={"detailedUser"}
+          classNames={{
+            appear: "detailedUser-appear",
+            appearActive: "detailedUser-appearActive",
+            enter: "detailedUser-enter",
+            enterActive: "detailedUser-enter-active",
+            exit: "detailedUser-exit",
+            exitActive: "detailedUser-exit-active",
+          }}
           unmountOnExit
         >
           <div className="detailedUser">
@@ -52,6 +60,7 @@ export const UserDetails = () => {
                   <div className="detailedUser__info-name">mobile</div>
                 </div>
               </li>
+
               <span className="detailedUser__line"></span>
 
               <li className="detailedUser__row">
@@ -98,6 +107,17 @@ export const UserDetails = () => {
                   <div className="detailedUser__info-name">company</div>
                 </div>
               </li>
+
+              <span className="detailedUser__line"></span>
+
+              <Link to="/users" className="detailedUser__backBtn">
+                <img
+                  className="detailedUser__backBtn-icon"
+                  src="https://cdn-icons-png.flaticon.com/512/7168/7168657.png"
+                  alt="img-goBack"
+                />
+                Back to Users
+              </Link>
             </div>
           </div>
         </CSSTransition>

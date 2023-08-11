@@ -55,19 +55,3 @@ export const Users = () => {
     </ul>
   );
 };
-
-// {
-//   <Link to={`/users/${item.id}`}></Link>
-
-// {allUsers.map((item) => (
-//   <li className="page" key={item.id}>
-
-//     <div className="page__userWrap">
-//       <p className="page__userID">
-//         {item.id}. {item.name}
-//       </p>
-//       <p className="page__userName">{item.username}</p>
-//     </div>
-//   </li>
-//       ))}
-// }

@@ -5,7 +5,7 @@
   justify-content: center;
   max-width: 600px;
   height: 100%;
-  padding: 10px;
+  padding: 20px;
   margin: 0 auto;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.3);
@@ -20,6 +20,7 @@
     display: flex;
     // flex-direction: row;
     margin: 15px 0;
+    align-items: center;
   }
 
   &__info {
@@ -27,7 +28,7 @@
     flex-direction: column;
     &:hover {
       cursor: pointer;
-      scale: 1.01;
+      // scale: 1.01;
     }
   }
 
@@ -46,7 +47,7 @@
       display: block;
       width: 100%;
       margin: 0 auto;
-      padding-top: 10px;
+      padding: 5px 0;
       border-bottom: 1px solid black;
     }
   }
@@ -57,7 +58,43 @@
     margin: 0 20px;
   }
 
+  &__backBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0 auto;
+    padding: 5px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    &:hover {
+      scale: 1.01;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  &__backBtn-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+  }
+
   // --- CSS Transition Group --- //
+
+  &-appear {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  &-appearActive {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+  }
+
   &-enter {
     opacity: 0;
     transform: scale(0.2);
