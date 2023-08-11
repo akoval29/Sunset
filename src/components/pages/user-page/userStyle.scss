@@ -2,10 +2,13 @@
 
 .detailedUser {
   display: flex;
-  width: 100%;
+  justify-content: center;
+  max-width: 700px;
   height: 100%;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
   font-family: "Roboto", sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
 
@@ -16,15 +19,43 @@
   &__row {
     display: flex;
     flex-direction: row;
+    margin: 15px 0;
   }
-  &__icon {
-    width: 50px;
-    height: 50px;
-  }
+
   &__info {
     display: flex;
     flex-direction: column;
+    &:hover {
+      cursor: pointer;
+      scale: 1.01;
+    }
   }
+
+  &__info-item {
+    font-size: 25px;
+  }
+
+  &__info-name {
+    font-style: italic;
+  }
+
+  &__line {
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 10px;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+  }
+
   // --- CSS Transition Group --- //
   &-enter {
     opacity: 0;

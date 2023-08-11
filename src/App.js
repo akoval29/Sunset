@@ -10,7 +10,7 @@ import { UserDetails } from "./components/pages/user-page/userDetails";
 import { NavBar } from "./components/navigation/navBar";
 import { Footer } from "./components/footer/footer";
 
-import defaultBg from "./lib/009.jpg";
+import defaultBg from "./lib/red-sunset.jpg";
 import cyberBg from "./lib/cyber.png";
 
 import "./style/app.scss";

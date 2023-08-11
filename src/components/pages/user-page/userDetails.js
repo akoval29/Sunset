@@ -39,6 +39,8 @@ export const UserDetails = () => {
                 </div>
               </li>
 
+              <span className="detailedUser__line"></span>
+
               <li className="detailedUser__row">
                 <img
                   className="detailedUser__icon"
@@ -50,6 +52,7 @@ export const UserDetails = () => {
                   <div className="detailedUser__info-name">mobile</div>
                 </div>
               </li>
+              <span className="detailedUser__line"></span>
 
               <li className="detailedUser__row">
                 <img
@@ -65,7 +68,7 @@ export const UserDetails = () => {
                   <div className="detailedUser__info-name">address</div>
                 </div>
               </li>
-
+              <span className="detailedUser__line"></span>
               <li className="detailedUser__row">
                 <img
                   className="detailedUser__icon"
@@ -77,7 +80,7 @@ export const UserDetails = () => {
                   <div className="detailedUser__info-name">website</div>
                 </div>
               </li>
-
+              <span className="detailedUser__line"></span>
               <li className="detailedUser__row">
                 <img
                   className="detailedUser__icon"
