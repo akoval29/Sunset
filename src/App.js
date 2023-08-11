@@ -10,8 +10,8 @@ import { UserDetails } from "./components/pages/user-page/userDetails";
 import { NavBar } from "./components/navigation/navBar";
 import { Footer } from "./components/footer/footer";
 
-import defaultBg from "./lib/red-sunset.jpg";
-import cyberBg from "./lib/cyber.png";
+import secondBg from "./lib/red-sunset.jpg";
+import defaultBg from "./lib/cyber.png";
 
 import "./style/app.scss";
 import "./components/pages/user-page/userStyle.scss";
@@ -29,7 +29,7 @@ export const App = () => {
           className={`app__bg ${!showClass}`}
           alt="default-bg"
         />
-        <img src={cyberBg} className={`app__bg ${showClass}`} alt="cyber-bg" />
+        <img src={secondBg} className={`app__bg ${showClass}`} alt="cyber-bg" />
         <header className="app__header">New Company</header>
         <section className="app__container">
           <NavBar />
