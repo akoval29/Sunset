@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 
 import { ErrorMessage } from "../../common/error/errorMessage";
 
+import "./userStyle.scss";
+
 export const UserDetails = () => {
   const { id } = useParams();
   const users = useSelector((state) => state.users.entities);
@@ -18,19 +20,22 @@ export const UserDetails = () => {
 
   return (
     <ul className="app__main">
-      <h3 className="app__main-title">{user.name}</h3>
+      <h3 className="app__main-title">
+        {user.name} ({user.username})
+      </h3>
       <TransitionGroup>
         <CSSTransition
           key={user.id}
           timeout={300}
-          classNames={{
-            appear: "detailedUser-appear",
-            appearActive: "detailedUser-appearActive",
-            enter: "detailedUser-enter",
-            enterActive: "detailedUser-enter-active",
-            exit: "detailedUser-exit",
-            exitActive: "detailedUser-exit-active",
-          }}
+          classNames={"detailedUser"}
+          // classNames={{
+          //   appear: "detailedUser-appear",
+          //   appearActive: "detailedUser-appear-active",
+          //   enter: "detailedUser-enter",
+          //   enterActive: "detailedUser-enter-active",
+          //   exit: "detailedUser-exit",
+          //   exitActive: "detailedUser-exit-active",
+          // }}
           unmountOnExit
         >
           <>
