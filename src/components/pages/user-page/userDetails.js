@@ -62,13 +62,15 @@ export const UserDetails = () => {
                 />
                 <div className="detailedUser__info">
                   <div className="detailedUser__info-item">
-                    {user.address.city} {user.address.street}
+                    {user.address.city}, {user.address.street},{" "}
                     {user.address.suite}
                   </div>
                   <div className="detailedUser__info-name">address</div>
                 </div>
               </li>
+
               <span className="detailedUser__line"></span>
+
               <li className="detailedUser__row">
                 <img
                   className="detailedUser__icon"
@@ -80,7 +82,9 @@ export const UserDetails = () => {
                   <div className="detailedUser__info-name">website</div>
                 </div>
               </li>
+
               <span className="detailedUser__line"></span>
+
               <li className="detailedUser__row">
                 <img
                   className="detailedUser__icon"
