@@ -39,7 +39,7 @@ export const App = () => {
             <Route path="/posts" element={<Posts />} />
             <Route path="/todos" element={<Todos />} />
             <Route path="/users" element={<Users />} />
-            <Route path="/users/details/:id" element={<UserDetails />} />
+            <Route path="/users/:id" element={<UserDetails />} />
           </Routes>
         </section>
 

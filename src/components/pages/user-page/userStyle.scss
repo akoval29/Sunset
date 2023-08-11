@@ -26,10 +26,6 @@
   &__info {
     display: flex;
     flex-direction: column;
-    &:hover {
-      cursor: pointer;
-      // scale: 1.01;
-    }
   }
 
   &__info-item {
@@ -74,7 +70,7 @@
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 10px;
     &:hover {
       scale: 1.01;

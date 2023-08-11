@@ -37,11 +37,7 @@ export const Users = () => {
       </div>
 
       {allUsers.map((item) => (
-        <Link
-          to={`/users/details/${item.id}`}
-          key={item.id}
-          className="page__link"
-        >
+        <Link to={`/users/${item.id}`} key={item.id} className="page__link">
           <li className="page">
             <div className="page__userWrap">
               <p className="page__userID">
