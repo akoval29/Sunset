@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./userStyle.scss";
 
+import { testUser } from "./testUser";
+
 export const UserTabs = () => {
   const [activeTab, setActiveTab] = useState("tab_1");
 
@@ -8,14 +10,15 @@ export const UserTabs = () => {
     setActiveTab(tabId);
   };
 
+  const currentUser = testUser[0];
+
   return (
     <div className="userTabs">
-      <div className="userTabs__nav">
+      <section className="userTabs__nav">
         <button
           className={`userTabs__navBtn ${
             activeTab === "tab_1" ? "active" : ""
           }`}
-          type="button"
           onClick={() => handleTabClick("tab_1")}
         >
           Posts
@@ -25,7 +28,6 @@ export const UserTabs = () => {
           className={`userTabs__navBtn ${
             activeTab === "tab_2" ? "active" : ""
           }`}
-          type="button"
           onClick={() => handleTabClick("tab_2")}
         >
           Todos
@@ -35,48 +37,67 @@ export const UserTabs = () => {
           className={`userTabs__navBtn ${
             activeTab === "tab_3" ? "active" : ""
           }`}
-          type="button"
           onClick={() => handleTabClick("tab_3")}
         >
           Albums
         </button>
-      </div>
+      </section>
 
-      <div className="userTabs__content">
+      <section className="userTabs__content">
         <div
           className={`userTabs__item ${activeTab === "tab_1" ? "active" : ""}`}
           id="tab_1"
         >
-          <p className="userTabs__text">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout.
-          </p>
+          <ul className="userTabs__post-list">
+            {currentUser.posts.map((post) => (
+              <li key={post.id} className="userTabs__post-item">
+                <div className="userTabs__post-title-wrap">
+                  <h3 className="userTabs__post-title">{post.title}</h3>
+                  <h1>ID №{post.id}</h1>
+                </div>
+                <div>{post.body}</div>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div
           className={`userTabs__item ${activeTab === "tab_2" ? "active" : ""}`}
           id="tab_2"
         >
-          <p className="userTabs__text">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English.
-          </p>
+          <ul className="userTabs__todo-list">
+            {currentUser.todos.map((todo) => (
+              <li key={todo.id} className="userTabs__todo-item">
+                <div className="userTabs__todo-title-wrap">
+                  <input
+                    className="userTabs__todo-checkbox"
+                    type="checkbox"
+                    checked={todo.completed}
+                    name="todo"
+                    readOnly
+                  />
+                  <h3 className="userTabs__todo-title">{todo.title}</h3>
+                </div>
+                <h1>ID №{todo.id}</h1>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div
           className={`userTabs__item ${activeTab === "tab_3" ? "active" : ""}`}
           id="tab_3"
         >
-          <p className="userTabs__text">
-            The point of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English.
-          </p>
+          <ul className="userTabs__album-list">
+            {currentUser.albums.map((album) => (
+              <li key={album.id} className="userTabs__album-item">
+                <h3>{album.title}</h3>
+                <h1>ID №{album.id}</h1>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

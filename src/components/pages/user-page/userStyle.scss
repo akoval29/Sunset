@@ -3,23 +3,20 @@
 .detailedUser {
   display: flex;
   justify-content: center;
-  max-width: 600px;
+  width: 100%;
   padding: 20px;
-  margin: 0 auto;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.3);
   font-family: "Roboto", sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-  @media (max-width: 900px) {
-    max-width: none;
-  }
+
   &__column {
     display: flex;
     flex-direction: column;
   }
   &__row {
     display: flex;
-    // flex-direction: row;
+    flex-wrap: wrap;
     margin: 15px 0;
     align-items: center;
   }
@@ -42,23 +39,11 @@
     color: $theme-color;
   }
 
-  &__line {
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      margin: 0 auto;
-      padding: 5px 0;
-      border-bottom: 1px solid black;
-    }
-  }
-
   &__backBtn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    margin: 20px auto 0 auto;
+    width: 100%;
     padding: 7px;
     color: black;
     font-weight: bold;
@@ -78,35 +63,40 @@
     margin-right: 5px;
   }
 
-  // --- CSS Transition Group --- //
+  &__line {
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      padding: 5px 0;
+      border-bottom: 1px solid black;
+    }
+  }
 
+  // --- CSS Transition Group --- //
   &-appear {
     opacity: 0;
     transform: scale(0.2);
   }
-
   &-appear-active {
     opacity: 1;
     transform: scale(1);
     transition: opacity 300ms, transform 300ms;
   }
-
   &-enter {
     opacity: 0;
     transform: scale(0.2);
   }
-
   &-enter-active {
     opacity: 1;
     transform: scale(1);
     transition: opacity 300ms, transform 300ms;
   }
-
   &-exit {
     opacity: 1;
     transform: scale(1);
   }
-
   &-exit-active {
     opacity: 0;
     transform: scale(0.2);
@@ -118,61 +108,122 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: 600px;
-  padding: 20px;
+  width: 100%;
+  padding: 30px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.3);
   font-family: "Roboto", sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-  @media (max-width: 900px) {
-    justify-content: center;
-    max-width: none;
-  }
-  &__text {
-    margin: 0 0 10px;
-  }
-
-  &__nav {
-    display: flex;
-  }
-
-  &__navBtn {
-    padding: 15px 30px;
-    width: 100%;
-    font-size: 20px;
-    border: 0;
-    border-right: 1px solid #ddd;
-    cursor: pointer;
-    text-transform: uppercase;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  &__navBtn:hover {
-    background-color: lighten($theme-color, 35%);
-  }
-  &__navBtn.active {
-    background-color: $theme-color;
-    border-right-color: $theme-color;
-    color: #fff;
-  }
-
-  &__navBtn:first-child {
-    border-top-left-radius: 25px;
-  }
-  &__navBtn:last-child {
-    border-right: none;
-    border-top-right-radius: 25px;
-  }
-
   &__content {
-    padding: 30px;
+    padding: 30px 0;
     max-height: 100%;
-    overflow-y: auto;
-    // background-color: #fff;
   }
   &__item {
     display: none;
   }
   &__item.active {
     display: block;
+  }
+
+  &__post-list,
+  &__todo-list,
+  &__album-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  &__post-item,
+  &__todo-item,
+  &__album-item {
+    // display: flex;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  &__post-title-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 10px;
+      border-bottom: 1px solid black;
+    }
+  }
+  &__post-title {
+    max-width: 80%;
+  }
+
+  &__album-item,
+  &__todo-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__todo-title-wrap {
+    display: inline-flex;
+    align-items: center;
+  }
+  &__todo-title {
+    font-weight: bold;
+  }
+  &__todo-checkbox {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid darken($theme-color, 10%);
+    border-radius: 50%;
+    margin-right: 10px;
+    &:checked {
+      background-color: greenyellow;
+      border-color: darken($theme-color, 10%);
+    }
+    &:checked:after {
+      content: "\2713";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+  }
+
+  // кнопки табів
+  &__nav {
+    display: flex;
+  }
+  &__navBtn {
+    padding: 15px 30px;
+    width: 100%;
+    font-size: 20px;
+
+    border: 0;
+    border-right: 1px solid #ddd;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  &__navBtn.active {
+    background-color: $theme-color;
+    color: #fff;
+  }
+  &__navBtn:hover {
+    background-color: darken($theme-color, 8%);
+  }
+  &__navBtn:first-child {
+    border-top-left-radius: 20px;
+  }
+  &__navBtn:last-child {
+    border-right: none;
+    border-top-right-radius: 20px;
   }
 }

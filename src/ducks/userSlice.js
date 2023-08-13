@@ -9,7 +9,7 @@ import { useHttp } from "../hooks/useAPI";
 const url = "https://jsonplaceholder.typicode.com";
 const usersAdapter = createEntityAdapter();
 
-// Отримуємо дані з локального сховища
+// reusable - Отримуємо дані з локального сховища
 const getUsersFromLocalStorage = () => {
   const usersData = localStorage.getItem("users");
   if (usersData) {
@@ -18,7 +18,7 @@ const getUsersFromLocalStorage = () => {
   return null;
 };
 
-// Зберігаємо дані у локальне сховище
+// reusable - Зберігаємо дані у локальне сховище
 const saveUsersToLocalStorage = (data) => {
   localStorage.setItem("users", JSON.stringify(data));
 };
