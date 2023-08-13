@@ -4,14 +4,15 @@
   display: flex;
   justify-content: center;
   max-width: 600px;
-  height: 100%;
   padding: 20px;
   margin: 0 auto;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.3);
   font-family: "Roboto", sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-
+  @media (max-width: 900px) {
+    max-width: none;
+  }
   &__column {
     display: flex;
     flex-direction: column;
@@ -27,14 +28,18 @@
     display: flex;
     flex-direction: column;
   }
-
+  &__info-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+  }
   &__info-item {
     font-size: 23px;
     font-weight: bold;
   }
-
   &__info-name {
     font-style: italic;
+    color: $theme-color;
   }
 
   &__line {
@@ -45,17 +50,6 @@
       margin: 0 auto;
       padding: 5px 0;
       border-bottom: 1px solid black;
-    }
-  }
-
-  &__icon {
-    width: 50px;
-    height: 50px;
-    margin: 0 20px;
-    &--back {
-      width: 50px;
-      height: 50px;
-      margin-right: 5px;
     }
   }
 
@@ -77,6 +71,11 @@
       scale: 1.01;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
     }
+  }
+  &__backBtn-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
   }
 
   // --- CSS Transition Group --- //
@@ -116,10 +115,20 @@
 }
 
 .userTabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   max-width: 600px;
-  margin: 50px auto;
-
-  p {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  @media (max-width: 900px) {
+    justify-content: center;
+    max-width: none;
+  }
+  &__text {
     margin: 0 0 10px;
   }
 
@@ -127,40 +136,42 @@
     display: flex;
   }
 
-  &__nav-btn {
+  &__navBtn {
     padding: 15px 30px;
-
+    width: 100%;
     font-size: 20px;
-
-    background-color: #f5f5f5;
     border: 0;
     border-right: 1px solid #ddd;
     cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.6);
   }
-
-  &__nav-btn:last-child {
-    border-right: none;
+  &__navBtn:hover {
+    background-color: lighten($theme-color, 35%);
   }
-
-  &__nav-btn:hover {
-    background-color: #ddd;
-  }
-
-  &__nav-btn.active {
-    background-color: #5e3ddf;
-    border-right-color: #5e3ddf;
+  &__navBtn.active {
+    background-color: $theme-color;
+    border-right-color: $theme-color;
     color: #fff;
+  }
+
+  &__navBtn:first-child {
+    border-top-left-radius: 25px;
+  }
+  &__navBtn:last-child {
+    border-right: none;
+    border-top-right-radius: 25px;
   }
 
   &__content {
     padding: 30px;
-    background-color: #fff;
+    max-height: 100%;
+    overflow-y: auto;
+    // background-color: #fff;
   }
-
   &__item {
     display: none;
   }
-
   &__item.active {
     display: block;
   }
