@@ -82,7 +82,15 @@
     @media (max-width: 900px) {
       padding: 15px;
       max-width: 100%;
-      height: calc($section-h - $h);
+      height: calc($section-h - $h * 1.5);
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 900px) {
+      flex-direction: column;
     }
   }
 
