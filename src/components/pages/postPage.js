@@ -33,7 +33,7 @@ export const Posts = () => {
   if (postsLoadingStatus === "loading") {
     return <Spinner />;
   } else if (postsLoadingStatus === "error") {
-    return <ErrorMessage />;
+    return <ErrorMessage message="Помилка завантаження" />;
   }
 
   const onDelete = (postId) => {

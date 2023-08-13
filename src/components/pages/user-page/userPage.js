@@ -25,7 +25,7 @@ export const Users = () => {
   if (usersLoadingStatus === "loading") {
     return <Spinner />;
   } else if (usersLoadingStatus === "error") {
-    return <ErrorMessage />;
+    return <ErrorMessage message="Помилка завантаження" />;
   }
 
   return (
@@ -37,11 +37,7 @@ export const Users = () => {
       </div>
 
       {allUsers.map((item) => (
-        <Link
-          to={`/users/details/${item.id}`}
-          key={item.id}
-          className="page__link"
-        >
+        <Link to={`/users/${item.id}`} key={item.id} className="page__link">
           <li className="page">
             <div className="page__userWrap">
               <p className="page__userID">
@@ -55,19 +51,3 @@ export const Users = () => {
     </ul>
   );
 };
-
-// {
-//   <Link to={`/users/${item.id}`}></Link>
-
-// {allUsers.map((item) => (
-//   <li className="page" key={item.id}>
-
-//     <div className="page__userWrap">
-//       <p className="page__userID">
-//         {item.id}. {item.name}
-//       </p>
-//       <p className="page__userName">{item.username}</p>
-//     </div>
-//   </li>
-//       ))}
-// }

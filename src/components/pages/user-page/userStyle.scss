@@ -2,10 +2,13 @@
 
 .detailedUser {
   display: flex;
-  width: 100%;
+  justify-content: center;
+  max-width: 600px;
   height: 100%;
-  padding: 10px;
-  margin: 15px 10px;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
   font-family: "Roboto", sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
 
@@ -15,17 +18,80 @@
   }
   &__row {
     display: flex;
-    flex-direction: row;
+    // flex-direction: row;
+    margin: 15px 0;
+    align-items: center;
   }
-  &__icon {
-    width: 50px;
-    height: 50px;
-  }
+
   &__info {
     display: flex;
     flex-direction: column;
   }
+
+  &__info-item {
+    font-size: 23px;
+    font-weight: bold;
+  }
+
+  &__info-name {
+    font-style: italic;
+  }
+
+  &__line {
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      padding: 5px 0;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+    &--back {
+      width: 50px;
+      height: 50px;
+      margin-right: 5px;
+    }
+  }
+
+  &__backBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 20px auto 0 auto;
+    padding: 7px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    &:hover {
+      scale: 1.01;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    }
+  }
+
   // --- CSS Transition Group --- //
+
+  &-appear {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  &-appear-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+  }
+
   &-enter {
     opacity: 0;
     transform: scale(0.2);

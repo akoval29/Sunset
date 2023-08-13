@@ -7,6 +7,7 @@
   position: fixed;
   left: 16%;
   bottom: 10%;
+  user-select: none;
   @media (max-width: 900px) {
     left: 5%;
   }
@@ -94,6 +95,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  user-select: none;
   width: 500px;
   top: 35%;
   left: 38%;
@@ -174,11 +176,11 @@
   }
   &__titlearea,
   &__textarea {
-    padding: 5px;
+    padding: 10px;
     border-radius: 7px;
-    outline: none;
     border: 1px solid $theme-color;
     transition: box-shadow 0.3s ease;
+    outline: none;
     resize: none;
     z-index: 1;
     &::placeholder {
