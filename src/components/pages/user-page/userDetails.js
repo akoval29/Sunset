@@ -119,8 +119,7 @@ export const UserDetails = () => {
               Back to Users
             </Link>
 
-            <UserTabs userId={Number(id)} />
-            {/* ТИПІЗАЦІЯ ДАНИХ !!!!!!!!!!! */}
+            <UserTabs userId={id} />
           </div>
         </CSSTransition>
       </TransitionGroup>

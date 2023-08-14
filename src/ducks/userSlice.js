@@ -36,8 +36,8 @@ export const fetchDetails = createAsyncThunk(
 
       const cachedUsers = getUsersFromLocalStorage();
 
-      console.log(userId);
-      console.log(cachedUsers);
+      // console.log(userId);
+      // console.log(cachedUsers);
 
       const userWithDetails = {
         ...cachedUsers[userId - 1],
@@ -46,13 +46,14 @@ export const fetchDetails = createAsyncThunk(
         albums: response3,
       };
 
-      console.log(userWithDetails);
+      // console.log(userWithDetails);
 
+      //  ТИПІЗАЦІЯ ДАНИХ !!!!!!!!!!!
       const updatedUsers = cachedUsers.map((user) =>
-        user.id === userId ? { ...user, ...userWithDetails } : user
+        user.id === Number(userId) ? { ...user, ...userWithDetails } : user
       );
 
-      console.log(updatedUsers);
+      // console.log(updatedUsers);
 
       saveUsersToLocalStorage(updatedUsers);
 
@@ -67,8 +68,8 @@ export const fetchDetails = createAsyncThunk(
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
   const { request } = useHttp();
 
-  // Повертаємо дані з локального сховища,
-  // якщо вони є і на вихід з функції fetchUsers
+  // Перевіряємо локальне сховище, якщо даані є
+  // то - на вихід з функції fetchUsers
   const cachedUsers = getUsersFromLocalStorage();
   if (cachedUsers) {
     return cachedUsers;
@@ -140,7 +141,14 @@ const usersSlice = createSlice({
           changes: updatedUser,
         });
       })
+      .addCase(fetchDetails.pending, (state) => {
+        state.usersLoadingStatus = "loading";
+      })
+      .addCase(fetchDetails.rejected, (state) => {
+        state.usersLoadingStatus = "error";
+      })
       .addCase(fetchDetails.fulfilled, (state, action) => {
+        state.usersLoadingStatus = "idle";
         const { userId, userWithDetails } = action.payload;
         usersAdapter.updateOne(state, {
           id: userId,

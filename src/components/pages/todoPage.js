@@ -32,9 +32,17 @@ export const Todos = () => {
   }, [dispatch]);
 
   if (todosLoadingStatus === "loading") {
-    return <Spinner />;
+    return (
+      <article className="app__main">
+        <Spinner />;
+      </article>
+    );
   } else if (todosLoadingStatus === "error") {
-    return <ErrorMessage message="Помилка завантаження" />;
+    return (
+      <article className="app__main">
+        <ErrorMessage message="Помилка завантаження" />;
+      </article>
+    );
   }
 
   const onDelete = (todoId) => {
