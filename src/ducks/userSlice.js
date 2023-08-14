@@ -30,11 +30,19 @@ export const fetchDetails = createAsyncThunk(
     const { request } = useHttp();
 
     try {
+      const cachedUsers = getUsersFromLocalStorage();
+
+      if (
+        cachedUsers &&
+        cachedUsers[userId - 1] &&
+        cachedUsers[userId - 1].posts
+      ) {
+        return { userId, userWithDetails: cachedUsers[userId - 1] };
+      }
+
       const response1 = await request(`${url}/users/${userId}/posts`);
       const response2 = await request(`${url}/users/${userId}/todos`);
       const response3 = await request(`${url}/users/${userId}/albums`);
-
-      const cachedUsers = getUsersFromLocalStorage();
 
       const userWithDetails = {
         ...cachedUsers[userId - 1],
