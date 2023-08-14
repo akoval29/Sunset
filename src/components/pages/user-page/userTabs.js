@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchDetails, allUsersSelector } from "../../../ducks/userSlice";
-
-// commons
 import { ErrorMessage } from "../../common/error/errorMessage";
 import { Spinner } from "../../common/loading/spinner";
-
 import "./userStyle.scss";
-
-// import { testUser } from "./testUser";
 
 export const UserTabs = ({ userId }) => {
   const [activeTab, setActiveTab] = useState("tab_1");
-
   const allUsers = useSelector(allUsersSelector);
   const usersLoadingStatus = useSelector(
     (state) => state.users.usersLoadingStatus
@@ -33,108 +27,95 @@ export const UserTabs = ({ userId }) => {
     setActiveTab(tabId);
   };
 
-  // const currentUser = allUsers[userId];
+  const renderContent = (content, renderItem) => {
+    if (content) {
+      return <ul className="userTabs__list">{content.map(renderItem)}</ul>;
+    }
+    return <Spinner />;
+  };
 
-  console.log(allUsers[Number(userId - 1)]);
+  const renderPostItem = (post) => (
+    <li key={post.id} className="userTabs__post-item">
+      <div className="userTabs__post-title-wrap">
+        <h3 className="userTabs__post-title">{post.title}</h3>
+        <h1>ID №{post.id}</h1>
+      </div>
+      <div>{post.body}</div>
+    </li>
+  );
+
+  const renderTodoItem = (todo) => (
+    <li key={todo.id} className="userTabs__todo-item">
+      <div className="userTabs__todo-title-wrap">
+        <input
+          className="userTabs__todo-checkbox"
+          type="checkbox"
+          checked={todo.completed}
+          name="todo"
+          readOnly
+        />
+        <h3 className="userTabs__todo-title">{todo.title}</h3>
+      </div>
+      <h1>ID №{todo.id}</h1>
+    </li>
+  );
+
+  const renderAlbumItem = (album) => (
+    <li key={album.id} className="userTabs__album-item">
+      <h3 className="userTabs__album-title">{album.title}</h3>
+      <h1>ID №{album.id}</h1>
+    </li>
+  );
+
   const currentUser = allUsers[Number(userId - 1)];
+
+  const tabData = [
+    {
+      id: "tab_1",
+      label: "Posts",
+      content: currentUser.posts,
+      renderItem: renderPostItem,
+    },
+    {
+      id: "tab_2",
+      label: "Todos",
+      content: currentUser.todos,
+      renderItem: renderTodoItem,
+    },
+    {
+      id: "tab_3",
+      label: "Albums",
+      content: currentUser.albums,
+      renderItem: renderAlbumItem,
+    },
+  ];
 
   return (
     <div className="userTabs">
       <section className="userTabs__nav">
-        <button
-          className={`userTabs__navBtn ${
-            activeTab === "tab_1" ? "active" : ""
-          }`}
-          onClick={() => handleTabClick("tab_1")}
-        >
-          Posts
-        </button>
-
-        <button
-          className={`userTabs__navBtn ${
-            activeTab === "tab_2" ? "active" : ""
-          }`}
-          onClick={() => handleTabClick("tab_2")}
-        >
-          Todos
-        </button>
-
-        <button
-          className={`userTabs__navBtn ${
-            activeTab === "tab_3" ? "active" : ""
-          }`}
-          onClick={() => handleTabClick("tab_3")}
-        >
-          Albums
-        </button>
+        {tabData.map((tab) => (
+          <button
+            key={tab.id}
+            className={`userTabs__navBtn ${
+              activeTab === tab.id ? "active" : ""
+            }`}
+            onClick={() => handleTabClick(tab.id)}
+          >
+            {tab.label}
+          </button>
+        ))}
       </section>
 
       <section className="userTabs__content">
-        <div
-          className={`userTabs__item ${activeTab === "tab_1" ? "active" : ""}`}
-          id="tab_1"
-        >
-          {currentUser && currentUser.posts ? (
-            <ul className="userTabs__list">
-              {currentUser.posts.map((post) => (
-                <li key={post.id} className="userTabs__post-item">
-                  <div className="userTabs__post-title-wrap">
-                    <h3 className="userTabs__post-title">{post.title}</h3>
-                    <h1>ID №{post.id}</h1>
-                  </div>
-                  <div>{post.body}</div>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <Spinner />
-          )}
-        </div>
-
-        <div
-          className={`userTabs__item ${activeTab === "tab_2" ? "active" : ""}`}
-          id="tab_2"
-        >
-          {currentUser && currentUser.todos ? (
-            <ul className="userTabs__list">
-              {currentUser.todos.map((todo) => (
-                <li key={todo.id} className="userTabs__todo-item">
-                  <div className="userTabs__todo-title-wrap">
-                    <input
-                      className="userTabs__todo-checkbox"
-                      type="checkbox"
-                      checked={todo.completed}
-                      name="todo"
-                      readOnly
-                    />
-                    <h3 className="userTabs__todo-title">{todo.title}</h3>
-                  </div>
-                  <h1>ID №{todo.id}</h1>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <Spinner />
-          )}
-        </div>
-
-        <div
-          className={`userTabs__item ${activeTab === "tab_3" ? "active" : ""}`}
-          id="tab_3"
-        >
-          {currentUser && currentUser.albums ? (
-            <ul className="userTabs__list">
-              {currentUser.albums.map((album) => (
-                <li key={album.id} className="userTabs__album-item">
-                  <h3 className="userTabs__album-title">{album.title}</h3>
-                  <h1>ID №{album.id}</h1>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <Spinner />
-          )}
-        </div>
+        {tabData.map((tab) => (
+          <div
+            key={tab.id}
+            className={`userTabs__item ${activeTab === tab.id ? "active" : ""}`}
+            id={tab.id}
+          >
+            {renderContent(tab.content, tab.renderItem)}
+          </div>
+        ))}
       </section>
     </div>
   );

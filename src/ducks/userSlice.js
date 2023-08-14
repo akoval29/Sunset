@@ -73,7 +73,6 @@ export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
   }
 
   const response = await request(`${url}/users`);
-  console.log(response);
   saveUsersToLocalStorage(response);
   return response;
 });
