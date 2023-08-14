@@ -32,11 +32,7 @@ export const fetchDetails = createAsyncThunk(
     try {
       const cachedUsers = getUsersFromLocalStorage();
 
-      if (
-        cachedUsers &&
-        cachedUsers[userId - 1] &&
-        cachedUsers[userId - 1].posts
-      ) {
+      if (cachedUsers[userId - 1].posts) {
         return { userId, userWithDetails: cachedUsers[userId - 1] };
       }
 
