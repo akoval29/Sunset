@@ -36,6 +36,7 @@ export const fetchDetails = createAsyncThunk(
 
       const cachedUsers = getUsersFromLocalStorage();
 
+      console.log(userId);
       console.log(cachedUsers);
 
       const userWithDetails = {
@@ -55,19 +56,12 @@ export const fetchDetails = createAsyncThunk(
 
       saveUsersToLocalStorage(updatedUsers);
 
-      return { userId, updatedUsers };
+      return { userId, userWithDetails };
     } catch (error) {
       throw error;
     }
   }
 );
-
-// const cachedUsers = getUsersFromLocalStorage();
-// const updatedUsers = cachedUsers.map((user) =>
-//   user.id === userId ? { ...user, ...updatedUser } : user
-// );
-// saveUsersToLocalStorage(updatedUsers);
-// return { userId, updatedUser };
 
 // Отримуєм user
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
@@ -147,10 +141,10 @@ const usersSlice = createSlice({
         });
       })
       .addCase(fetchDetails.fulfilled, (state, action) => {
-        const { userId, updatedUsers } = action.payload;
+        const { userId, userWithDetails } = action.payload;
         usersAdapter.updateOne(state, {
           id: userId,
-          changes: updatedUsers,
+          changes: userWithDetails,
         });
       })
       .addDefaultCase(() => {});
