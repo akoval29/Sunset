@@ -15,11 +15,6 @@ export const UserDetails = () => {
 
   const user = users[id];
 
-  // console.log(user);
-  // console.log(users);
-  // console.log(users[id]);
-  // console.log(id);
-
   if (!user) {
     return <ErrorMessage message="Користувач відсутній" />;
   }
@@ -124,7 +119,7 @@ export const UserDetails = () => {
               Back to Users
             </Link>
 
-            <UserTabs />
+            <UserTabs userId={id} />
           </div>
         </CSSTransition>
       </TransitionGroup>

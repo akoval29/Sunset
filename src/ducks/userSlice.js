@@ -23,6 +23,52 @@ const saveUsersToLocalStorage = (data) => {
   localStorage.setItem("users", JSON.stringify(data));
 };
 
+//Отримуєм деталі
+export const fetchDetails = createAsyncThunk(
+  "users/fetchDetails",
+  async ({ userId }) => {
+    const { request } = useHttp();
+
+    console.log(userId);
+
+    try {
+      const response1 = await request(`${url}/users/${userId}/posts`);
+      const response2 = await request(`${url}/users/${userId}/todos`);
+      const response3 = await request(`${url}/users/${userId}/albums`);
+
+      const cachedUsers = getUsersFromLocalStorage();
+
+      const updatedUsers = cachedUsers.map((user) => {
+        if (user.id === userId) {
+          return {
+            ...user,
+            posts: response1,
+            todos: response2,
+            albums: response3,
+          };
+        }
+        return user;
+      });
+
+      console.log(updatedUsers);
+
+      // const updatedUsers = cachedUsers.map((user) =>
+      //   user.id === userId ? { ...user, ...updatedUser } : user
+      // );
+
+      saveUsersToLocalStorage(updatedUsers);
+
+      // Виклик додаткових дій Redux, якщо потрібно
+      // thunkAPI.dispatch(...);
+
+      return { userId, updatedUsers };
+    } catch (error) {
+      // Обробка помилок, якщо необхідно
+      throw error;
+    }
+  }
+);
+
 // Отримуєм user
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
   const { request } = useHttp();
@@ -35,6 +81,7 @@ export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
   }
 
   const response = await request(`${url}/users`);
+  console.log(response);
   saveUsersToLocalStorage(response);
   return response;
 });
@@ -97,6 +144,13 @@ const usersSlice = createSlice({
         usersAdapter.updateOne(state, {
           id: userId,
           changes: updatedUser,
+        });
+      })
+      .addCase(fetchDetails.fulfilled, (state, action) => {
+        const { userId, updatedUsers } = action.payload;
+        usersAdapter.updateOne(state, {
+          id: userId,
+          changes: updatedUsers,
         });
       })
       .addDefaultCase(() => {});
