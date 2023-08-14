@@ -29,8 +29,6 @@ export const fetchDetails = createAsyncThunk(
   async ({ userId }) => {
     const { request } = useHttp();
 
-    console.log(userId);
-
     try {
       const response1 = await request(`${url}/users/${userId}/posts`);
       const response2 = await request(`${url}/users/${userId}/todos`);
@@ -38,36 +36,38 @@ export const fetchDetails = createAsyncThunk(
 
       const cachedUsers = getUsersFromLocalStorage();
 
-      const updatedUsers = cachedUsers.map((user) => {
-        if (user.id === userId) {
-          return {
-            ...user,
-            posts: response1,
-            todos: response2,
-            albums: response3,
-          };
-        }
-        return user;
-      });
+      console.log(cachedUsers);
+
+      const userWithDetails = {
+        ...cachedUsers[userId - 1],
+        posts: response1,
+        todos: response2,
+        albums: response3,
+      };
+
+      console.log(userWithDetails);
+
+      const updatedUsers = cachedUsers.map((user) =>
+        user.id === userId ? { ...user, ...userWithDetails } : user
+      );
 
       console.log(updatedUsers);
 
-      // const updatedUsers = cachedUsers.map((user) =>
-      //   user.id === userId ? { ...user, ...updatedUser } : user
-      // );
-
       saveUsersToLocalStorage(updatedUsers);
-
-      // Виклик додаткових дій Redux, якщо потрібно
-      // thunkAPI.dispatch(...);
 
       return { userId, updatedUsers };
     } catch (error) {
-      // Обробка помилок, якщо необхідно
       throw error;
     }
   }
 );
+
+// const cachedUsers = getUsersFromLocalStorage();
+// const updatedUsers = cachedUsers.map((user) =>
+//   user.id === userId ? { ...user, ...updatedUser } : user
+// );
+// saveUsersToLocalStorage(updatedUsers);
+// return { userId, updatedUser };
 
 // Отримуєм user
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
