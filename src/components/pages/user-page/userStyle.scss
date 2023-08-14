@@ -115,7 +115,7 @@
   font-family: "Roboto", sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
   &__content {
-    padding: 30px 0;
+    padding-top: 30px;
     max-height: 100%;
   }
   &__item {
@@ -125,9 +125,7 @@
     display: block;
   }
 
-  &__post-list,
-  &__todo-list,
-  &__album-list {
+  &__list {
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -205,7 +203,6 @@
     padding: 15px 30px;
     width: 100%;
     font-size: 20px;
-
     border: 0;
     border-right: 1px solid #ddd;
     cursor: pointer;

@@ -48,7 +48,7 @@ export const UserTabs = () => {
           className={`userTabs__item ${activeTab === "tab_1" ? "active" : ""}`}
           id="tab_1"
         >
-          <ul className="userTabs__post-list">
+          <ul className="userTabs__list">
             {currentUser.posts.map((post) => (
               <li key={post.id} className="userTabs__post-item">
                 <div className="userTabs__post-title-wrap">
@@ -65,7 +65,7 @@ export const UserTabs = () => {
           className={`userTabs__item ${activeTab === "tab_2" ? "active" : ""}`}
           id="tab_2"
         >
-          <ul className="userTabs__todo-list">
+          <ul className="userTabs__list">
             {currentUser.todos.map((todo) => (
               <li key={todo.id} className="userTabs__todo-item">
                 <div className="userTabs__todo-title-wrap">
@@ -88,7 +88,7 @@ export const UserTabs = () => {
           className={`userTabs__item ${activeTab === "tab_3" ? "active" : ""}`}
           id="tab_3"
         >
-          <ul className="userTabs__album-list">
+          <ul className="userTabs__list">
             {currentUser.albums.map((album) => (
               <li key={album.id} className="userTabs__album-item">
                 <h3>{album.title}</h3>
