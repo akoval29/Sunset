@@ -36,9 +36,6 @@ export const fetchDetails = createAsyncThunk(
 
       const cachedUsers = getUsersFromLocalStorage();
 
-      // console.log(userId);
-      // console.log(cachedUsers);
-
       const userWithDetails = {
         ...cachedUsers[userId - 1],
         posts: response1,
@@ -46,14 +43,10 @@ export const fetchDetails = createAsyncThunk(
         albums: response3,
       };
 
-      // console.log(userWithDetails);
-
       //  ТИПІЗАЦІЯ ДАНИХ !!!!!!!!!!!
       const updatedUsers = cachedUsers.map((user) =>
         user.id === Number(userId) ? { ...user, ...userWithDetails } : user
       );
-
-      // console.log(updatedUsers);
 
       saveUsersToLocalStorage(updatedUsers);
 

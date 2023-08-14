@@ -126,7 +126,7 @@ export const UserTabs = ({ userId }) => {
             <ul className="userTabs__list">
               {currentUser.albums.map((album) => (
                 <li key={album.id} className="userTabs__album-item">
-                  <h3>{album.title}</h3>
+                  <h3 className="userTabs__album-title">{album.title}</h3>
                   <h1>ID №{album.id}</h1>
                 </li>
               ))}
