@@ -33,6 +33,9 @@
   &__info-item {
     font-size: 23px;
     font-weight: bold;
+    @media (max-width: 500px) {
+      font-size: 17px;
+    }
   }
   &__info-name {
     font-style: italic;
@@ -169,7 +172,6 @@
   &__album-title {
     max-width: 80%;
   }
-
   &__todo-title-wrap {
     display: inline-flex;
     align-items: center;
@@ -204,13 +206,16 @@
   // кнопки табів
   &__nav {
     display: flex;
+    flex-direction: row;
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
   }
   &__navBtn {
     padding: 15px 30px;
     width: 100%;
     font-size: 20px;
-    border: 0;
-    border-right: 1px solid #ddd;
+    margin: 1px;
     cursor: pointer;
     text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.6);
@@ -224,9 +229,17 @@
   }
   &__navBtn:first-child {
     border-top-left-radius: 20px;
+    @media (max-width: 500px) {
+      border-top-right-radius: 20px;
+    }
   }
   &__navBtn:last-child {
     border-right: none;
     border-top-right-radius: 20px;
+    @media (max-width: 500px) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
   }
 }
