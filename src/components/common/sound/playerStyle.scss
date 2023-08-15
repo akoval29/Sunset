@@ -15,7 +15,7 @@ $inverted-theme-color: invert($theme-color);
     display: block;
     width: 35px;
     height: 35px;
-    margin: 5px;
+    margin: 10px 10px;
     border-radius: 50%;
     filter: invert(1);
     transition: scale 0.3s ease, opacity 0.3s ease;

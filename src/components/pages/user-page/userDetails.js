@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Link } from "react-router-dom";
 
+import { UserTabs } from "./userTabs";
 import { ErrorMessage } from "../../common/error/errorMessage";
 
 import "./userStyle.scss";
@@ -28,22 +29,14 @@ export const UserDetails = () => {
           key={user.id}
           timeout={300}
           classNames={"detailedUser"}
-          // classNames={{
-          //   appear: "detailedUser-appear",
-          //   appearActive: "detailedUser-appear-active",
-          //   enter: "detailedUser-enter",
-          //   enterActive: "detailedUser-enter-active",
-          //   exit: "detailedUser-exit",
-          //   exitActive: "detailedUser-exit-active",
-          // }}
           unmountOnExit
         >
-          <>
+          <div className="app__wrap">
             <div className="detailedUser">
               <div className="detailedUser__column">
                 <li className="detailedUser__row">
                   <img
-                    className="detailedUser__icon"
+                    className="detailedUser__info-icon"
                     src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png"
                     alt="img-email"
                   />
@@ -57,7 +50,7 @@ export const UserDetails = () => {
 
                 <li className="detailedUser__row">
                   <img
-                    className="detailedUser__icon"
+                    className="detailedUser__info-icon"
                     src="https://cdn-icons-png.flaticon.com/512/455/455705.png"
                     alt="img-email"
                   />
@@ -71,7 +64,7 @@ export const UserDetails = () => {
 
                 <li className="detailedUser__row">
                   <img
-                    className="detailedUser__icon"
+                    className="detailedUser__info-icon"
                     src="https://img.freepik.com/free-icon/placeholder_318-903608.jpg"
                     alt="img-email"
                   />
@@ -88,7 +81,7 @@ export const UserDetails = () => {
 
                 <li className="detailedUser__row">
                   <img
-                    className="detailedUser__icon"
+                    className="detailedUser__info-icon"
                     src="https://icon-library.com/images/icon-website/icon-website-0.jpg"
                     alt="img-email"
                   />
@@ -104,7 +97,7 @@ export const UserDetails = () => {
 
                 <li className="detailedUser__row">
                   <img
-                    className="detailedUser__icon"
+                    className="detailedUser__info-icon"
                     src="https://static.thenounproject.com/png/509354-200.png"
                     alt="img-email"
                   />
@@ -119,13 +112,15 @@ export const UserDetails = () => {
             </div>
             <Link to="/users" className="detailedUser__backBtn">
               <img
-                className="detailedUser__icon--back"
+                className="detailedUser__backBtn-icon"
                 src="https://cdn-icons-png.flaticon.com/512/7168/7168657.png"
                 alt="img-goBack"
               />
               Back to Users
             </Link>
-          </>
+
+            <UserTabs userId={id} />
+          </div>
         </CSSTransition>
       </TransitionGroup>
     </ul>

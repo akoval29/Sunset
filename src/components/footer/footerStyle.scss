@@ -9,6 +9,9 @@
   background: rgba(0, 0, 0, 0.3);
   height: $h;
   width: 100%;
+  @media (max-width: 900px) {
+    height: calc($h * 1.5);
+  }
   &__icon {
     display: block;
     width: 25px;

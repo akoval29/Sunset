@@ -23,9 +23,17 @@ export const Users = () => {
   }, [dispatch]);
 
   if (usersLoadingStatus === "loading") {
-    return <Spinner />;
+    return (
+      <article className="app__main">
+        <Spinner />;
+      </article>
+    );
   } else if (usersLoadingStatus === "error") {
-    return <ErrorMessage message="Помилка завантаження" />;
+    return (
+      <article className="app__main">
+        <ErrorMessage message="Помилка завантаження" />;
+      </article>
+    );
   }
 
   return (

@@ -9,7 +9,7 @@ import { useHttp } from "../hooks/useAPI";
 const url = "https://jsonplaceholder.typicode.com";
 const usersAdapter = createEntityAdapter();
 
-// Отримуємо дані з локального сховища
+// reusable - Отримуємо дані з локального сховища
 const getUsersFromLocalStorage = () => {
   const usersData = localStorage.getItem("users");
   if (usersData) {
@@ -18,17 +18,55 @@ const getUsersFromLocalStorage = () => {
   return null;
 };
 
-// Зберігаємо дані у локальне сховище
+// reusable - Зберігаємо дані у локальне сховище
 const saveUsersToLocalStorage = (data) => {
   localStorage.setItem("users", JSON.stringify(data));
 };
+
+//Отримуєм деталі
+export const fetchDetails = createAsyncThunk(
+  "users/fetchDetails",
+  async ({ userId }) => {
+    const { request } = useHttp();
+
+    try {
+      const cachedUsers = getUsersFromLocalStorage();
+
+      if (cachedUsers[userId - 1].posts) {
+        return { userId, userWithDetails: cachedUsers[userId - 1] };
+      }
+
+      const response1 = await request(`${url}/users/${userId}/posts`);
+      const response2 = await request(`${url}/users/${userId}/todos`);
+      const response3 = await request(`${url}/users/${userId}/albums`);
+
+      const userWithDetails = {
+        ...cachedUsers[userId - 1],
+        posts: response1,
+        todos: response2,
+        albums: response3,
+      };
+
+      //  ТИПІЗАЦІЯ ДАНИХ !!!!!!!!!!!
+      const updatedUsers = cachedUsers.map((user) =>
+        user.id === Number(userId) ? { ...user, ...userWithDetails } : user
+      );
+
+      saveUsersToLocalStorage(updatedUsers);
+
+      return { userId, userWithDetails };
+    } catch (error) {
+      throw error;
+    }
+  }
+);
 
 // Отримуєм user
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
   const { request } = useHttp();
 
-  // Повертаємо дані з локального сховища,
-  // якщо вони є і на вихід з функції fetchUsers
+  // Перевіряємо локальне сховище, якщо даані є
+  // то - на вихід з функції fetchUsers
   const cachedUsers = getUsersFromLocalStorage();
   if (cachedUsers) {
     return cachedUsers;
@@ -97,6 +135,20 @@ const usersSlice = createSlice({
         usersAdapter.updateOne(state, {
           id: userId,
           changes: updatedUser,
+        });
+      })
+      .addCase(fetchDetails.pending, (state) => {
+        state.usersLoadingStatus = "loading";
+      })
+      .addCase(fetchDetails.rejected, (state) => {
+        state.usersLoadingStatus = "error";
+      })
+      .addCase(fetchDetails.fulfilled, (state, action) => {
+        state.usersLoadingStatus = "idle";
+        const { userId, userWithDetails } = action.payload;
+        usersAdapter.updateOne(state, {
+          id: userId,
+          changes: userWithDetails,
         });
       })
       .addDefaultCase(() => {});
