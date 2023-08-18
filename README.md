@@ -7,3 +7,8 @@
    <source src="https://git.foxminded.ua/foxstudent104396/task-3.3/-/blob/main/src/lib/preview.gif" type="gif">
    Your browser does not support the video tag.
 </video> -->
+
+<video width="600" autoplay loop>
+   <source src="https://git.foxminded.ua/foxstudent104396/task-3.3/-/blob/main/src/lib/test.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video>
