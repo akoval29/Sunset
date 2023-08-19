@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+$theme-color: brown;
+$theme-color-white: lighten($theme-color, 69%);
+
+$h: 50px;
+$section-h: calc(100vh - 2 * $h);
+$fz: 26px;
+$theme-font-color: white;
+$theme-font-color2: black;
+
+// $main-color: #8d0515;

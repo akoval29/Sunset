@@ -1,0 +1,88 @@
+@use "../../../style/normalize.scss" as *;
+
+$inverted-theme-color: invert($theme-color);
+
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+
+  &__icon {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin: 10px 10px;
+    border-radius: 50%;
+    filter: invert(1);
+    transition: scale 0.3s ease, opacity 0.3s ease;
+    background: $inverted-theme-color;
+    &:hover {
+      cursor: pointer;
+      scale: 1.1;
+    }
+  }
+
+  &__icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0 5px;
+  }
+
+  &__volume-wrap {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+  }
+
+  &__volume-input {
+    width: 100px;
+    height: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+    appearance: none;
+    background-color: white;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: $theme-color;
+      border-radius: 50%;
+      border: 1px solid white;
+      &:hover {
+        cursor: pointer;
+        scale: 1.1;
+      }
+    }
+
+    &::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background: $theme-color;
+      border: none;
+      border-radius: 50%;
+      &:hover {
+        cursor: pointer;
+        scale: 1.1;
+      }
+    }
+
+    &::-ms-thumb {
+      width: 20px;
+      height: 20px;
+      background: $theme-color;
+      border: none;
+      border-radius: 50%;
+      &:hover {
+        cursor: pointer;
+        scale: 1.1;
+      }
+    }
+  }
+}
