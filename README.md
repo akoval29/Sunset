@@ -6,7 +6,9 @@
 - **Simulated API:** Interaction with a fake API from [JSONPlaceholder](https://jsonplaceholder.typicode.com/) allows users to perform operations like adding, editing, and deleting posts and todo items.
 - **Local Storage Persistence:** Data is saved to local storage, ensuring that user data is retained even after leaving the application.
 - **Nested Routing:** The project includes nested routing, allowing for more complex page structures and enhanced user experience.
+- **Form Validation:** Formik library is used for form validation, ensuring accurate and user-friendly input.
 - **Mobile Responsiveness:** The website is fully adapted and responsive to different screen sizes, providing a user-friendly experience on both desktop and mobile devices.
+- **CSS Transitions:** Animations are incorporated into the project using the CSS Transition library, enhancing the visual appeal of the application.
 - **Audio Player:** An audio player is integrated into the application, enabling users to play audio files seamlessly.
 ## Technologies Used
 - **React:** Frontend library
