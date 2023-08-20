@@ -15,5 +15,7 @@
 - **Redux:** State management
 - **React Router:** Multi-page navigation
 - **JSONPlaceholder:** Simulated API
+- **CSS Transition Group:** Better animations
+- **Formik:** Form validation
 - **Local Storage:** Data persistence
 - **SCSS:** Styles
