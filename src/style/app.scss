@@ -88,23 +88,35 @@
     }
   }
 
+  &__list {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px 30px;
+    border-radius: 30px;
+  }
+
   &__list-item {
     color: $theme-font-color2;
     margin-bottom: 14px;
     letter-spacing: 1px;
   }
 
+  &__bold-text {
+    font-weight: bold;
+  }
+
   &__clearBtn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 200px;
+    height: 40px;
     padding: 7px;
     color: black;
+    border: 1px solid $theme-color;
     font-weight: bold;
+    margin: 15px auto;
     text-transform: uppercase;
     text-decoration: none;
-
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
     &:hover {

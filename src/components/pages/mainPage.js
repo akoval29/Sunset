@@ -15,43 +15,46 @@ export const Main = () => {
     setIsLocalStorageEmpty(true);
   };
 
-  const buttonStyle = {
-    width: "250px",
-    height: "40px",
-    margin: "0 auto",
-  };
-
-  const boldText = {
-    fontWeight: "bold",
-  };
-
   return (
     <article className="app__main">
       <h3 className="app__main-title">Main</h3>
       <ul className="app__list">
         <li className="app__list-item">
           This application is developed using{" "}
-          <span style={boldText}>React Redux</span> technologies. Its core
-          functionality revolves around interacting with the API at{" "}
+          <span className="app__bold-text">React Redux</span> technologies. Its
+          core functionality revolves around interacting with the API at{" "}
           <a href="https://jsonplaceholder.typicode.com">
             https://jsonplaceholder.typicode.com
           </a>
-          , from which we retrieve sample data including posts, todos, and
-          users. The application fetches this data and stores it in the
-          browser's <span style={boldText}>local storage</span>, serving as a
-          data repository.
+          . The application fetches sample data including{" "}
+          <a href="https://jsonplaceholder.typicode.com/posts">posts</a>,{" "}
+          <a href="https://jsonplaceholder.typicode.com/todos">todos</a>, and{" "}
+          <a href="https://jsonplaceholder.typicode.com/users">users</a> from
+          the API.
+        </li>
+
+        <li className="app__list-item">
+          Obtained data is then stored in the browser's{" "}
+          <span className="app__bold-text">local storage</span>, serving as a
+          data repository. Subsequently, all interactions occur using this
+          stored data. You can clear your browser's local storage by pressing
+          the "Clear Local Storage" button below. If you see "local storage is
+          clear" it means you didn't clicked on any section below Main section
+          yet, so nothing to clear.
         </li>
         <li className="app__list-item">
-          Subsequently, all interactions occur using this stored data. Users can
-          create new posts, todos, as well as edit or delete them. It's
-          important to note that this project is adaptable to various backend
-          databases for handling real-world data.
+          It's important to note that this project is adaptable to various
+          backend databases for handling real-world data. You can create new
+          posts, todos, as well as edit or delete them as you want. We use fake
+          API database in this app so every change you might do will be canceled
+          after page reload.
         </li>
         <li className="app__list-item">
           When you click on any user within the Users section, you will gain
           access to detailed and comprehensive information about that specific
           user. This includes their associated posts and todos, employing{" "}
-          <span style={boldText}>Nested Routing</span> for seamless navigation.
+          <span className="app__bold-text">Nested Routing</span> for seamless
+          navigation.
         </li>
         <li className="app__list-item">
           Additionally, an audio player is located in the right corner of the
@@ -60,11 +63,7 @@ export const Main = () => {
         </li>
       </ul>
 
-      <button
-        className="app__clearBtn"
-        onClick={handleClearLocalStorage}
-        style={buttonStyle}
-      >
+      <button className="app__clearBtn" onClick={handleClearLocalStorage}>
         {isLocalStorageEmpty ? "Local Storage is clear" : "Clear Local Storage"}
       </button>
     </article>
