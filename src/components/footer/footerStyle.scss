@@ -39,4 +39,29 @@
       margin: 0 10px;
     }
   }
+
+  &__clearBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 7px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    &:hover {
+      scale: 1.01;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+      cursor: pointer;
+    }
+  }
+  &__backBtn-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+  }
 }
