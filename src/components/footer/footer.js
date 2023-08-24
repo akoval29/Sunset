@@ -16,12 +16,6 @@ export const Footer = ({ playing, setPlaying }) => {
     setIsLocalStorageEmpty(true);
   };
 
-  const buttonStyle = {
-    width: "250px",
-    height: "40px",
-    margin: "0 auto",
-  };
-
   // Player
   const onPlay = (isPlaying) => {
     setPlaying(isPlaying);
@@ -30,11 +24,7 @@ export const Footer = ({ playing, setPlaying }) => {
   return (
     <footer className="footer">
       <Player playing={playing} onPlay={onPlay} />
-      <button
-        className="footer__clearBtn"
-        onClick={handleClearLocalStorage}
-        style={buttonStyle}
-      >
+      <button className="footer__clearBtn" onClick={handleClearLocalStorage}>
         {isLocalStorageEmpty ? "Local Storage is clear" : "Clear Local Storage"}
       </button>
       <div className="footer__linkwrap">
