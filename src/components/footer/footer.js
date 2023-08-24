@@ -1,21 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Player } from "../common/sound/player";
 import "./footerStyle.scss";
 
 export const Footer = ({ playing, setPlaying }) => {
-  const [isLocalStorageEmpty, setIsLocalStorageEmpty] = useState(
-    localStorage.length === 0
-  );
-
-  useEffect(() => {
-    setIsLocalStorageEmpty(localStorage.length === 0);
-  }, []);
-
-  const handleClearLocalStorage = () => {
-    localStorage.clear();
-    setIsLocalStorageEmpty(true);
-  };
-
   // Player
   const onPlay = (isPlaying) => {
     setPlaying(isPlaying);
@@ -24,9 +11,7 @@ export const Footer = ({ playing, setPlaying }) => {
   return (
     <footer className="footer">
       <Player playing={playing} onPlay={onPlay} />
-      <button className="footer__clearBtn" onClick={handleClearLocalStorage}>
-        {isLocalStorageEmpty ? "Local Storage is clear" : "Clear Local Storage"}
-      </button>
+
       <div className="footer__linkwrap">
         <a href="https://www.facebook.com/">
           <img

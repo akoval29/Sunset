@@ -64,6 +64,8 @@
   }
 
   &__main {
+    display: flex;
+    flex-direction: column;
     position: relative;
     flex-basis: 100%;
     max-width: 85%;
@@ -86,10 +88,35 @@
     }
   }
 
-  &__paragraph {
+  &__list-item {
     color: $theme-font-color2;
-    margin-bottom: 5px;
+    margin-bottom: 14px;
     letter-spacing: 1px;
+  }
+
+  &__clearBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 7px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    &:hover {
+      scale: 1.01;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+      cursor: pointer;
+    }
+    &:active {
+      scale: 1;
+      box-shadow: none;
+      cursor: pointer;
+    }
   }
 
   // userDetailed and Tabs MAIN WRAPPER !!!
