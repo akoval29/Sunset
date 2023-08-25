@@ -1,5 +1,6 @@
 @use "normalize.scss" as *;
 @use "variables.scss" as *;
+@use "./mixin.scss";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 .app {
@@ -93,9 +94,8 @@
   }
 
   &__list {
-    background-color: rgba(255, 255, 255, 0.6);
+    @include mixin.passiveEntry();
     padding: 20px 30px;
-    border-radius: 30px;
   }
 
   &__list-item:not(:last-child) {
@@ -117,30 +117,12 @@
   }
 
   &__clearBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixin.activeEntry();
     width: 200px;
     height: 40px;
-    padding: 7px;
-    color: black;
-    border: 1px solid $theme-color;
     font-weight: bold;
     margin: 15px auto;
     text-transform: uppercase;
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
-    &:hover {
-      scale: 1.01;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-      cursor: pointer;
-    }
-    &:active {
-      scale: 1;
-      box-shadow: none;
-      cursor: pointer;
-    }
   }
 
   // userDetailed and Tabs MAIN WRAPPER !!!

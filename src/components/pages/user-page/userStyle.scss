@@ -1,15 +1,14 @@
 @use "../../../style/variables.scss" as *;
+@use "../../../style/mixin.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .detailedUser {
+  @include mixin.passiveEntry();
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 20px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.6);
   font-family: "Roboto", sans-serif;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
 
   &__column {
     display: flex;
@@ -47,6 +46,7 @@
   }
 
   &__backBtn {
+    @include mixin.activeEntry();
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,14 +56,6 @@
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    border: 2px solid black;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
-    &:hover {
-      scale: 1.01;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-      cursor: pointer;
-    }
   }
   &__backBtn-icon {
     width: 50px;
@@ -113,15 +105,14 @@
 }
 
 .userTabs {
+  @include mixin.passiveEntry();
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
   padding: 30px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.6);
   font-family: "Roboto", sans-serif;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+
   &__content {
     padding-top: 30px;
     max-height: 100%;
