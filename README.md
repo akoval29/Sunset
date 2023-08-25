@@ -19,3 +19,5 @@
 - **Formik:** Form validation
 - **Local Storage:** Data persistence
 - **SCSS:** Styles
+## Deploy
+https://sunset-lovat.vercel.app/
