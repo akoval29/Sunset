@@ -1,7 +1,7 @@
 import React from "react";
 import "./errorStyle.scss";
 
-export const ErrorMessage = ({ message = "помилка" }) => {
+export const ErrorMessage = ({ message = "Error" }) => {
   return (
     <div className="error">
       <img

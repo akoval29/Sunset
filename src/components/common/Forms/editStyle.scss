@@ -25,23 +25,6 @@
       }
     }
   }
-
-  &__cross-wrap {
-    @include mixin.fixedButton();
-    justify-content: flex-start;
-    transition: width 0.3s ease-in-out; // анімація ширини
-    &:hover {
-      border-radius: 25px;
-      width: 280px; //  ширина
-
-      .addBtn__message {
-        display: flex;
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-  }
-
   &__cross {
     color: white;
     font-size: 30px;
@@ -51,6 +34,20 @@
     transform: rotate(45deg);
   }
 
+  &__cross-wrap {
+    @include mixin.fixedButton();
+    justify-content: flex-start;
+    transition: width 0.3s ease-in-out; // анімація ширини
+    &:hover {
+      border-radius: 25px;
+      width: 280px; //  ширина
+      .addBtn__message {
+        display: flex;
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
   &__message {
     margin-left: 10px;
     font-size: 25px;
