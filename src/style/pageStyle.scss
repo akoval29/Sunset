@@ -17,13 +17,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     &::after {
       content: "";
       display: block;
       width: 100%;
       margin: 0 auto;
-      padding-top: 10px;
+      padding-top: 5px;
       border-bottom: 1px solid black;
     }
   }
@@ -31,6 +32,8 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
   }
 
   &__userId {
@@ -64,7 +67,7 @@
   }
 
   &__title {
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
     text-align: center;
   }
 
