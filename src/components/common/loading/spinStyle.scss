@@ -1,18 +1,18 @@
 @use "../../../style/variables.scss" as *;
 
 .spinner {
+  position: relative;
   color: $theme-color;
   font-size: 20px;
   margin: 100px auto;
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  position: relative;
   text-indent: -9999em;
-  -webkit-animation: load4 1.3s infinite linear;
   animation: load4 1.3s infinite linear;
-  -webkit-transform: translateZ(0);
+  -webkit-animation: load4 1.3s infinite linear;
   -ms-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
 @-webkit-keyframes load4 {

@@ -2,6 +2,35 @@
 @use "../../../style/mixin.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+.user {
+  @include mixin.activeEntry();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 10px;
+  height: 50px;
+  padding: 10px;
+  color: black;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: underline;
+    margin: 5px 25px;
+    font-size: 20px;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__userName {
+    font-style: italic;
+  }
+}
+
 .detailedUser {
   @include mixin.passiveEntry();
   display: flex;

@@ -8,7 +8,7 @@ import { ErrorMessage } from "../../common/error/errorMessage";
 import { Spinner } from "../../common/loading/spinner";
 
 // style
-import "../../../style/pageStyle.scss";
+import "./userStyle.scss";
 
 export const Users = () => {
   const allUsers = useSelector(allUsersSelector);
@@ -31,7 +31,7 @@ export const Users = () => {
   } else if (usersLoadingStatus === "error") {
     return (
       <article className="app__main">
-        <ErrorMessage message="Помилка завантаження" />;
+        <ErrorMessage message="Loading error" />;
       </article>
     );
   }
@@ -39,21 +39,17 @@ export const Users = () => {
   return (
     <ul className="app__main">
       <h3 className="app__main-title">Users</h3>
-      <div className="page__userContainer">
-        <p className="page__userId">Name </p>
-        <p className="page__userId">User name</p>
+      <div className="user__container">
+        <p className="user__id">Name </p>
+        <p className="user__id">User name</p>
       </div>
 
       {allUsers.map((item) => (
-        <Link to={`/users/${item.id}`} key={item.id} className="page__link">
-          <li className="page">
-            <div className="page__userWrap">
-              <p className="page__userID">
-                {item.id}. {item.name}
-              </p>
-              <p className="page__userName">{item.username}</p>
-            </div>
-          </li>
+        <Link to={`/users/${item.id}`} key={item.id} className="user">
+          <p className="user__name">
+            {item.id}. {item.name}
+          </p>
+          <p className="user__userName">{item.username}</p>
         </Link>
       ))}
     </ul>

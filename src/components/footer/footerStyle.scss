@@ -1,5 +1,3 @@
-@use "../../style/variables.scss" as *;
-
 .footer {
   display: flex;
   flex-direction: row;
@@ -7,10 +5,10 @@
   align-items: center;
   color: white;
   background: rgba(0, 0, 0, 0.3);
-  height: $h;
+  height: 50px;
   width: 100%;
   @media (max-width: 900px) {
-    height: calc($h * 1.5);
+    height: 100px;
   }
   &__icon {
     display: block;

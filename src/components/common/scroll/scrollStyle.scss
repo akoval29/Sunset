@@ -1,25 +1,12 @@
 @use "../../../style/variables.scss" as *;
+@use "../../../style/mixin.scss";
 
 .scroll {
-  display: flex;
+  @include mixin.fixedButton();
   justify-content: center;
-  align-items: center;
-
   position: fixed;
   right: 2%;
   bottom: 10%;
-
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgba($theme-color, 0.4);
-  &:hover {
-    box-shadow: 0px 0px 6px rgba($theme-color, 0.7);
-    cursor: pointer;
-  }
-  &:active {
-    box-shadow: 0px 0px 12px rgba($theme-color, 0.9);
-  }
 
   &__arrow {
     position: absolute;

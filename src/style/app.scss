@@ -1,5 +1,4 @@
 @use "normalize.scss" as *;
-@use "variables.scss" as *;
 @use "./mixin.scss";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
@@ -37,7 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: $h;
+    height: 50px;
     width: 100%;
     font-size: 26px;
     color: white;
@@ -58,8 +57,9 @@
     position: relative;
     flex-basis: 85%;
     line-height: 25px;
+    // text-decoration: none;
     overflow-y: auto;
-    height: calc(100vh - $h * 2);
+    height: calc(100vh - 100px);
     background: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.5),
@@ -70,7 +70,7 @@
     );
     padding: 15px 65px;
     @media (max-width: 900px) {
-      height: calc(100vh - $h * 3.5);
+      height: calc(100vh - 200px);
       flex-basis: 100%;
       padding: 15px;
     }
@@ -81,8 +81,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // text-align: center;
-    // vertical-align: middle;
     font-family: "Poppins", sans-serif;
     color: black;
     margin-bottom: 20px;
@@ -131,7 +129,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 800px;
+    max-width: 900px;
     // width: 100%;
     margin: 0 auto;
     gap: 30px;

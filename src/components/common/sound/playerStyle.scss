@@ -16,12 +16,12 @@
     margin: 10px 10px;
     border-radius: 50%;
     filter: invert(1);
-    background: invert($theme-color);
-    // background: $theme-color; no no no
+    background: invert(rgba($theme-color, $globalOpacity));
+    // background: $theme-color; // no no no
     transition: scale 0.3s ease, opacity 0.3s ease;
     &:hover {
-      cursor: pointer;
       scale: 1.1;
+      cursor: pointer;
     }
   }
 
