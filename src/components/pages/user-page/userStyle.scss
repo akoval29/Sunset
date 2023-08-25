@@ -1,4 +1,5 @@
-@use "../../../style/normalize.scss" as *;
+@use "../../../style/variables.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .detailedUser {
   display: flex;

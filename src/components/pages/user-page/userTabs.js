@@ -20,7 +20,7 @@ export const UserTabs = ({ userId }) => {
   if (usersLoadingStatus === "loading") {
     return <Spinner />;
   } else if (usersLoadingStatus === "error") {
-    return <ErrorMessage message="Помилка завантаження детальних даних" />;
+    return <ErrorMessage message="Detailed data: loading error" />;
   }
 
   const handleTabClick = (tabId) => {

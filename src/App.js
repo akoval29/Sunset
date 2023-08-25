@@ -14,7 +14,6 @@ import secondBg from "./lib/red-sunset.jpg";
 import defaultBg from "./lib/cyber.png";
 
 import "./style/app.scss";
-import "./components/pages/user-page/userStyle.scss";
 
 export const App = () => {
   const [playing, setPlaying] = useState(false);

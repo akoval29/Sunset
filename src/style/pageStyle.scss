@@ -1,10 +1,11 @@
-@use "./normalize.scss" as *;
+@use "./variables.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .page {
   border: 2px solid black;
   border-radius: 15px;
   padding: 10px;
-  margin: 15px 10px;
+  margin-bottom: 15px;
   font-family: "Roboto", sans-serif;
   background-color: rgba(255, 255, 255, 0.6);
   list-style: none;
@@ -64,14 +65,8 @@
     font-style: italic;
   }
 
-  &__userID {
-    font-weight: bold;
-  }
-
-  &__todoId {
-    font-weight: bold;
-  }
-
+  &__userID,
+  &__todoId,
   &__postId {
     font-weight: bold;
   }
@@ -118,8 +113,8 @@
   &__completed {
     font-weight: bold;
   }
-  // --- CSS Transition Group --- //
 
+  // --- CSS Transition Group --- //
   &-appear {
     opacity: 0;
     transform: scale(0.2);

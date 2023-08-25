@@ -44,20 +44,18 @@ export const Main = () => {
         </li>
         <li className="app__list-item">
           It's important to note that this project is adaptable to various
-          backend databases for handling real-world data. You can create new
-          posts, todos, as well as edit or delete them as you want. We use fake
-          API database in this app so every change you might do will be canceled
-          after page reload.
+          backend databases for handling real-world data. In this app we use
+          fake API database so every change you might do will be canceled after
+          page reload. So You can create new posts, todos, as well as edit or
+          delete them as you want.
         </li>
         <li className="app__list-item">
           When you click on any user within the Users section, you will gain
-          access to detailed and comprehensive information about that specific
-          user. This includes their associated posts and todos, employing{" "}
-          <span className="app__bold-text">Nested Routing</span> for seamless
-          navigation.
+          access to detailed information about that specific user. This includes
+          their associated posts, todos and albums.
         </li>
         <li className="app__list-item">
-          Additionally, an audio player is located in the right corner of the
+          Additionally, an audio player is located in the left corner of the
           footer, enhancing the overall user experience while exploring the
           capabilities of this application.
         </li>

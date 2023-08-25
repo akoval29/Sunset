@@ -1,11 +1,11 @@
-@use "../../style/normalize.scss" as *;
+@use "../../style/variables.scss" as *;
 
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: $theme-font-color;
+  color: white;
   background: rgba(0, 0, 0, 0.3);
   height: $h;
   width: 100%;
