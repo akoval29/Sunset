@@ -21,7 +21,7 @@ export const Main = () => {
       <ul className="app__list">
         <li className="app__list-item">
           This application is developed using{" "}
-          <span className="app__bold-text">React Redux</span> technologies. Its
+          <span className="app__bold-text">React/Redux</span> technologies. Its
           core functionality revolves around interacting with the API at{" "}
           <a href="https://jsonplaceholder.typicode.com">
             https://jsonplaceholder.typicode.com
